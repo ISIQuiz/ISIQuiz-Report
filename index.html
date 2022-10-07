@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html  lang="it"  dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> RELAZIONE DI PROGETTO<br />
+DI<br />
+PARADIGMI DI PROGRAMMAZIONE E SVILUPPO<br />
+<br />
+<strong>ISIQuiz</strong><br />
+<br /></title>
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.26.4/css/uikit.gradient.css">
+
+        <link rel="stylesheet" href="style.css">
+        <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+        <script src="./pandoc-uikit/uikit.js"></script>
+        <script src="./pandoc-uikit/scripts.js"></script>
+        <script src="./pandoc-uikit/jquery.sticky-kit.js"></script>
+
+        <meta name="generator" content="pandoc-uikit" />
+                <meta name="author" content="Gambaletta Daniele daniele.gambaletta@studio.unibo.it" />
+                <meta name="author" content="Lirussi Igor igor.lirussi@studio.unibo.it" />
+                <meta name="author" content="Omiccioli Riccardo riccardo.omiccioli@studio.unibo.it" />
+                <meta name="author" content="Teodorani Cecilia cecilia.teodorani@studio.unibo.it   " />
+                        <meta name="date" content="2022-10-07" />
+                <title> RELAZIONE DI PROGETTO DI PARADIGMI DI PROGRAMMAZIONE E SVILUPPO  ISIQuiz  </title>
+        <style type="text/css">code{white-space: pre;}</style>
+                                <link rel="stylesheet" href="./pandoc-uikit/uikit.css" />
+                                             
+    </head>
+
+    <body>
+
+
+        <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+
+                        <div class="uk-grid" data-uk-grid-margin>
+                <div class="uk-width-1-1">
+                    <h1 class="uk-heading-large"> RELAZIONE DI PROGETTO<br />
+DI<br />
+PARADIGMI DI PROGRAMMAZIONE E SVILUPPO<br />
+<br />
+<strong>ISIQuiz</strong><br />
+<br /></h1>
+                                        <h3 class="uk-heading-large">2022-10-07</p></h3>
+                                                            <p class="uk-text-large">Gambaletta
+Daniele<br />
+<a
+href="mailto:daniele.gambaletta@studio.unibo.it"><code>daniele.gambaletta@studio.unibo.it</code></a></p>
+                                        <p class="uk-text-large">Lirussi
+Igor<br />
+<a
+href="mailto:igor.lirussi@studio.unibo.it"><code>igor.lirussi@studio.unibo.it</code></a></p>
+                                        <p class="uk-text-large">Omiccioli
+Riccardo<br />
+<a
+href="mailto:riccardo.omiccioli@studio.unibo.it"><code>riccardo.omiccioli@studio.unibo.it</code></a></p>
+                                        <p class="uk-text-large">Teodorani
+Cecilia<br />
+<a
+href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.unibo.it</code></a><br />
+<br />
+<br /></p>
+                                    </div>
+            </div>
+            
+            <div class="uk-grid" data-uk-grid-margin >          
+                <div class="uk-width-medium-1-4">
+                    <div class="uk-overflow-container" data-uk-sticky="{top:25,media: 768}">
+                        <div class="uk-panel uk-panel-box menu-begin" >
+
+                                                        <ul>
+                                                        <li><a
+                                                        href="#foointroduzione"
+                                                        id="footoc-introduzione"><span
+                                                        class="toc-section-number">1</span>
+                                                        Introduzione</a>
+                                                        <ul>
+                                                        <li><a
+                                                        href="#foooverview"
+                                                        id="footoc-overview"><span
+                                                        class="toc-section-number">1.1</span>
+                                                        Overview</a></li>
+                                                        <li><a
+                                                        href="#fooproblemi"
+                                                        id="footoc-problemi"><span
+                                                        class="toc-section-number">1.2</span>
+                                                        Problemi</a></li>
+                                                        <li><a
+                                                        href="#fooobiettivi"
+                                                        id="footoc-obiettivi"><span
+                                                        class="toc-section-number">1.3</span>
+                                                        Obiettivi</a></li>
+                                                        </ul></li>
+                                                        <li><a
+                                                        href="#foostato-dellarte"
+                                                        id="footoc-stato-dellarte"><span
+                                                        class="toc-section-number">2</span>
+                                                        Stato
+                                                        dell&#x2019;Arte</a></li>
+                                                        <li><a
+                                                        href="#fooprocesso-di-sviluppo"
+                                                        id="footoc-processo-di-sviluppo"><span
+                                                        class="toc-section-number">3</span>
+                                                        Processo di
+                                                        Sviluppo</a>
+                                                        <ul>
+                                                        <li><a
+                                                        href="#foodomain-driven-design"
+                                                        id="footoc-domain-driven-design"><span
+                                                        class="toc-section-number">3.1</span>
+                                                        Domain Driven
+                                                        Design</a>
+                                                        <ul>
+                                                        <li><a
+                                                        href="#fooaspetti-principali"
+                                                        id="footoc-aspetti-principali"><span
+                                                        class="toc-section-number">3.1.1</span>
+                                                        Aspetti
+                                                        principali</a></li>
+                                                        </ul></li>
+                                                        <li><a
+                                                        href="#foometodologia-di-sviluppo"
+                                                        id="footoc-metodologia-di-sviluppo"><span
+                                                        class="toc-section-number">3.2</span>
+                                                        Metodologia di
+                                                        Sviluppo</a>
+                                                        <ul>
+                                                        <li><a
+                                                        href="#fooscrum"
+                                                        id="footoc-scrum"><span
+                                                        class="toc-section-number">3.2.1</span>
+                                                        Scrum</a></li>
+                                                        </ul></li>
+                                                        <li><a
+                                                        href="#foogestione-di-progetto"
+                                                        id="footoc-gestione-di-progetto"><span
+                                                        class="toc-section-number">3.3</span>
+                                                        Gestione di
+                                                        Progetto</a></li>
+                                                        <li><a
+                                                        href="#foochap:CI"
+                                                        id="footoc-chap:CI"><span
+                                                        class="toc-section-number">3.4</span>
+                                                        Continuous Integration
+                                                        e Automatizzazione</a>
+                                                        <ul>
+                                                        <li><a
+                                                        href="#foorelazione"
+                                                        id="footoc-relazione"><span
+                                                        class="toc-section-number">3.4.1</span>
+                                                        Relazione</a></li>
+                                                        <li><a
+                                                        href="#fooprogetto"
+                                                        id="footoc-progetto"><span
+                                                        class="toc-section-number">3.4.2</span>
+                                                        Progetto</a></li>
+                                                        </ul></li>
+                                                        </ul></li>
+                                                        <li><a
+                                                        href="#fooanalisi-dello-spazio-del-problema"
+                                                        id="footoc-analisi-dello-spazio-del-problema"><span
+                                                        class="toc-section-number">4</span>
+                                                        Analisi dello spazio
+                                                        del problema</a>
+                                                        <ul>
+                                                        <li><a
+                                                        href="#fooknowledge-crunching"
+                                                        id="footoc-knowledge-crunching"><span
+                                                        class="toc-section-number">4.1</span>
+                                                        Knowledge
+                                                        crunching</a></li>
+                                                        </ul></li>
+                                                        <li><a
+                                                        href="#fooanalisi-dei-requisiti"
+                                                        id="footoc-analisi-dei-requisiti"><span
+                                                        class="toc-section-number">5</span>
+                                                        Analisi dei
+                                                        Requisiti</a>
+                                                        <ul>
+                                                        <li><a
+                                                        href="#foorequisiti-di-business"
+                                                        id="footoc-requisiti-di-business"><span
+                                                        class="toc-section-number">5.1</span>
+                                                        Requisiti di
+                                                        Business</a></li>
+                                                        <li><a
+                                                        href="#foorequisiti-utente"
+                                                        id="footoc-requisiti-utente"><span
+                                                        class="toc-section-number">5.2</span>
+                                                        Requisiti
+                                                        Utente</a></li>
+                                                        <li><a
+                                                        href="#foorequisiti-funzionali"
+                                                        id="footoc-requisiti-funzionali"><span
+                                                        class="toc-section-number">5.3</span>
+                                                        Requisiti
+                                                        Funzionali</a>
+                                                        <ul>
+                                                        <li><a
+                                                        href="#fooobbligatori"
+                                                        id="footoc-obbligatori"><span
+                                                        class="toc-section-number">5.3.1</span>
+                                                        Obbligatori</a></li>
+                                                        <li><a
+                                                        href="#fooopzionali"
+                                                        id="footoc-opzionali"><span
+                                                        class="toc-section-number">5.3.2</span>
+                                                        Opzionali</a></li>
+                                                        </ul></li>
+                                                        <li><a
+                                                        href="#foorequisiti-non-funzionali"
+                                                        id="footoc-requisiti-non-funzionali"><span
+                                                        class="toc-section-number">5.4</span>
+                                                        Requisiti non
+                                                        Funzionali</a></li>
+                                                        <li><a
+                                                        href="#foorequisiti-implementativi"
+                                                        id="footoc-requisiti-implementativi"><span
+                                                        class="toc-section-number">5.5</span>
+                                                        Requisiti
+                                                        Implementativi</a></li>
+                                                        </ul></li>
+                                                        <li><a
+                                                        href="#foodesign-architetturale"
+                                                        id="footoc-design-architetturale"><span
+                                                        class="toc-section-number">6</span>
+                                                        Design
+                                                        Architetturale</a>
+                                                        <ul>
+                                                        <li><a
+                                                        href="#fooarchitettura-generale"
+                                                        id="footoc-architettura-generale"><span
+                                                        class="toc-section-number">6.1</span>
+                                                        Architettura
+                                                        Generale</a></li>
+                                                        <li><a
+                                                        href="#fooscelte-tecnologiche-cruciali"
+                                                        id="footoc-scelte-tecnologiche-cruciali"><span
+                                                        class="toc-section-number">6.2</span>
+                                                        Scelte Tecnologiche
+                                                        Cruciali</a></li>
+                                                        <li><a
+                                                        href="#foopattern-architetturali-utilizzati"
+                                                        id="footoc-pattern-architetturali-utilizzati"><span
+                                                        class="toc-section-number">6.3</span>
+                                                        Pattern Architetturali
+                                                        Utilizzati</a></li>
+                                                        </ul></li>
+                                                        <li><a
+                                                        href="#foodesign-di-dettaglio"
+                                                        id="footoc-design-di-dettaglio"><span
+                                                        class="toc-section-number">7</span>
+                                                        Design di
+                                                        Dettaglio</a></li>
+                                                        <li><a
+                                                        href="#fooimplementazione"
+                                                        id="footoc-implementazione"><span
+                                                        class="toc-section-number">8</span>
+                                                        Implementazione</a>
+                                                        <ul>
+                                                        <li><a
+                                                        href="#foogambaletta-daniele"
+                                                        id="footoc-gambaletta-daniele"><span
+                                                        class="toc-section-number">8.1</span>
+                                                        Gambaletta
+                                                        Daniele</a></li>
+                                                        <li><a
+                                                        href="#foolirussi-igor"
+                                                        id="footoc-lirussi-igor"><span
+                                                        class="toc-section-number">8.2</span>
+                                                        Lirussi Igor</a></li>
+                                                        <li><a
+                                                        href="#fooomiccioli-riccardo"
+                                                        id="footoc-omiccioli-riccardo"><span
+                                                        class="toc-section-number">8.3</span>
+                                                        Omiccioli
+                                                        Riccardo</a></li>
+                                                        <li><a
+                                                        href="#footeodorani-cecilia"
+                                                        id="footoc-teodorani-cecilia"><span
+                                                        class="toc-section-number">8.4</span>
+                                                        Teodorani
+                                                        Cecilia</a></li>
+                                                        </ul></li>
+                                                        <li><a
+                                                        href="#footesting-e-performance"
+                                                        id="footoc-testing-e-performance"><span
+                                                        class="toc-section-number">9</span>
+                                                        Testing e
+                                                        Performance</a></li>
+                                                        <li><a
+                                                        href="#fooretrospettiva"
+                                                        id="footoc-retrospettiva"><span
+                                                        class="toc-section-number">10</span>
+                                                        Retrospettiva</a>
+                                                        <ul>
+                                                        <li><a
+                                                        href="#foosvolgimento"
+                                                        id="footoc-svolgimento"><span
+                                                        class="toc-section-number">10.1</span>
+                                                        Svolgimento</a></li>
+                                                        <li><a
+                                                        href="#foosprint-0"
+                                                        id="footoc-sprint-0"><span
+                                                        class="toc-section-number">10.2</span>
+                                                        Sprint 0</a></li>
+                                                        <li><a
+                                                        href="#foosprint-1"
+                                                        id="footoc-sprint-1"><span
+                                                        class="toc-section-number">10.3</span>
+                                                        Sprint 1</a></li>
+                                                        </ul></li>
+                                                        <li><a
+                                                        href="#fooconclusioni"
+                                                        id="footoc-conclusioni"><span
+                                                        class="toc-section-number">11</span>
+                                                        Conclusioni</a>
+                                                        <ul>
+                                                        <li><a
+                                                        href="#foosviluppi-futuri"
+                                                        id="footoc-sviluppi-futuri"><span
+                                                        class="toc-section-number">11.1</span>
+                                                        Sviluppi
+                                                        Futuri</a></li>
+                                                        </ul></li>
+                                                        </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uk-width-medium-3-4">
+<section id="foointroduzione" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span>
+Introduzione</h1>
+<p>ISIQuiz &#xE8; un progetto che nasce con l&#x2019;intento di sviluppare un
+<strong>gioco a quiz</strong>, che permetta ...</p>
+<section id="foooverview" class="level2" data-number="1.1">
+<h2 data-number="1.1"><span class="header-section-number">1.1</span>
+Overview</h2>
+<figure>
+<img src="Extra/ISIQuizLogoLineTransparent.png" id="foofig:Logo"
+style="width:80.0%" alt="Il logo in-line" />
+<figcaption aria-hidden="true">Il <strong>logo</strong> in-line</figcaption>
+</figure>
+</section>
+<section id="fooproblemi" class="level2" data-number="1.2">
+<h2 data-number="1.2"><span class="header-section-number">1.2</span>
+Problemi</h2>
+<p>I problemi che hanno portato alla necessit&#xE0; di svolgere il sw:</p>
+<ul>
+<li><p>Uno</p></li>
+<li><p>Due</p></li>
+<li><p>Tre</p></li>
+<li><p>Quattro</p></li>
+</ul>
+</section>
+<section id="fooobiettivi" class="level2" data-number="1.3">
+<h2 data-number="1.3"><span class="header-section-number">1.3</span>
+Obiettivi</h2>
+<p>L&#x2019;obiettivo &#xE8; quello di ...</p>
+</section>
+</section>
+<section id="foostato-dellarte" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Stato
+dell&#x2019;Arte</h1>
+<p>... non so se volgiamo farlo, ma forse un due righe non guastano</p>
+<p>Il topic scelto ha parecchie varianti:</p>
+<ul>
+<li><p>Uno</p></li>
+<li><p>Due ...</p></li>
+</ul>
+<p>La nostra idea si differenzia per:</p>
+<ul>
+<li><p>Natura di Accademica</p></li>
+<li><p>Ripasso possibile ...</p></li>
+<li><p>Commistione con il concetto di FlashCard</p></li>
+</ul>
+</section>
+<section id="fooprocesso-di-sviluppo" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Processo di
+Sviluppo</h1>
+<section id="foodomain-driven-design" class="level2" data-number="3.1">
+<h2 data-number="3.1"><span class="header-section-number">3.1</span> Domain
+Driven Design</h2>
+<p>Il processo di sviluppo ...</p>
+<section id="fooaspetti-principali" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1"><span class="header-section-number">3.1.1</span>
+Aspetti principali</h3>
+<p>Concetti chiave ...:</p>
+<ul>
+<li><p><strong>Uno</strong>: ...</p></li>
+<li><p><strong>Due</strong>: ...</p></li>
+<li><p><strong>Tre</strong>: ...</p></li>
+</ul>
+</section>
+</section>
+<section id="foometodologia-di-sviluppo" class="level2" data-number="3.2">
+<h2 data-number="3.2"><span class="header-section-number">3.2</span>
+Metodologia di Sviluppo</h2>
+<p>Per sviluppare il progetto &#xE8; stata scelto il framework Scrum. Questo per
+permettere ...</p>
+<section id="fooscrum" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1"><span class="header-section-number">3.2.1</span>
+Scrum</h3>
+<p>Sprint, Sprint Planning, product-backlog, daily-Scrum, "Definition of
+Done", "refinement" del backlog,</p>
+</section>
+</section>
+<section id="foogestione-di-progetto" class="level2" data-number="3.3">
+<h2 data-number="3.3"><span class="header-section-number">3.3</span> Gestione
+di Progetto</h2>
+<p>In questa sezione verr&#xE0; spiegato come il progetto...</p>
+<section id="foogantt-chart" class="level5" data-number="3.3.0.0.1">
+<h5 data-number="3.3.0.0.1"><span
+class="header-section-number">3.3.0.0.1</span> Gantt Chart</h5>
+<p>...</p>
+</section>
+<section id="foolicensing" class="level5" data-number="3.3.0.0.2">
+<h5 data-number="3.3.0.0.2"><span
+class="header-section-number">3.3.0.0.2</span> Licensing</h5>
+<p>...</p>
+</section>
+<section id="fooversioning" class="level5" data-number="3.3.0.0.3">
+<h5 data-number="3.3.0.0.3"><span
+class="header-section-number">3.3.0.0.3</span> Versioning</h5>
+<p>...</p>
+</section>
+<section id="foogithub-projects" class="level5" data-number="3.3.0.0.4">
+<h5 data-number="3.3.0.0.4"><span
+class="header-section-number">3.3.0.0.4</span> GitHub Projects </h5>
+<p>Per le Board di Scrum &#xE8; stato utilizzato GitHub Projects...</p>
+</section>
+<section id="footelegram" class="level5" data-number="3.3.0.0.5">
+<h5 data-number="3.3.0.0.5"><span
+class="header-section-number">3.3.0.0.5</span> Telegram</h5>
+<p>scelta telegram...</p>
+<section id="foobot" class="level6" data-number="3.3.0.0.5.1">
+<h6 data-number="3.3.0.0.5.1"><span
+class="header-section-number">3.3.0.0.5.1</span> Bot</h6>
+<p>teleram bot...</p>
+</section>
+</section>
+<section id="foodiscord" class="level5" data-number="3.3.0.0.6">
+<h5 data-number="3.3.0.0.6"><span
+class="header-section-number">3.3.0.0.6</span> Discord</h5>
+<p>Discord...</p>
+</section>
+</section>
+<section id="foochap:CI" class="level2" data-number="3.4">
+<h2 data-number="3.4"><span class="header-section-number">3.4</span>
+Continuous Integration e Automatizzazione</h2>
+<p>CI e Automatizzazione</p>
+<section id="foorelazione" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1"><span class="header-section-number">3.4.1</span>
+Relazione</h3>
+<p>relazione su overleaf e relativa CI</p>
+<section id="footool-utilizzati" class="level6" data-number="3.4.1.0.0.1">
+<h6 data-number="3.4.1.0.0.1"><span
+class="header-section-number">3.4.1.0.0.1</span> Tool utilizzati</h6>
+<ul>
+<li><p>Overleaf</p></li>
+<li><p>GitHub Actions</p></li>
+<li><p>Telegram Bots</p></li>
+<li><p>Pandoc</p></li>
+<li><p>GitHub Pages</p></li>
+</ul>
+</section>
+</section>
+<section id="fooprogetto" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2"><span class="header-section-number">3.4.2</span>
+Progetto</h3>
+<p>CI progetto, Test, Coverage, Documentazione, Quality assurance, bla bla</p>
+<section id="footool-utilizzati-1" class="level6" data-number="3.4.2.0.0.1">
+<h6 data-number="3.4.2.0.0.1"><span
+class="header-section-number">3.4.2.0.0.1</span> Tool utilizzati</h6>
+<ul>
+<li><p>Sbt</p></li>
+<li><p>ScalaTest</p></li>
+<li><p>GitHub Actions</p></li>
+<li><p>GitHub Pages</p></li>
+<li><p>Telegram Bots</p></li>
+<li><p>Dependabot</p></li>
+<li><p>Sonarcloud/Codacy/Codefactor</p></li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+<section id="fooanalisi-dello-spazio-del-problema" class="level1"
+data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Analisi dello
+spazio del problema</h1>
+<section id="fooknowledge-crunching" class="level2" data-number="4.1">
+<h2 data-number="4.1"><span class="header-section-number">4.1</span> Knowledge
+crunching</h2>
+<p>...</p>
+</section>
+</section>
+<section id="fooanalisi-dei-requisiti" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Analisi dei
+Requisiti</h1>
+<p>Come abbiamo trovato i <strong>requisiti</strong></p>
+<section id="foorequisiti-di-business" class="level2" data-number="5.1">
+<h2 data-number="5.1"><span class="header-section-number">5.1</span> Requisiti
+di Business</h2>
+<p>...</p>
+</section>
+<section id="foorequisiti-utente" class="level2" data-number="5.2">
+<h2 data-number="5.2"><span class="header-section-number">5.2</span> Requisiti
+Utente</h2>
+<p>Si possono inserire qui i mockup</p>
+</section>
+<section id="foorequisiti-funzionali" class="level2" data-number="5.3">
+<h2 data-number="5.3"><span class="header-section-number">5.3</span> Requisiti
+Funzionali</h2>
+<section id="fooobbligatori" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1"><span class="header-section-number">5.3.1</span>
+Obbligatori</h3>
+<p>All&#x2019;interno di ogni partita, vengono presentate all&#x2019;utente diverse domande
+di natura accademica, ognuna delle quali viene accompagnata da un numero
+predeterminato di risposte possibili, alcune corrette ed altre sbagliate.
+L&#x2019;utente dovr&#xE0; individuare le risposte corrette in un tempo massimo per non
+fallire la domanda.</p>
+<ul>
+<li><p><strong>Modalit&#xE0; di gioco generale</strong>: domande a scelta multipla
+su tutti i corsi disponibili</p></li>
+<li><p><strong>Modalit&#xE0; di gioco materie a scelta</strong>: domande a scelta
+multipla su pi&#xF9; materie scelte dal giocatore</p></li>
+<li><p><strong>Modalit&#xE0; di gioco materia specifica</strong>: domande a scelta
+multipla su una sola materia scelta dal giocatore</p></li>
+<li><p><strong>Interfaccia grafica</strong> (CLI e poi JavaFX):
+visualizzazione menu principale, visualizzazione della domanda e di 4
+possibili risposte da scegliere durante il gioco, visualizzazione dei
+risultati post partita</p></li>
+<li><p><strong>Punteggio finale</strong> del quiz appena effettuato: al
+termine della partita verr&#xE0; visualizzato il punteggio ottenuto dal giocatore
+in base al numero di risposte corrette o errate date nella partita
+conclusa</p></li>
+<li><p><strong>Visualizzazione delle statistiche personali</strong></p></li>
+<li><p><strong>Pi&#xF9; risposte giuste</strong> e sbagliate per ogni domanda in
+modo da avere una rotazione tra le possibili scelte</p></li>
+<li><p>Aggiunta di <strong>nuove domande e risposte da parte
+dell&#x2019;utente</strong></p></li>
+</ul>
+</section>
+<section id="fooopzionali" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2"><span class="header-section-number">5.3.2</span>
+Opzionali</h3>
+<ul>
+<li><p><strong>Sfida a tempo</strong>: rispondere a pi&#xF9; domande possibili in
+un intervallo di tempo limitato</p></li>
+<li><p><strong>Aiuti su richiesta</strong>: all&#x2019;utente vengono messi a
+disposizione un numero specifico di aiuti ad ogni partita con i quali
+semplificare la scelta della risposta</p></li>
+<li><p><strong>Revisione solo delle risposte sbagliate</strong>: l&#x2019;utente pu&#xF2;
+scegliere una modalit&#xE0; di gioco in cui ripassare esclusivamente le domande
+precedentemente sbagliate</p></li>
+<li><p><strong>Medaglie-achievement</strong> quando si completano delle sfide
+(es. aver risposto bene a tutte le domande di una materia)</p></li>
+</ul>
+</section>
+</section>
+<section id="foorequisiti-non-funzionali" class="level2" data-number="5.4">
+<h2 data-number="5.4"><span class="header-section-number">5.4</span> Requisiti
+non Funzionali</h2>
+<p>...</p>
+</section>
+<section id="foorequisiti-implementativi" class="level2" data-number="5.5">
+<h2 data-number="5.5"><span class="header-section-number">5.5</span> Requisiti
+Implementativi</h2>
+<p>...</p>
+</section>
+</section>
+<section id="foodesign-architetturale" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Design
+Architetturale</h1>
+<p>...</p>
+<section id="fooarchitettura-generale" class="level2" data-number="6.1">
+<h2 data-number="6.1"><span class="header-section-number">6.1</span>
+Architettura Generale</h2>
+<p>....</p>
+</section>
+<section id="fooscelte-tecnologiche-cruciali" class="level2"
+data-number="6.2">
+<h2 data-number="6.2"><span class="header-section-number">6.2</span> Scelte
+Tecnologiche Cruciali</h2>
+<p>...</p>
+</section>
+<section id="foopattern-architetturali-utilizzati" class="level2"
+data-number="6.3">
+<h2 data-number="6.3"><span class="header-section-number">6.3</span> Pattern
+Architetturali Utilizzati</h2>
+<p>...</p>
+</section>
+</section>
+<section id="foodesign-di-dettaglio" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Design di
+Dettaglio</h1>
+<p>...</p>
+</section>
+<section id="fooimplementazione" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span>
+Implementazione</h1>
+<p>...</p>
+<section id="foogambaletta-daniele" class="level2" data-number="8.1">
+<h2 data-number="8.1"><span class="header-section-number">8.1</span>
+Gambaletta Daniele</h2>
+</section>
+<section id="foolirussi-igor" class="level2" data-number="8.2">
+<h2 data-number="8.2"><span class="header-section-number">8.2</span> Lirussi
+Igor</h2>
+</section>
+<section id="fooomiccioli-riccardo" class="level2" data-number="8.3">
+<h2 data-number="8.3"><span class="header-section-number">8.3</span> Omiccioli
+Riccardo</h2>
+</section>
+<section id="footeodorani-cecilia" class="level2" data-number="8.4">
+<h2 data-number="8.4"><span class="header-section-number">8.4</span> Teodorani
+Cecilia</h2>
+</section>
+</section>
+<section id="footesting-e-performance" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Testing e
+Performance</h1>
+<p>... non so se volgiamo farlo, ma forse un due righe non guastano</p>
+</section>
+<section id="fooretrospettiva" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span>
+Retrospettiva</h1>
+<section id="foosvolgimento" class="level2" data-number="10.1">
+<h2 data-number="10.1"><span class="header-section-number">10.1</span>
+Svolgimento</h2>
+<p>Gli sprint sono stati portati avanti nel seguente modo:</p>
+<section id="foosprint-planning" class="level5" data-number="10.1.0.0.1">
+<h5 data-number="10.1.0.0.1"><span
+class="header-section-number">10.1.0.0.1</span> Sprint Planning</h5>
+<p>Pianificazione a inizio sprint degli obiettivi, tempistiche e
+responsabilit&#xE0; nel periodo dello sprint corrente. Diviso in due parti:</p>
+<ul>
+<li><p><strong>parte 1</strong> Viene raffinato e rivisto il product backlog,
+viene effettuata la scelta dello sprint goal (what).</p></li>
+<li><p><strong>parte 2</strong> Si decidono gli item e viene raffinato come
+implementarli (how). Effettuato con solo il team senza la figura del product
+owner</p></li>
+</ul>
+</section>
+<section id="fooiterativo-daily-scrum" class="level5"
+data-number="10.1.0.0.2">
+<h5 data-number="10.1.0.0.2"><span
+class="header-section-number">10.1.0.0.2</span> [Iterativo] Daily scrum</h5>
+<p>Breve meeting svolto giornalmente. Viene utilizzato per gli aggiornamenti
+sull&#x2019;andamento del progetto, senza scendere nei dettagli implementativi.</p>
+</section>
+<section id="foooccasionale-pair-programming" class="level5"
+data-number="10.1.0.0.3">
+<h5 data-number="10.1.0.0.3"><span
+class="header-section-number">10.1.0.0.3</span> [Occasionale] Pair Programming
+</h5>
+<p>Utilizzato per risolvere problemi che causano il blocco di un componente
+del team per parecchio tempo su una issue.</p>
+</section>
+<section id="foomeeting-finale" class="level5" data-number="10.1.0.0.4">
+<h5 data-number="10.1.0.0.4"><span
+class="header-section-number">10.1.0.0.4</span> Meeting finale</h5>
+<p>Riflessioni e considerazioni finali sullo spint passato. Suggerimenti per
+migliorare il prossimo. Diviso in tre parti:</p>
+<ul>
+<li><p><strong>Product backlog refinement</strong> aggiunta di dettagli e
+riordino del product backlog</p></li>
+<li><p><strong>Sprint review</strong> &#xE8; stato ispezionato l&#x2019;incremento, il
+Minimum Viable Product o di risultati sul processo. Discernere cosa &#xE8; stato
+fatto e cosa no</p></li>
+<li><p><strong>Retrospettiva</strong> Considerazioni sul team stesso e sui
+miglioramenti per il prossimo sprint.</p></li>
+</ul>
+</section>
+</section>
+<section id="foosprint-0" class="level2" data-number="10.2">
+<h2 data-number="10.2"><span class="header-section-number">10.2</span> Sprint
+0</h2>
+<p>Abbiamo studiato...</p>
+<section id="foodeliverables" class="level5" data-number="10.2.0.0.1">
+<h5 data-number="10.2.0.0.1"><span
+class="header-section-number">10.2.0.0.1</span> Deliverables</h5>
+<p>obiettivi raggiunti</p>
+<ul>
+<li><p>uno</p></li>
+<li><p>due</p></li>
+<li><p>tre</p></li>
+</ul>
+</section>
+</section>
+<section id="foosprint-1" class="level2" data-number="10.3">
+<h2 data-number="10.3"><span class="header-section-number">10.3</span> Sprint
+1</h2>
+<p>Nello sprint 1 ...</p>
+<section id="foodeliverables-1" class="level5" data-number="10.3.0.0.1">
+<h5 data-number="10.3.0.0.1"><span
+class="header-section-number">10.3.0.0.1</span> Deliverables</h5>
+<p>Abbiamo creato...</p>
+<ul>
+<li><p>uno</p></li>
+<li><p>due</p></li>
+<li><p>tre</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="fooconclusioni" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span>
+Conclusioni</h1>
+<p>Visione generale sul progetto, pareri personali, ...</p>
+<section id="foosviluppi-futuri" class="level2" data-number="11.1">
+<h2 data-number="11.1"><span class="header-section-number">11.1</span>
+Sviluppi Futuri</h2>
+<p>In futuro ...</p>
+<div id="foorefs" class="references csl-bib-body hanging-indent"
+role="doc-bibliography">
+<div id="fooref-uasyncio" class="csl-entry" role="doc-biblioentry">
+author. s.d.<span>&#xAB;<span>Title </span>&#xBB;</span>. <a
+href="https://github.com/resource.md"
+class="uri">https://github.com/resource.md</a>.
+</div>
+<div id="fooref-yolov3" class="csl-entry" role="doc-biblioentry">
+Author1, Author3, Author2. 2018. <span>&#xAB;Article Title&#xBB;</span>. <em>arXiv</em>.
+<a
+href="https://pjreddie.com/media/files/papers/paper.pdf">https://pjreddie.com/media/files/papers/paper.pdf</a>.
+</div>
+<div id="fooref-StackOverflow" class="csl-entry" role="doc-biblioentry">
+StackOverflow. s.d. <a
+href="https://stackoverflow.com/">https://stackoverflow.com/</a>.
+</div>
+</div>
+</section>
+</section>                    
+                </div>
+            </div>
+
+            <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+        </div>
+    </body>
+</html>
