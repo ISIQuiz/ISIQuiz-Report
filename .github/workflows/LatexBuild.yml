@@ -79,9 +79,8 @@ jobs:
             to: ${{ secrets.TELEGRAM_TO }}
             token: ${{ secrets.TELEGRAM_TOKEN }}
             message: |
-                ${{ github.event_name }} event,
-                on github.com/${{ github.repository }}, 
-                by ${{ github.actor }}:
+                ${{ github.event_name }} event on
+                github.com/${{ github.repository }}, 
                 <b>${{ github.event.head_commit.message }}</b>
                 ✅ <b>SUCCEDED</b> ✅ 
             format: html
@@ -127,12 +126,6 @@ jobs:
       if: failure() # if its failed
       runs-on: ubuntu-20.04
       steps:
-      - name: Clone Repo with Checkout 
-        uses: actions/checkout@v2 
-      - name: Download Artifacts
-        uses: actions/download-artifact@v2
-        with:
-          name: Logs
       - name: Send custom Telegram message
         uses: appleboy/telegram-action@master
         with:
@@ -179,9 +172,9 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git fetch --all
-      - name: Clone Pandoc dependency 
+      - name: Clone Pandoc template 
         run: |
-          git clone https://github.com/SmartDogHouse/pandoc-uikit.git
+          git clone https://github.com/igor-lirussi/pandoc-uikit
       - name: Pandoc tex conversion
         uses: docker://pandoc/latex:latest
         with:
@@ -189,22 +182,19 @@ jobs:
             -d ./pandoc-uikit/config.yaml 
             -o ./index.html 
             main.tex
-            
       - name: Commit the new gh-pages html
         run: |
-          git add ./index.html
-          git commit -m "Invisible commit"
-          rm -rdf pandoc-uikit/.git*
-          git clean -fxd
+          git add ./index.html 
+          git commit -m "Invisible commit" 
+          rm -rdf pandoc-uikit/.git* 
+          git clean -fxd 
           git checkout gh-pages
           git rm -rf .
           git clean -fxd
-          git clone https://github.com/SmartDogHouse/pandoc-uikit.git
+          git clone https://github.com/igor-lirussi/pandoc-uikit
           rm -rdf pandoc-uikit/.git*
-          #get the folders needed from the main branch
-          git checkout main Extra
-          git checkout main Images
-          git checkout main index.html
+          git checkout -f main Extra
+          git checkout -f main index.html
           git status
           # git cherry-pick main, alternatives
           git add .
