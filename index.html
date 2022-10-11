@@ -27,7 +27,7 @@ PARADIGMI DI PROGRAMMAZIONE E SVILUPPO<br />
                 <meta name="author" content="Lirussi Igor igor.lirussi@studio.unibo.it" />
                 <meta name="author" content="Omiccioli Riccardo riccardo.omiccioli@studio.unibo.it" />
                 <meta name="author" content="Teodorani Cecilia cecilia.teodorani@studio.unibo.it   " />
-                        <meta name="date" content="2022-10-10" />
+                        <meta name="date" content="2022-10-11" />
                 <title> RELAZIONE DI PROGETTO DI PARADIGMI DI PROGRAMMAZIONE E SVILUPPO  ISIQuiz  </title>
         <style type="text/css">code{white-space: pre;}</style>
                                 <link rel="stylesheet" href="./pandoc-uikit/uikit.css" />
@@ -47,7 +47,7 @@ PARADIGMI DI PROGRAMMAZIONE E SVILUPPO<br />
 <br />
 <strong>ISIQuiz</strong><br />
 <br /></h1>
-                                        <h1 class="uk-heading" style="margin:0">2022-10-10</h1>
+                                        <h1 class="uk-heading" style="margin:0">2022-10-11</h1>
                                                             <p class="uk-text-large">Gambaletta
 Daniele<br />
 <a
@@ -170,11 +170,11 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
                                                         del problema</a>
                                                         <ul>
                                                         <li><a
-                                                        href="#fooknowledge-crunching"
-                                                        id="footoc-knowledge-crunching"><span
+                                                        href="#foointervista-con-il-committente"
+                                                        id="footoc-intervista-con-il-committente"><span
                                                         class="toc-section-number">4.1</span>
-                                                        Knowledge
-                                                        crunching</a></li>
+                                                        Intervista con il
+                                                        committente</a></li>
                                                         </ul></li>
                                                         <li><a
                                                         href="#fooanalisi-dei-requisiti"
@@ -340,7 +340,13 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
 <h1 data-number="1"><span class="header-section-number">1</span>
 Introduzione</h1>
 <p>ISIQuiz &#xE8; un progetto che nasce con l&#x2019;intento di sviluppare un
-<strong>gioco a quiz</strong>, che permetta ...</p>
+<strong>gioco a quiz</strong>, che permetta ad uno studente di ripassare il
+contenuto dei corsi di <strong>Ingegneria e Scienze Informatiche</strong>
+attraverso domande a scelta multipla che coprono una o pi&#xF9; materie di suo
+interesse. Lo scopo di <strong>ISIQuiz</strong> &#xE8; quindi quello di gamificare
+il ripasso pre-esame attraverso uno strumento stimoltante che permetta allo
+studenti di tracciare i propri progressi e allenarsi sulle domande che per lui
+risultano pi&#xF9; critiche.</p>
 <section id="foooverview" class="level2" data-number="1.1">
 <h2 data-number="1.1"><span class="header-section-number">1.1</span>
 Overview</h2>
@@ -370,7 +376,8 @@ Obiettivi</h2>
 <section id="foostato-dellarte" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Stato
 dell&#x2019;Arte</h1>
-<p>... non so se volgiamo farlo, ma forse un due righe non guastano</p>
+<p>... non so se volgiamo farlo, ma forse un due righe non guastano (Rimuovere
+capitolo e unire "la nostra idea si differenzia per" nel capitolo 1)</p>
 <p>Il topic scelto ha parecchie varianti:</p>
 <ul>
 <li><p>Uno</p></li>
@@ -409,8 +416,27 @@ permettere ...</p>
 <section id="fooscrum" class="level3" data-number="3.2.1">
 <h3 data-number="3.2.1"><span class="header-section-number">3.2.1</span>
 Scrum</h3>
-<p>Sprint, Sprint Planning, product-backlog, daily-Scrum, "Definition of
-Done", "refinement" del backlog,</p>
+<p>Secondo il framework "Scrum" il lavoro va diviso in pi&#xF9; sprint seguendo un
+approccio iterativo. Il team mantiene due tipi di backlog, il product backlog
+e lo sprint backlog.. Sprint Planning... Product-backlog... Daily-Scrum...
+Definition of Done ... "refinement" del backlog... <strong>Definition of
+done:</strong> Un item del product backlog si ritiene concluso quando tutti i
+task che lo compongono sono stati completati, il codice implementato &#xE8; stato
+adeguatamente testato con esito positivo e la relativa documentazione &#xE8; stata
+scritta. <strong>Scrum poker:</strong> Per stimare il livello di effort
+necessario per il completamento di ogni task &#xE8; stata utilizzata la tecnica che
+viene chiamata <strong>scrum poker</strong>. Questa tecnica consiste nella
+lettura e discussione di un task e degli aspetti che lo riguardano e nella
+scelta, da parte di ogni membro del team, di un valore di effort stimato
+scegliendo tra 1, 2, 3, 5, 8, 13, 20 il numero che ritiene pi&#xF9; adeguato a
+rappresentare la complessit&#xE0; del task tenendo conto ad esempio del tempo
+ritenuto necessario per lo sviluppo o la complessit&#xE0; stimata del task stesso.
+A seguito della scelta di un numero da parte di ogni membro vengono rivelati i
+numeri scelti e si cerca di raggiungere consenso sulla scelta del numero
+finale, eventualmente argomentando la propria decisione. La scelta del set di
+numeri da assegnare &#xE8; tale da avere volutamente ampi intervalli tra i numeri
+per ridurre conflitti e raggiungere con maggiore semplicit&#xE0; una situazione di
+consenso.</p>
 </section>
 </section>
 <section id="foogestione-di-progetto" class="level2" data-number="3.3">
@@ -434,17 +460,17 @@ class="header-section-number">3.3.0.0.3</span> Versioning</h5>
 </section>
 <section id="foogithub-projects" class="level5" data-number="3.3.0.0.4">
 <h5 data-number="3.3.0.0.4"><span
-class="header-section-number">3.3.0.0.4</span> GitHub Projects </h5>
-<p>Per le Board di Scrum &#xE8; stato utilizzato GitHub Projects...</p>
+class="header-section-number">3.3.0.0.4</span> GitHub-Projects</h5>
+<p>Per le Board di Scrum &#xE8; stato utilizzato GitHub-Projects...</p>
 </section>
 <section id="footelegram" class="level5" data-number="3.3.0.0.5">
 <h5 data-number="3.3.0.0.5"><span
 class="header-section-number">3.3.0.0.5</span> Telegram</h5>
-<p>scelta telegram...</p>
+<p>scelta Telegram...</p>
 <section id="foobot" class="level6" data-number="3.3.0.0.5.1">
 <h6 data-number="3.3.0.0.5.1"><span
 class="header-section-number">3.3.0.0.5.1</span> Bot</h6>
-<p>teleram bot...</p>
+<p>Telegram bot...</p>
 </section>
 </section>
 <section id="foodiscord" class="level5" data-number="3.3.0.0.6">
@@ -497,10 +523,66 @@ class="header-section-number">3.4.2.0.0.1</span> Tool utilizzati</h6>
 data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Analisi dello
 spazio del problema</h1>
-<section id="fooknowledge-crunching" class="level2" data-number="4.1">
-<h2 data-number="4.1"><span class="header-section-number">4.1</span> Knowledge
-crunching</h2>
-<p>...</p>
+<section id="foointervista-con-il-committente" class="level2"
+data-number="4.1">
+<h2 data-number="4.1"><span class="header-section-number">4.1</span>
+Intervista con il committente</h2>
+<p>Inizialmente l&#x2019;esperto del dominio &#xE8; stato contattato per un&#x2019;intervista
+preliminare (sotto riportata). La sessione si &#xE8; svolta in via telematica ed ha
+avuto lo scopo di prendere familiarit&#xE0; con l&#x2019;ambito di lavoro e individuare i
+requisiti del software ad esso collegato. Nel colloquio il problema &#xE8; emerso
+chiaramente e la soluzione software &#xE8; stata individuata in maniera univoca. In
+seguito sono stati definiti incontri periodici con il committente per la
+valutazione del progresso e i feedback sui deliverables di ogni sprint. Di
+seguito si riporta l&#x2019;intervista:</p>
+<p>Sono uno studente di Ingegneria e Scienze Informatiche dell&#x2019;Universit&#xE0; di
+Bologna presso la sede di Cesena. In questi anni ho dovuto studiare e
+ripassare la teoria per molti esami e ho trovato utile porre a me stesso delle
+domande alle quali dover rispondere, cos&#xEC; da verificare la conoscenza della
+materia. In particolare, dopo aver acquisito una discreta quantit&#xE0; di nozioni,
+ho riscontrato la necessit&#xE0; di rivedere, in maniera generale, se riuscissi a
+ricordare i concetti principali per ogni topic dell&#x2019;esame in questione. Per
+questo motivo, sarebbe utile poter avere a disposizione uno strumento che
+permetta di rendere pi&#xF9; stimolante il ripasso pre esame. Ad esempio, vorrei
+non dover pi&#xF9; scrivere su un foglio le domande e le relative risposte corrette
+e sbagliate. In pi&#xF9;, vorrei poterle integrare con quelle dei miei compagni e
+viceversa, in modo da coprire il pi&#xF9; possibile tutti gli argomenti di un
+esame. Vorrei anche potermi esercitare sulle domande che sbaglio pi&#xF9; spesso,
+per migliorare le lacune. Trovo utile poter ripassare pi&#xF9; materie
+contemporaneamente nei periodi di sessione, in cui ho pi&#xF9; esami nella stessa
+settimana. Inoltre poter rispondere a pi&#xF9; domande possibili nel minor tempo
+possibile, cos&#xEC; da essere sicuro di riuscire a rispondere velocemente durante
+gli orali.</p>
+<ol>
+<li><p>Abbiamo pensato che il modo pi&#xF9; divertente per poter studiare e
+ripassare potrebbe essere quello di fare un gioco a quiz, dove viene posta una
+domanda e quattro possibili risposte. Potrebbe essere utile?</p>
+<p>Sarebbe molto interessante, cos&#xEC; non mi annoierei. Metterei un&#x2019;unica
+risposta corretta e le altre tre sbagliate. Ogni volta che ripasso una materia
+in particolare, le domande sono sempre le stesse? Perch&#xE9; a me piacerebbe
+rispondere correttamente attraverso il ragionamento, non solo ricordandomi a
+memoria la risposta data in precedenza.</p></li>
+<li><p>Per quanto riguarda il numero di domande per ogni argomento, abbiamo
+pensato di inserirne una quantit&#xE0; tale da avere sempre un ricambio adeguato ed
+evitare il ricircolo delle stesse. Inoltre anche le risposte saranno un numero
+superiore alle quattro visibili per ogni domanda. Quali modalit&#xE0; di gioco
+vorresti avere a disposizione?</p>
+<p>Mi piacerebbe poter scegliere se rispondere a domande di uno specifico
+corso o di pi&#xF9; corsi durante lo stesso quiz.</p></li>
+<li><p>Riguardo al tempo disponibile per rispondere, preferisce avere un tempo
+limite per ogni singolo quesito o per l&#x2019;intera sessione di gioco?</p>
+<p>Sicuramente vorrei avere un tempo limitato ad ogni domanda, per non
+incorrere nella tentazione di barare. Qualora fosse possibile avere anche una
+modalit&#xE0; di gioco con un tempo limite globale sarebbe molto
+divertente.</p></li>
+<li><p>Invece quali schermate di gioco vorresti visualizzare?</p>
+<p>Dal menu principale vorrei poter scegliere le varie modalit&#xE0; di gioco,
+poter aggiungere ed esportare le domande e le risposte dei corsi e
+visualizzare le statistiche sulle partite effettuate in precedenza. Invece a
+fine partita vorrei visualizzare un riepilogo di tutte le domande presenti nel
+quiz appena concluso ed eventualmente, in caso di risposta errata,
+visualizzare la risposta corretta.</p></li>
+</ol>
 </section>
 </section>
 <section id="fooanalisi-dei-requisiti" class="level1" data-number="5">
@@ -515,6 +597,17 @@ di Business</h2>
 <section id="foorequisiti-utente" class="level2" data-number="5.2">
 <h2 data-number="5.2"><span class="header-section-number">5.2</span> Requisiti
 Utente</h2>
+<p>Uno user dell&#x2019;applicazione dovr&#xE0; quindi essere in grado di:</p>
+<ul>
+<li><p>ripassare: visualizzare domande e scegliere tra le possibili
+risposte</p></li>
+<li><p>scegliere tra varie modalit&#xE0; di gioco</p></li>
+<li><p>visualizzare un riepilogo a fine partita</p></li>
+<li><p>visualizzare le proprie statistiche su tutte le partite
+effettuate</p></li>
+<li><p>importare ed esportare nuove domande e risposte indicando la materia a
+cui si riferiscono</p></li>
+</ul>
 <p>Si possono inserire qui i mockup</p>
 </section>
 <section id="foorequisiti-funzionali" class="level2" data-number="5.3">
@@ -563,14 +656,32 @@ semplificare la scelta della risposta</p></li>
 scegliere una modalit&#xE0; di gioco in cui ripassare esclusivamente le domande
 precedentemente sbagliate</p></li>
 <li><p><strong>Medaglie-achievement</strong> quando si completano delle sfide
-(es. aver risposto bene a tutte le domande di una materia)</p></li>
+(es. pi&#xF9; punti di un certo limite, pi&#xF9; giornate continuativamente, aver
+risposto bene a tutte le domande di una materia)</p></li>
 </ul>
 </section>
 </section>
 <section id="foorequisiti-non-funzionali" class="level2" data-number="5.4">
 <h2 data-number="5.4"><span class="header-section-number">5.4</span> Requisiti
 non Funzionali</h2>
-<p>...</p>
+<ul>
+<li><p>Interfaccia grafica intuitiva e che fornisca feedback coerenti
+all&#x2019;utente per comunicargli lo stato delle sue azioni (ad esempio indicando
+con colore verde e checkmark una risposta qualora essa sia corretta)</p></li>
+<li><p>Interfaccia grafica accessibile agli utenti daltonici</p></li>
+<li><p>Interfaccia grafica reattiva: alle azioni di un utente devono
+corrispondere degli aggiornamenti dell&#x2019;interfaccia stessa in tempi ragionevoli
+per non rovinare la user experience</p></li>
+<li><p>Realizzare un sistema modulare che permetta estensioni future (ad
+esempio uno sviluppo distribuito che permetta di realizzare funzionalit&#xE0; di
+gioco multiplayer)</p></li>
+<li><p>Il sistema deve essere funzionante in diversi sistemi operativi nei
+quali &#xE8; installata una appropriata Java Virtual Machine (il requisito minimo
+considera il funzionamento su sistemi Windows, Linux e MacOS)</p></li>
+<li><p>Il sistema deve essere fault-tolerant, cio&#xE8; deve continuare a
+funzionare in modo affidabile e deve essere privo di falle che permettano al
+giocatore di barare.</p></li>
+</ul>
 </section>
 <section id="foorequisiti-implementativi" class="level2" data-number="5.5">
 <h2 data-number="5.5"><span class="header-section-number">5.5</span> Requisiti
