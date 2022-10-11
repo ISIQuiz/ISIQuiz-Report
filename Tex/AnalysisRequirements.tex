@@ -10,6 +10,15 @@ Come abbiamo trovato i \textbf{requisiti}
 	...
 	
 	\section{Requisiti Utente}
+    Uno user dell'applicazione dovrà quindi essere in grado di:
+    \begin{itemize}
+        \item ripassare: visualizzare domande e scegliere tra le possibili risposte
+        \item scegliere tra varie modalità di gioco
+        \item visualizzare un riepilogo a fine partita
+        \item visualizzare le proprie statistiche su tutte le partite effettuate
+        \item importare ed esportare nuove domande e risposte indicando la materia a cui si riferiscono
+    \end{itemize}
+ 
 	Si possono inserire qui i mockup
 	    
 	\section{Requisiti Funzionali} 
@@ -40,10 +49,19 @@ Come abbiamo trovato i \textbf{requisiti}
             \item \textbf{Sfida a tempo}: rispondere a più domande possibili in un intervallo di tempo limitato
             \item \textbf{Aiuti su richiesta}: all’utente vengono messi a disposizione un numero specifico di aiuti ad ogni partita con i quali semplificare la scelta della risposta
             \item \textbf{Revisione solo delle risposte sbagliate}: l’utente può scegliere una modalità di gioco in cui ripassare esclusivamente le domande precedentemente sbagliate
-            \item \textbf{Medaglie-achievement} quando si completano delle sfide (es. aver risposto bene a tutte le domande di una materia)
+            \item \textbf{Medaglie-achievement} quando si completano delle sfide (es. più punti di un certo limite, più giornate continuativamente, aver risposto bene a tutte le domande di una materia)
         \end{itemize}
 	\section{Requisiti non Funzionali}
-	...
+        \begin{itemize}
+            \item Interfaccia grafica intuitiva e che fornisca feedback coerenti all'utente per comunicargli lo stato delle sue azioni (ad esempio indicando con colore verde e checkmark una risposta qualora essa sia corretta)
+            \item Interfaccia grafica accessibile agli utenti daltonici
+            \item Interfaccia grafica reattiva: alle azioni di un utente devono corrispondere degli aggiornamenti dell'interfaccia stessa in tempi ragionevoli per non rovinare la user experience
+            \item Realizzare un sistema modulare che permetta estensioni future (ad esempio uno sviluppo distribuito che permetta di realizzare funzionalità di gioco multiplayer)
+            \item Il sistema deve essere funzionante in diversi sistemi operativi nei quali è installata una appropriata Java Virtual Machine (il requisito minimo considera il funzionamento su sistemi Windows, Linux e MacOS)
+            \item Il sistema deve essere fault-tolerant, cioè deve continuare a funzionare in modo affidabile e deve essere privo di falle che permettano al giocatore di barare.
+        
+        \end{itemize}
 
 	\section{Requisiti Implementativi}
 	...
+	
