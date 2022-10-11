@@ -35,7 +35,6 @@ sorting=ynt
 
 
 %Import
-
 \usepackage{tabularx}
 \usepackage{marvosym}
 \usepackage{fancyvrb}
@@ -104,7 +103,11 @@ coltitle=black,center title}}
 %PATH IMMAGINI
 %\graphicspath{{Images/}{DrawIo/}}
 \newcommand{\emailaddr}[1]{\href{mailto:#1}{\texttt{#1}}}
-
+%QandA
+\usepackage{enumitem}
+\newenvironment{QandA}{\begin{enumerate}[label=\bfseries\alph*.]\bfseries}
+                      {\end{enumerate}}
+\newenvironment{answered}{\par\normalfont}{}
 
 \title{\LARGE
     RELAZIONE DI PROGETTO  \\ DI \\ PARADIGMI DI PROGRAMMAZIONE E SVILUPPO \\
