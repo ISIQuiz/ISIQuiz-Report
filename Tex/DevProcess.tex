@@ -52,22 +52,38 @@ In questa sezione verrà spiegato come il progetto...
 
 \section{Continuous Integration e Automatizzazione}
 \label{chap:CI}
-CI e Automatizzazione
+Nel progetto la Continuous Integration (CI) e L'Automatizzazione delle mansioni più ripetitive hanno avuto notevole importanza. Una cospicua quantità di tempo è stata dedicata all'inizio per la messa in opera di pipeline che permettano di risparmiare tempo successivamente agli sviluppatori e di garantire la massima qualità al cliente finale.
     \subsection{Relazione}
-        relazione su overleaf e relativa CI
-        
         \subparagraph{Tool utilizzati}
         \begin{itemize}
+            \item \LaTeX
             \item Overleaf
             \item GitHub Actions
             \item Telegram Bots
             \item Pandoc
             \item GitHub Pages
         \end{itemize}
+        La relazione di progetto è stata svolta in \textbf{\LaTeX}. Questa decisione è motivata dal fatto che esso permette facilmente di organizzare lunghi testi in capitoli e sottocapitoli, eventualmente riordinando intere parti senza preoccuparsi dell'indice o della formattazione. Inoltre, permette la gestione in maniera più accurata, rispetto al Markdown, di elementi grafici, tabelle, stili, link e referenze, producendo un pdf finale molto più professionale. 
+        
+        Come strumento complementare è stato scelto \textbf{Overleaf}. La piattaforma permette di collaborare ininterrottamente e simultaneamente sullo stesso blocco di testo. Questo è risultato particolarmente utile nelle discussioni e nel produrre la documentazione negli "Sprint-planning" e, sopratutto, negli "Sprint-review". Particolarmente significative sono state le funzioni di poter generare immediatamente il pdf per osservare il risultato e poter raggiungere il cursore di altri membri del gruppo per osservare la documentazione prodotta in itinere. Ciò ha snellito molto il processo e ha eliminato laboriose review dei commit fatti con relativi commenti.  
+
+        Dal lato "Continuous Integration", sono state sfruttate a pieno le \textbf{GitHub-Actions} messe a disposizione da GitHub. Queste permettono di generare il pdf finale in automatico e di renderlo pubblico con Release istantanee ad ogni cambiamento. Ciò ha non solo alleviato la preoccupazione di farlo manualmente, ma ha anche permesso di rendere disponibile al cliente sempre l'ultima versione aggiornata. 
+
+        Per garantire la massima qualità, un \textbf{Bot Telegram} è stato utilizzato come strumento di notifica nel gruppo Telegram dedicato. Il Bot notifica come in [Fig. \ref{fig:ci-github}] qualora ci sia qualunque problema in ogni step della CI, altrimenti avverte che l'azione è stata portata a termine correttamente, inoltrando anche il pdf sul gruppo. 
+
+        \begin{figure}[H]
+            \caption{Pipeline GitHub Actions}
+            \label{fig:ci-github}
+            \centering
+            \includegraphics[width=1\textwidth]{Images/gh-pipeline.png}
+        \end{figure}
+
+        Qualora una persona volesse consultare la relazione online, senza scaricare il pdf, si è fatto uso di \textbf{Pandoc} per generare il relativo sito web, consultabile comodamente sul browser. Per la paginazione un template html/css è stato utilizzato per rendere la vista più accattivante.
+
+        Il deploy del sito, infine, è stato utilizzato \textbf{GitHub-Pages} che permette di semplificarne la messa in opera avendo un branch dedicato sul quale tutti i file relativi possono essere mantenuti e aggiornati.
+        
 
     \subsection{Progetto}
-        CI progetto, Test, Coverage, Documentazione, Quality assurance, bla bla
-        
         \subparagraph{Tool utilizzati}
         \begin{itemize}
             \item Sbt
@@ -78,7 +94,8 @@ CI e Automatizzazione
             \item Dependabot
             \item Sonarcloud/Codacy/Codefactor
         \end{itemize}
-
+    CI progetto, Test, Coverage, Documentazione, Quality assurance, bla bla
+        
 
 
 
