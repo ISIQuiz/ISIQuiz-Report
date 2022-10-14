@@ -27,7 +27,7 @@ PARADIGMI DI PROGRAMMAZIONE E SVILUPPO<br />
                 <meta name="author" content="Lirussi Igor igor.lirussi@studio.unibo.it" />
                 <meta name="author" content="Omiccioli Riccardo riccardo.omiccioli@studio.unibo.it" />
                 <meta name="author" content="Teodorani Cecilia cecilia.teodorani@studio.unibo.it   " />
-                        <meta name="date" content="2022-10-11" />
+                        <meta name="date" content="2022-10-14" />
                 <title> RELAZIONE DI PROGETTO DI PARADIGMI DI PROGRAMMAZIONE E SVILUPPO  ISIQuiz  </title>
         <style type="text/css">code{white-space: pre;}</style>
                                 <link rel="stylesheet" href="./pandoc-uikit/uikit.css" />
@@ -47,7 +47,7 @@ PARADIGMI DI PROGRAMMAZIONE E SVILUPPO<br />
 <br />
 <strong>ISIQuiz</strong><br />
 <br /></h1>
-                                        <h1 class="uk-heading" style="margin:0">2022-10-11</h1>
+                                        <h1 class="uk-heading" style="margin:0">2022-10-14</h1>
                                                             <p class="uk-text-large">Gambaletta
 Daniele<br />
 <a
@@ -482,27 +482,71 @@ class="header-section-number">3.3.0.0.6</span> Discord</h5>
 <section id="foochap:CI" class="level2" data-number="3.4">
 <h2 data-number="3.4"><span class="header-section-number">3.4</span>
 Continuous Integration e Automatizzazione</h2>
-<p>CI e Automatizzazione</p>
+<p>Nel progetto la Continuous Integration (CI) e L&#x2019;Automatizzazione delle
+mansioni pi&#xF9; ripetitive hanno avuto notevole importanza. Una cospicua quantit&#xE0;
+di tempo &#xE8; stata dedicata all&#x2019;inizio per la messa in opera di pipeline che
+permettano di risparmiare tempo successivamente agli sviluppatori e di
+garantire la massima qualit&#xE0; al cliente finale.</p>
 <section id="foorelazione" class="level3" data-number="3.4.1">
 <h3 data-number="3.4.1"><span class="header-section-number">3.4.1</span>
 Relazione</h3>
-<p>relazione su overleaf e relativa CI</p>
 <section id="footool-utilizzati" class="level6" data-number="3.4.1.0.0.1">
 <h6 data-number="3.4.1.0.0.1"><span
 class="header-section-number">3.4.1.0.0.1</span> Tool utilizzati</h6>
 <ul>
+<li><p>LaTeX</p></li>
 <li><p>Overleaf</p></li>
 <li><p>GitHub Actions</p></li>
 <li><p>Telegram Bots</p></li>
 <li><p>Pandoc</p></li>
 <li><p>GitHub Pages</p></li>
 </ul>
+<p>La relazione di progetto &#xE8; stata svolta in <strong>LaTeX</strong>. Questa
+decisione &#xE8; motivata dal fatto che esso permette facilmente di organizzare
+lunghi testi in capitoli e sottocapitoli, eventualmente riordinando intere
+parti senza preoccuparsi dell&#x2019;indice o della formattazione. Inoltre, permette
+la gestione in maniera pi&#xF9; accurata, rispetto al Markdown, di elementi
+grafici, tabelle, stili, link e referenze, producendo un pdf finale molto pi&#xF9;
+professionale.</p>
+<p>Come strumento complementare &#xE8; stato scelto <strong>Overleaf</strong>. La
+piattaforma permette di collaborare ininterrottamente e simultaneamente sullo
+stesso blocco di testo. Questo &#xE8; risultato particolarmente utile nelle
+discussioni e nel produrre la documentazione negli "Sprint-planning" e,
+sopratutto, negli "Sprint-review". Particolarmente significative sono state le
+funzioni di poter generare immediatamente il pdf per osservare il risultato e
+poter raggiungere il cursore di altri membri del gruppo per osservare la
+documentazione prodotta in itinere. Ci&#xF2; ha snellito molto il processo e ha
+eliminato laboriose review dei commit fatti con relativi commenti.</p>
+<p>Dal lato "Continuous Integration", sono state sfruttate a pieno le
+<strong>GitHub-Actions</strong> messe a disposizione da GitHub. Queste
+permettono di generare il pdf finale in automatico e di renderlo pubblico con
+Release istantanee ad ogni cambiamento. Ci&#xF2; ha non solo alleviato la
+preoccupazione di farlo manualmente, ma ha anche permesso di rendere
+disponibile al cliente sempre l&#x2019;ultima versione aggiornata.</p>
+<p>Per garantire la massima qualit&#xE0;, un <strong>Bot Telegram</strong> &#xE8; stato
+utilizzato come strumento di notifica nel gruppo Telegram dedicato. Il Bot
+notifica come in [Fig. <a href="#foofig:ci-github" data-reference-type="ref"
+data-reference="fig:ci-github">3.1</a>] qualora ci sia qualunque problema in
+ogni step della CI, altrimenti avverte che l&#x2019;azione &#xE8; stata portata a termine
+correttamente, inoltrando anche il pdf sul gruppo.</p>
+<figure>
+<img src="Images/gh-pipeline.png" id="foofig:ci-github" style="width:100.0%"
+alt="Pipeline GitHub Actions" />
+<figcaption aria-hidden="true">Pipeline GitHub Actions</figcaption>
+</figure>
+<p>Qualora una persona volesse consultare la relazione online, senza scaricare
+il pdf, si &#xE8; fatto uso di <strong>Pandoc</strong> per generare il relativo
+sito web, consultabile comodamente sul browser. Per la paginazione un template
+html/css &#xE8; stato utilizzato per rendere la vista pi&#xF9; accattivante.</p>
+<p>Il deploy del sito, infine, &#xE8; stato utilizzato
+<strong>GitHub-Pages</strong> che permette di semplificarne la messa in opera
+avendo un branch dedicato sul quale tutti i file relativi possono essere
+mantenuti e aggiornati.</p>
 </section>
 </section>
 <section id="fooprogetto" class="level3" data-number="3.4.2">
 <h3 data-number="3.4.2"><span class="header-section-number">3.4.2</span>
 Progetto</h3>
-<p>CI progetto, Test, Coverage, Documentazione, Quality assurance, bla bla</p>
 <section id="footool-utilizzati-1" class="level6" data-number="3.4.2.0.0.1">
 <h6 data-number="3.4.2.0.0.1"><span
 class="header-section-number">3.4.2.0.0.1</span> Tool utilizzati</h6>
@@ -515,6 +559,7 @@ class="header-section-number">3.4.2.0.0.1</span> Tool utilizzati</h6>
 <li><p>Dependabot</p></li>
 <li><p>Sonarcloud/Codacy/Codefactor</p></li>
 </ul>
+<p>CI progetto, Test, Coverage, Documentazione, Quality assurance, bla bla</p>
 </section>
 </section>
 </section>
