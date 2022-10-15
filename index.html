@@ -175,6 +175,12 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
                                                         class="toc-section-number">4.1</span>
                                                         Intervista con il
                                                         committente</a></li>
+                                                        <li><a
+                                                        href="#fooubiquitous-language"
+                                                        id="footoc-ubiquitous-language"><span
+                                                        class="toc-section-number">4.2</span>
+                                                        Ubiquitous
+                                                        Language</a></li>
                                                         </ul></li>
                                                         <li><a
                                                         href="#fooanalisi-dei-requisiti"
@@ -335,11 +341,6 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
                                                         Sviluppi
                                                         Futuri</a></li>
                                                         </ul></li>
-                                                        <li><a
-                                                        href="#fooglossario"
-                                                        id="footoc-glossario"><span
-                                                        class="toc-section-number">12</span>
-                                                        Glossario</a></li>
                                                         </ul>
                             
                         </div>
@@ -569,7 +570,9 @@ class="header-section-number">3.4.2.0.0.1</span> Tool utilizzati</h6>
 <li><p>Telegram Bots</p></li>
 <li><p>Dependabot</p></li>
 <li><p>Sonarcloud/Codacy/Codefactor</p></li>
-<li><p>Miro board</p></li>
+<li><p><a
+href="https://miro.com/app/board/uXjVPN93uLs=/?share_link_id=56431555728">Miro
+board</a></p></li>
 </ul>
 <p>CI progetto, Test, Coverage, Documentazione, Quality assurance, bla bla</p>
 </section>
@@ -580,18 +583,17 @@ class="header-section-number">3.4.2.0.0.1</span> Tool utilizzati</h6>
 data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Analisi dello
 spazio del problema</h1>
-<section id="foointervista-con-il-committente" class="level2"
-data-number="4.1">
-<h2 data-number="4.1"><span class="header-section-number">4.1</span>
-Intervista con il committente</h2>
 <p>Inizialmente l&#x2019;esperto del dominio &#xE8; stato contattato per un&#x2019;intervista
 preliminare (sotto riportata). La sessione si &#xE8; svolta in via telematica ed ha
 avuto lo scopo di prendere familiarit&#xE0; con l&#x2019;ambito di lavoro e individuare i
 requisiti del software ad esso collegato. Nel colloquio il problema &#xE8; emerso
 chiaramente e la soluzione software &#xE8; stata individuata in maniera univoca. In
 seguito sono stati definiti incontri periodici con il committente per la
-valutazione del progresso e i feedback sui deliverables di ogni sprint. Di
-seguito si riporta l&#x2019;intervista:</p>
+valutazione del progresso e i feedback sui deliverables di ogni sprint.</p>
+<section id="foointervista-con-il-committente" class="level2"
+data-number="4.1">
+<h2 data-number="4.1"><span class="header-section-number">4.1</span>
+Intervista con il committente</h2>
 <p>Sono uno studente di Ingegneria e Scienze Informatiche dell&#x2019;Universit&#xE0; di
 Bologna presso la sede di Cesena. In questi anni ho dovuto studiare e
 ripassare la teoria per molti esami e ho trovato utile porre a me stesso delle
@@ -641,13 +643,26 @@ quiz appena concluso ed eventualmente, in caso di risposta errata,
 visualizzare la risposta corretta.</p></li>
 </ol>
 </section>
+<section id="fooubiquitous-language" class="level2" data-number="4.2">
+<h2 data-number="4.2"><span class="header-section-number">4.2</span>
+Ubiquitous Language</h2>
+<p>Per chiarire il gergo usato tra il committente e gli sviluppatori &#xE8;
+risultato essenziale adottare dei significati condivisi per i termini
+maggiormente usati. Ci&#xF2; ha aiutato notevolmente anche la comunicazione tra gli
+sviluppatori stessi per non incorrere in malintesi.</p>
+<figure>
+<img src="Miro/ubiquitous-language.jpg" id="foofig:ubiquitouslanguage"
+style="width:90.0%" alt="Tabella ubiquitous language" />
+<figcaption aria-hidden="true">Tabella ubiquitous language</figcaption>
+</figure>
+</section>
 </section>
 <section id="fooanalisi-dei-requisiti" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Analisi dei
 Requisiti</h1>
 <p>A seguito dell&#x2019;intervista con l&#x2019;esperto del dominio, sono stati elaborati i
 seguenti requisiti per l&#x2019;applicativo richiesto. Questi sono stati poi discussi
-e approvati dal cliente.</p>
+e approvati dal committente.</p>
 <section id="foorequisiti-di-business" class="level2" data-number="5.1">
 <h2 data-number="5.1"><span class="header-section-number">5.1</span> Requisiti
 di Business</h2>
@@ -682,7 +697,7 @@ raccolti, il team di sviluppo ha prodotto i mockup per due diversi
 applicativi: <a href="#foomockup1" data-reference-type="ref"
 data-reference="mockup1">5.2.1.1</a> e <a href="#foomockup2"
 data-reference-type="ref" data-reference="mockup2">5.2.1.2</a>. In seguito,
-questi sono stati sottoposti al cliente, il quale ha riscontrato aspetti
+questi sono stati sottoposti al committente, il quale ha riscontrato aspetti
 positivi e negativi in entrambe le proposte. Di conseguenza, i mockup
 definitivi <a href="#foomockupFinished" data-reference-type="ref"
 data-reference="mockupFinished">5.2.1.3</a> sono stati sviluppati con la sua
@@ -830,7 +845,7 @@ in base al numero di risposte corrette o errate date nella partita conclusa.
 risposta correttamente? Se vengono utilizzati degli aiuti il punteggio
 cala?)</p></li>
 <li><p><strong>Visualizzazione e salvataggio delle statistiche
-personali</strong>: nello specifico le statistiche personali includono:</p>
+personali</strong>: in specifico le statistiche personali includono:</p>
 <ol>
 <li><p>Totale domande risposte</p></li>
 <li><p>Totale risposte corrette</p></li>
@@ -1066,13 +1081,6 @@ Conclusioni</h1>
 <h2 data-number="11.1"><span class="header-section-number">11.1</span>
 Sviluppi Futuri</h2>
 <p>In futuro ...</p>
-</section>
-</section>
-<section id="fooglossario" class="level1" data-number="12">
-<h1 data-number="12"><span class="header-section-number">12</span>
-Glossario</h1>
-<p>Cliente = esperto del dominio</p>
-<p>Esame = Corso = Materia</p>
 <div id="foorefs" class="references csl-bib-body hanging-indent"
 role="doc-bibliography">
 <div id="fooref-uasyncio" class="csl-entry" role="doc-biblioentry">
@@ -1090,6 +1098,7 @@ StackOverflow. s.d. <a
 href="https://stackoverflow.com/">https://stackoverflow.com/</a>.
 </div>
 </div>
+</section>
 </section>                    
                 </div>
             </div>
