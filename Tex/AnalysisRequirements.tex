@@ -5,9 +5,14 @@
 % Attenzione in particolare ai requirement non funzionali: 1) non siano troppo vaghi altrimenti sono inverificabili, e quindi praticamente inutili; 2) se il sistema è distribuito, è inevitable dire cosa vi aspettate in termini di di robustezza a cambiamenti/guasti (quali?, come?), e scalabilità (in quale dimensione? fino a che punto?).
 
 \chapter{Analisi dei Requisiti}
-Come abbiamo trovato i \textbf{requisiti}
+A seguito dell'intervista con l'esperto del dominio, sono stati elaborati i seguenti requisiti per l'applicativo richiesto. Questi sono stati poi discussi e approvati dal cliente.
 	\section{Requisiti di Business}
-	...
+	\begin{itemize}
+        \item selezione di N domande tra i C corsi scelti dell'utente
+        \item gestione delle domande e delle relative risposte permettendo l'editing, il salvataggio e il caricamento delle stesse
+        \item elaborare un riepilogo al termine di ogni partita
+        \item elaborare e salvare alcune statistiche di interesse relativamente ad un utente
+    \end{itemize}
 	
 	\section{Requisiti Utente}
     Uno user dell'applicazione dovrà quindi essere in grado di:
@@ -19,37 +24,149 @@ Come abbiamo trovato i \textbf{requisiti}
         \item importare ed esportare nuove domande e risposte indicando la materia a cui si riferiscono
     \end{itemize}
  
-	Si possono inserire qui i mockup
+        \subsection{Mockup}
+    	A seguito dell'intervista fatta con l'esperto del dominio e dei requisiti raccolti, il team di sviluppo ha prodotto i mockup per due diversi applicativi: \ref{mockup1} e \ref{mockup2}. In seguito, questi sono stati sottoposti al cliente, il quale ha riscontrato aspetti positivi e negativi in entrambe le proposte. Di conseguenza, i mockup definitivi \ref{mockupFinished} sono stati sviluppati con la sua collaborazione e supervisione.
+
+        \subsubsection{Mockup applicativo uno}\label{mockup1}
+    	\begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{Images/mockup/home1.jpg}
+            \caption{Pagina Iniziale}
+            \label{fig:HomePage1}
+        \end{figure}
+        
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{Images/mockup/start1.jpg}
+            \caption{Settaggio di una partita prima di iniziarla}
+            \label{fig:Start1}
+        \end{figure}
+          
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{Images/mockup/quiz1.jpg}
+            \caption{Quiz}
+            \label{fig:Quiz1}
+        \end{figure}
+        
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{Images/mockup/achivements1.jpg}
+            \caption{Statistiche di gioco e obiettivi raggiunti}
+            \label{fig:Achievements1}
+        \end{figure}
+          
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{Images/mockup/settings1.jpg}
+            \caption{Impostazioni Generali}
+            \label{fig:Settings1}
+        \end{figure}
+        
+        \subsubsection{Mockup applicativo due}\label{mockup2}
+        
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{Images/mockup/home2.jpg}
+            \caption{Pagina Iniziale}
+            \label{fig:HomePage2}
+        \end{figure}
+        
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{Images/mockup/quiz2.jpg}
+            \caption{Quiz}
+            \label{fig:Quiz2}
+        \end{figure}
+        
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{Images/mockup/import2.jpg}
+            \caption{Inserimento di nuove domande e relative risposte per un determinato corso}
+            \label{fig:Import2}
+        \end{figure}
+        
+        \subsubsection{Mockup definitivi}\label{mockupFinished}
 	    
 	\section{Requisiti Funzionali} 
         \subsection{Obbligatori}
         All’interno di ogni partita, vengono presentate all’utente diverse domande di natura accademica, ognuna delle quali viene accompagnata da un numero predeterminato di risposte possibili, alcune corrette ed altre sbagliate. L’utente dovrà individuare le risposte corrette in un tempo massimo per non fallire la domanda. 
 
-        \begin{itemize}
-            \item \textbf{Modalità di gioco generale}: domande a scelta multipla su tutti i corsi disponibili
+        \begin{enumerate}
+            \item \textbf{Modalità di gioco generale}: domande a scelta multipla su tutti i corsi disponibili: al giocatore verranno poste N domande scelte casualmente tra tutti i corsi disponibili nel gioco. Ogni domanda dovrà essere risposta in T tempo massimo altrimenti verrà considerata errata.
             
-            \item \textbf{Modalità di gioco materie a scelta}: domande a scelta multipla su più materie scelte dal giocatore
+            \item \textbf{Modalità di gioco materie a scelta}: domande a scelta multipla su più materie scelte dal giocatore: domande a scelta multipla su alcuni dei corsi scelti dal giocatore tra tutti i corsi disponibili: al giocatore verranno poste N domande scelte casualmente tra tutti i corsi selezionati. Ogni domanda dovrà essere risposta in T tempo massimo altrimenti verrà considerata errata.
             
-            \item \textbf{Modalità di gioco materia specifica}: domande a scelta multipla su una sola materia scelta dal giocatore
+            \item \textbf{Modalità di gioco materia specifica}: domande a scelta multipla su una materia scelta dal giocatore: domande a scelta multipla su un corso scelto dal giocatore tra tutti i corsi disponibili: al giocatore verranno poste N domande scelte casualmente tra quelle disponibili per il corso. Ogni domanda dovrà essere risposta in T tempo massimo altrimenti verrà considerata errata.
             
-            \item \textbf{Interfaccia grafica} (CLI e poi JavaFX): visualizzazione menu principale, visualizzazione della domanda e di 4 possibili risposte da scegliere durante il gioco, visualizzazione dei risultati post partita
+            \item \textbf{Interfaccia grafica} (CLI e poi JavaFX): visualizzazione menu principale, visualizzazione della domanda e di 4 possibili risposte da scegliere durante il gioco, visualizzazione dei risultati post partita. La prima iterazione del programma dovrà fornire una semplice interfaccia grafica che permetta di interagire con le funzionalità principali del gioco scrivendo le operazioni da eseguire tramite il terminale.
+                \begin{enumerate}
+                    \item Menu principale: la prima pagina che verrà mostrata all'avvio
+                        \begin{enumerate}
+                            \item Pulsante "inizia a giocare" > pagina inizia a giocare
+                            \item Pulsante "statistiche e achievement" > pagina statistiche
+                            \item Pulsante "impostazioni" > pagina impostazioni
+                            \item Pulsante "esci" > termina l'applicazione
+                        \end{enumerate}
+                    \item Pagina statistiche: contiene informazioni sulle statistiche relative alle partite concluse e agli achievement raggiunti
+                        \begin{enumerate}
+                            \item Testo con totale domande risposte
+                            \item Testo con totale domande risposte correttamente
+                            \item Testo con totale domande risposte sbagliate
+                            \item Testo con percentuale risposte corrette
+                        \end{enumerate}
+                    \item Pagina impostazioni: permette di editare le domande e le risposte oltre a salvarle ed importarle da file
+                        \begin{enumerate}
+                            \item Casella di testo con il quale editare lo username del giocatore ?
+                            \item Form per editare le domande
+                            \item Pulsante per salvare (esportare) nuove domande > salva su file le domande di un corso
+                            \item Pulsante per importare nuove domande > permette di selezionare un file contenente le domande di un corso 
+                        \end{enumerate}
+                    \item Pagina selezione corsi: permette di selezionare prima di iniziare la partita i corsi dai quali devono essere prese le domande ed alcune impostazioni di gioco
+                        \begin{enumerate}
+                            \item Lista selezioni corsi disponibili
+                            \item Casella selezione tempo per risposta ?
+                            \item Casella selezione tempo totale ?
+                            \item Casella selezione numero domande al quale rispondere ?
+                        \end{enumerate}
+                    \item Pagina riepilogo post partita: permette di visualizzare il punteggio ottenuto nella partita appena conclusa e una lista con il riepilogo di tutte le domande con un'indicazione sulla correttezza della risposta data e, in caso di risposta errata, la risposta corretta corrispondente
+                    \begin{enumerate}
+                        \item Testo con punteggio della partita
+                        \item Lista domande della partita con risposta scelta ed eventualmente risposta corretta
+                    \end{enumerate}
+                \end{enumerate}
             
-            \item \textbf{Punteggio finale} del quiz appena effettuato: al termine della partita verrà visualizzato il punteggio ottenuto dal giocatore in base al numero di risposte corrette o errate date nella partita conclusa
+            \item \textbf{Punteggio finale} del quiz appena effettuato: al termine della partita verrà visualizzato il punteggio ottenuto dal giocatore in base al numero di risposte corrette o errate date nella partita conclusa. (Il punteggio verrà calcolato sommando i punti relativi ad ogni domanda risposta correttamente? Se vengono utilizzati degli aiuti il punteggio cala?)
             
-            \item \textbf{Visualizzazione delle statistiche personali}
+            \item \textbf{Visualizzazione e salvataggio delle statistiche personali}: nello specifico le statistiche personali includono:
+                \begin{enumerate}
+                    \item Totale domande risposte
+                    \item Totale risposte corrette
+                    \item Totale risposte errate
+                    \item Percentuale di correttezza delle risposte
+                    \item Punteggio totale giocatore
+                \end{enumerate}
             
-            \item \textbf{Più risposte giuste} e sbagliate per ogni domanda in modo da avere una rotazione tra le possibili scelte
+            \item \textbf{Più risposte giuste} e sbagliate per ogni domanda in modo da avere una rotazione tra le possibili scelte: ogni domanda dovrà necessariamente avere almeno 3 risposte errate ed 1 corretta ma potrebbe averne a disposizione un numero superiore, da scegliere poi casualmente durante il gioco. In ogni caso dovrà essere rispettato il vincolo di avere 3 risposte errate ed 1 corretta per ogni domanda durante la partita.
             
-            \item Aggiunta di \textbf{nuove domande e risposte da parte dell’utente}
-        \end{itemize}  
+            \item Aggiunta di \textbf{nuove domande e risposte da parte dell’utente}:
+                \begin{enumerate}
+                        \item Aggiunta di una nuova materia
+                        \item Aggiunta di una nuova domanda
+                        \item Aggiunta di 3 o più risposte errate relative ad una domanda
+                        \item Aggiunta di 1 o più risposta corretta relativa ad una domanda
+                        \item Aggiunta di un punteggio per una domanda ?
+                    \end{enumerate}
+        \end{enumerate}  
 
     
         \subsection{Opzionali}
         \begin{itemize}
             \item \textbf{Sfida a tempo}: rispondere a più domande possibili in un intervallo di tempo limitato
-            \item \textbf{Aiuti su richiesta}: all’utente vengono messi a disposizione un numero specifico di aiuti ad ogni partita con i quali semplificare la scelta della risposta
+            \item \textbf{Aiuti su richiesta}: all’utente vengono messi a disposizione un numero specifico di aiuti ad ogni partita con i quali semplificare la scelta della risposta. Utilizzando uno degli aiuti verrà eliminata una tra le risposte errate, semplificando così la scelta. Potranno essere utilizzati al massimo 2 aiuti per ogni domanda. (Il numero di aiuti a disposizione sarà configurabile dall'utente prima di iniziare una partita?)
             \item \textbf{Revisione solo delle risposte sbagliate}: l’utente può scegliere una modalità di gioco in cui ripassare esclusivamente le domande precedentemente sbagliate
             \item \textbf{Medaglie-achievement} quando si completano delle sfide (es. più punti di un certo limite, più giornate continuativamente, aver risposto bene a tutte le domande di una materia)
+            \item Salvataggio delle statistiche relative al tempo medio di risposta e tempo totale di gioco
         \end{itemize}
 	\section{Requisiti non Funzionali}
         \begin{itemize}
@@ -57,11 +174,17 @@ Come abbiamo trovato i \textbf{requisiti}
             \item Interfaccia grafica accessibile agli utenti daltonici
             \item Interfaccia grafica reattiva: alle azioni di un utente devono corrispondere degli aggiornamenti dell'interfaccia stessa in tempi ragionevoli per non rovinare la user experience
             \item Realizzare un sistema modulare che permetta estensioni future (ad esempio uno sviluppo distribuito che permetta di realizzare funzionalità di gioco multiplayer)
-            \item Il sistema deve essere funzionante in diversi sistemi operativi nei quali è installata una appropriata Java Virtual Machine (il requisito minimo considera il funzionamento su sistemi Windows, Linux e MacOS)
+            \item Il sistema dovrà essere in grado di memorizzare dati di interesse in maniera consistente
+            \item Il sistema deve essere funzionante in diversi sistemi operativi nei quali è installata una appropriata Java Virtual Machine (il requisito minimo considera il funzionamento su sistemi Windows, Linux e MacOS).
             \item Il sistema deve essere fault-tolerant, cioè deve continuare a funzionare in modo affidabile e deve essere privo di falle che permettano al giocatore di barare.
         
         \end{itemize}
 
 	\section{Requisiti Implementativi}
-	...
+        \begin{itemize}
+            \item Utilizzo di JDK X ?
+            \item Per il salvataggio delle domande e delle relative risposte deve essere utilizzata la notazione JSON in modo che l'integrazione con il software possa utilizzare librerie generiche già disponibili.
+            \item Per lo sviluppo dovrà essere utilizzato l'IDE IntelliJ in modo da avere consistenza tra i membri del team di sviluppo.
+        \end{itemize}
+
 	
