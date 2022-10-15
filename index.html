@@ -10,8 +10,8 @@ PARADIGMI DI PROGRAMMAZIONE E SVILUPPO<br />
 <br />
 <strong>ISIQuiz</strong><br />
 <br /></title>
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-        <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
+        <link rel="shortcut icon" type="image/png" href="favicon.png">
+        <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.26.4/css/uikit.gradient.css">
 
@@ -27,7 +27,7 @@ PARADIGMI DI PROGRAMMAZIONE E SVILUPPO<br />
                 <meta name="author" content="Lirussi Igor igor.lirussi@studio.unibo.it" />
                 <meta name="author" content="Omiccioli Riccardo riccardo.omiccioli@studio.unibo.it" />
                 <meta name="author" content="Teodorani Cecilia cecilia.teodorani@studio.unibo.it   " />
-                        <meta name="date" content="2022-10-14" />
+                        <meta name="date" content="2022-10-15" />
                 <title> RELAZIONE DI PROGETTO DI PARADIGMI DI PROGRAMMAZIONE E SVILUPPO  ISIQuiz  </title>
         <style type="text/css">code{white-space: pre;}</style>
                                 <link rel="stylesheet" href="./pandoc-uikit/uikit.css" />
@@ -47,7 +47,7 @@ PARADIGMI DI PROGRAMMAZIONE E SVILUPPO<br />
 <br />
 <strong>ISIQuiz</strong><br />
 <br /></h1>
-                                        <h1 class="uk-heading" style="margin:0">2022-10-14</h1>
+                                        <h1 class="uk-heading" style="margin:0">2022-10-15</h1>
                                                             <p class="uk-text-large">Gambaletta
 Daniele<br />
 <a
@@ -193,8 +193,14 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
                                                         href="#foorequisiti-utente"
                                                         id="footoc-requisiti-utente"><span
                                                         class="toc-section-number">5.2</span>
-                                                        Requisiti
-                                                        Utente</a></li>
+                                                        Requisiti Utente</a>
+                                                        <ul>
+                                                        <li><a
+                                                        href="#foomockup"
+                                                        id="footoc-mockup"><span
+                                                        class="toc-section-number">5.2.1</span>
+                                                        Mockup</a></li>
+                                                        </ul></li>
                                                         <li><a
                                                         href="#foorequisiti-funzionali"
                                                         id="footoc-requisiti-funzionali"><span
@@ -329,6 +335,11 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
                                                         Sviluppi
                                                         Futuri</a></li>
                                                         </ul></li>
+                                                        <li><a
+                                                        href="#fooglossario"
+                                                        id="footoc-glossario"><span
+                                                        class="toc-section-number">12</span>
+                                                        Glossario</a></li>
                                                         </ul>
                             
                         </div>
@@ -558,6 +569,7 @@ class="header-section-number">3.4.2.0.0.1</span> Tool utilizzati</h6>
 <li><p>Telegram Bots</p></li>
 <li><p>Dependabot</p></li>
 <li><p>Sonarcloud/Codacy/Codefactor</p></li>
+<li><p>Miro board</p></li>
 </ul>
 <p>CI progetto, Test, Coverage, Documentazione, Quality assurance, bla bla</p>
 </section>
@@ -633,11 +645,20 @@ visualizzare la risposta corretta.</p></li>
 <section id="fooanalisi-dei-requisiti" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Analisi dei
 Requisiti</h1>
-<p>Come abbiamo trovato i <strong>requisiti</strong></p>
+<p>A seguito dell&#x2019;intervista con l&#x2019;esperto del dominio, sono stati elaborati i
+seguenti requisiti per l&#x2019;applicativo richiesto. Questi sono stati poi discussi
+e approvati dal cliente.</p>
 <section id="foorequisiti-di-business" class="level2" data-number="5.1">
 <h2 data-number="5.1"><span class="header-section-number">5.1</span> Requisiti
 di Business</h2>
-<p>...</p>
+<ul>
+<li><p>selezione di N domande tra i C corsi scelti dell&#x2019;utente</p></li>
+<li><p>gestione delle domande e delle relative risposte permettendo l&#x2019;editing,
+il salvataggio e il caricamento delle stesse</p></li>
+<li><p>elaborare un riepilogo al termine di ogni partita</p></li>
+<li><p>elaborare e salvare alcune statistiche di interesse relativamente ad un
+utente</p></li>
+</ul>
 </section>
 <section id="foorequisiti-utente" class="level2" data-number="5.2">
 <h2 data-number="5.2"><span class="header-section-number">5.2</span> Requisiti
@@ -653,7 +674,73 @@ effettuate</p></li>
 <li><p>importare ed esportare nuove domande e risposte indicando la materia a
 cui si riferiscono</p></li>
 </ul>
-<p>Si possono inserire qui i mockup</p>
+<section id="foomockup" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1"><span class="header-section-number">5.2.1</span>
+Mockup</h3>
+<p>A seguito dell&#x2019;intervista fatta con l&#x2019;esperto del dominio e dei requisiti
+raccolti, il team di sviluppo ha prodotto i mockup per due diversi
+applicativi: <a href="#foomockup1" data-reference-type="ref"
+data-reference="mockup1">5.2.1.1</a> e <a href="#foomockup2"
+data-reference-type="ref" data-reference="mockup2">5.2.1.2</a>. In seguito,
+questi sono stati sottoposti al cliente, il quale ha riscontrato aspetti
+positivi e negativi in entrambe le proposte. Di conseguenza, i mockup
+definitivi <a href="#foomockupFinished" data-reference-type="ref"
+data-reference="mockupFinished">5.2.1.3</a> sono stati sviluppati con la sua
+collaborazione e supervisione.</p>
+<section id="foomockup1" class="level4" data-number="5.2.1.1">
+<h4 data-number="5.2.1.1"><span class="header-section-number">5.2.1.1</span>
+Mockup applicativo uno</h4>
+<figure>
+<img src="Images/mockup/home1.jpg" id="foofig:HomePage1"
+alt="Pagina Iniziale" />
+<figcaption aria-hidden="true">Pagina Iniziale</figcaption>
+</figure>
+<figure>
+<img src="Images/mockup/start1.jpg" id="foofig:Start1"
+alt="Settaggio di una partita prima di iniziarla" />
+<figcaption aria-hidden="true">Settaggio di una partita prima di
+iniziarla</figcaption>
+</figure>
+<figure>
+<img src="Images/mockup/quiz1.jpg" id="foofig:Quiz1" alt="Quiz" />
+<figcaption aria-hidden="true">Quiz</figcaption>
+</figure>
+<figure>
+<img src="Images/mockup/achivements1.jpg" id="foofig:Achievements1"
+alt="Statistiche di gioco e obiettivi raggiunti" />
+<figcaption aria-hidden="true">Statistiche di gioco e obiettivi
+raggiunti</figcaption>
+</figure>
+<figure>
+<img src="Images/mockup/settings1.jpg" id="foofig:Settings1"
+alt="Impostazioni Generali" />
+<figcaption aria-hidden="true">Impostazioni Generali</figcaption>
+</figure>
+</section>
+<section id="foomockup2" class="level4" data-number="5.2.1.2">
+<h4 data-number="5.2.1.2"><span class="header-section-number">5.2.1.2</span>
+Mockup applicativo due</h4>
+<figure>
+<img src="Images/mockup/home2.jpg" id="foofig:HomePage2"
+alt="Pagina Iniziale" />
+<figcaption aria-hidden="true">Pagina Iniziale</figcaption>
+</figure>
+<figure>
+<img src="Images/mockup/quiz2.jpg" id="foofig:Quiz2" alt="Quiz" />
+<figcaption aria-hidden="true">Quiz</figcaption>
+</figure>
+<figure>
+<img src="Images/mockup/import2.jpg" id="foofig:Import2"
+alt="Inserimento di nuove domande e relative risposte per un determinato corso" />
+<figcaption aria-hidden="true">Inserimento di nuove domande e relative
+risposte per un determinato corso</figcaption>
+</figure>
+</section>
+<section id="foomockupFinished" class="level4" data-number="5.2.1.3">
+<h4 data-number="5.2.1.3"><span class="header-section-number">5.2.1.3</span>
+Mockup definitivi</h4>
+</section>
+</section>
 </section>
 <section id="foorequisiti-funzionali" class="level2" data-number="5.3">
 <h2 data-number="5.3"><span class="header-section-number">5.3</span> Requisiti
@@ -666,27 +753,107 @@ di natura accademica, ognuna delle quali viene accompagnata da un numero
 predeterminato di risposte possibili, alcune corrette ed altre sbagliate.
 L&#x2019;utente dovr&#xE0; individuare le risposte corrette in un tempo massimo per non
 fallire la domanda.</p>
-<ul>
+<ol>
 <li><p><strong>Modalit&#xE0; di gioco generale</strong>: domande a scelta multipla
-su tutti i corsi disponibili</p></li>
+su tutti i corsi disponibili: al giocatore verranno poste N domande scelte
+casualmente tra tutti i corsi disponibili nel gioco. Ogni domanda dovr&#xE0; essere
+risposta in T tempo massimo altrimenti verr&#xE0; considerata errata.</p></li>
 <li><p><strong>Modalit&#xE0; di gioco materie a scelta</strong>: domande a scelta
-multipla su pi&#xF9; materie scelte dal giocatore</p></li>
+multipla su pi&#xF9; materie scelte dal giocatore: domande a scelta multipla su
+alcuni dei corsi scelti dal giocatore tra tutti i corsi disponibili: al
+giocatore verranno poste N domande scelte casualmente tra tutti i corsi
+selezionati. Ogni domanda dovr&#xE0; essere risposta in T tempo massimo altrimenti
+verr&#xE0; considerata errata.</p></li>
 <li><p><strong>Modalit&#xE0; di gioco materia specifica</strong>: domande a scelta
-multipla su una sola materia scelta dal giocatore</p></li>
+multipla su una materia scelta dal giocatore: domande a scelta multipla su un
+corso scelto dal giocatore tra tutti i corsi disponibili: al giocatore
+verranno poste N domande scelte casualmente tra quelle disponibili per il
+corso. Ogni domanda dovr&#xE0; essere risposta in T tempo massimo altrimenti verr&#xE0;
+considerata errata.</p></li>
 <li><p><strong>Interfaccia grafica</strong> (CLI e poi JavaFX):
 visualizzazione menu principale, visualizzazione della domanda e di 4
 possibili risposte da scegliere durante il gioco, visualizzazione dei
-risultati post partita</p></li>
+risultati post partita. La prima iterazione del programma dovr&#xE0; fornire una
+semplice interfaccia grafica che permetta di interagire con le funzionalit&#xE0;
+principali del gioco scrivendo le operazioni da eseguire tramite il
+terminale.</p>
+<ol>
+<li><p>Menu principale: la prima pagina che verr&#xE0; mostrata all&#x2019;avvio</p>
+<ol>
+<li><p>Pulsante "inizia a giocare" &gt; pagina inizia a giocare</p></li>
+<li><p>Pulsante "statistiche e achievement" &gt; pagina statistiche</p></li>
+<li><p>Pulsante "impostazioni" &gt; pagina impostazioni</p></li>
+<li><p>Pulsante "esci" &gt; termina l&#x2019;applicazione</p></li>
+</ol></li>
+<li><p>Pagina statistiche: contiene informazioni sulle statistiche relative
+alle partite concluse e agli achievement raggiunti</p>
+<ol>
+<li><p>Testo con totale domande risposte</p></li>
+<li><p>Testo con totale domande risposte correttamente</p></li>
+<li><p>Testo con totale domande risposte sbagliate</p></li>
+<li><p>Testo con percentuale risposte corrette</p></li>
+</ol></li>
+<li><p>Pagina impostazioni: permette di editare le domande e le risposte oltre
+a salvarle ed importarle da file</p>
+<ol>
+<li><p>Casella di testo con il quale editare lo username del giocatore
+?</p></li>
+<li><p>Form per editare le domande</p></li>
+<li><p>Pulsante per salvare (esportare) nuove domande &gt; salva su file le
+domande di un corso</p></li>
+<li><p>Pulsante per importare nuove domande &gt; permette di selezionare un
+file contenente le domande di un corso</p></li>
+</ol></li>
+<li><p>Pagina selezione corsi: permette di selezionare prima di iniziare la
+partita i corsi dai quali devono essere prese le domande ed alcune
+impostazioni di gioco</p>
+<ol>
+<li><p>Lista selezioni corsi disponibili</p></li>
+<li><p>Casella selezione tempo per risposta ?</p></li>
+<li><p>Casella selezione tempo totale ?</p></li>
+<li><p>Casella selezione numero domande al quale rispondere ?</p></li>
+</ol></li>
+<li><p>Pagina riepilogo post partita: permette di visualizzare il punteggio
+ottenuto nella partita appena conclusa e una lista con il riepilogo di tutte
+le domande con un&#x2019;indicazione sulla correttezza della risposta data e, in caso
+di risposta errata, la risposta corretta corrispondente</p>
+<ol>
+<li><p>Testo con punteggio della partita</p></li>
+<li><p>Lista domande della partita con risposta scelta ed eventualmente
+risposta corretta</p></li>
+</ol></li>
+</ol></li>
 <li><p><strong>Punteggio finale</strong> del quiz appena effettuato: al
 termine della partita verr&#xE0; visualizzato il punteggio ottenuto dal giocatore
-in base al numero di risposte corrette o errate date nella partita
-conclusa</p></li>
-<li><p><strong>Visualizzazione delle statistiche personali</strong></p></li>
+in base al numero di risposte corrette o errate date nella partita conclusa.
+(Il punteggio verr&#xE0; calcolato sommando i punti relativi ad ogni domanda
+risposta correttamente? Se vengono utilizzati degli aiuti il punteggio
+cala?)</p></li>
+<li><p><strong>Visualizzazione e salvataggio delle statistiche
+personali</strong>: nello specifico le statistiche personali includono:</p>
+<ol>
+<li><p>Totale domande risposte</p></li>
+<li><p>Totale risposte corrette</p></li>
+<li><p>Totale risposte errate</p></li>
+<li><p>Percentuale di correttezza delle risposte</p></li>
+<li><p>Punteggio totale giocatore</p></li>
+</ol></li>
 <li><p><strong>Pi&#xF9; risposte giuste</strong> e sbagliate per ogni domanda in
-modo da avere una rotazione tra le possibili scelte</p></li>
+modo da avere una rotazione tra le possibili scelte: ogni domanda dovr&#xE0;
+necessariamente avere almeno 3 risposte errate ed 1 corretta ma potrebbe
+averne a disposizione un numero superiore, da scegliere poi casualmente
+durante il gioco. In ogni caso dovr&#xE0; essere rispettato il vincolo di avere 3
+risposte errate ed 1 corretta per ogni domanda durante la partita.</p></li>
 <li><p>Aggiunta di <strong>nuove domande e risposte da parte
-dell&#x2019;utente</strong></p></li>
-</ul>
+dell&#x2019;utente</strong>:</p>
+<ol>
+<li><p>Aggiunta di una nuova materia</p></li>
+<li><p>Aggiunta di una nuova domanda</p></li>
+<li><p>Aggiunta di 3 o pi&#xF9; risposte errate relative ad una domanda</p></li>
+<li><p>Aggiunta di 1 o pi&#xF9; risposta corretta relativa ad una domanda</p></li>
+<li><p>Aggiunta di un punteggio per una domanda ?</p></li>
+</ol></li>
+</ol>
 </section>
 <section id="fooopzionali" class="level3" data-number="5.3.2">
 <h3 data-number="5.3.2"><span class="header-section-number">5.3.2</span>
@@ -696,13 +863,19 @@ Opzionali</h3>
 un intervallo di tempo limitato</p></li>
 <li><p><strong>Aiuti su richiesta</strong>: all&#x2019;utente vengono messi a
 disposizione un numero specifico di aiuti ad ogni partita con i quali
-semplificare la scelta della risposta</p></li>
+semplificare la scelta della risposta. Utilizzando uno degli aiuti verr&#xE0;
+eliminata una tra le risposte errate, semplificando cos&#xEC; la scelta. Potranno
+essere utilizzati al massimo 2 aiuti per ogni domanda. (Il numero di aiuti a
+disposizione sar&#xE0; configurabile dall&#x2019;utente prima di iniziare una
+partita?)</p></li>
 <li><p><strong>Revisione solo delle risposte sbagliate</strong>: l&#x2019;utente pu&#xF2;
 scegliere una modalit&#xE0; di gioco in cui ripassare esclusivamente le domande
 precedentemente sbagliate</p></li>
 <li><p><strong>Medaglie-achievement</strong> quando si completano delle sfide
 (es. pi&#xF9; punti di un certo limite, pi&#xF9; giornate continuativamente, aver
 risposto bene a tutte le domande di una materia)</p></li>
+<li><p>Salvataggio delle statistiche relative al tempo medio di risposta e
+tempo totale di gioco</p></li>
 </ul>
 </section>
 </section>
@@ -720,9 +893,11 @@ per non rovinare la user experience</p></li>
 <li><p>Realizzare un sistema modulare che permetta estensioni future (ad
 esempio uno sviluppo distribuito che permetta di realizzare funzionalit&#xE0; di
 gioco multiplayer)</p></li>
+<li><p>Il sistema dovr&#xE0; essere in grado di memorizzare dati di interesse in
+maniera consistente</p></li>
 <li><p>Il sistema deve essere funzionante in diversi sistemi operativi nei
 quali &#xE8; installata una appropriata Java Virtual Machine (il requisito minimo
-considera il funzionamento su sistemi Windows, Linux e MacOS)</p></li>
+considera il funzionamento su sistemi Windows, Linux e MacOS).</p></li>
 <li><p>Il sistema deve essere fault-tolerant, cio&#xE8; deve continuare a
 funzionare in modo affidabile e deve essere privo di falle che permettano al
 giocatore di barare.</p></li>
@@ -731,7 +906,14 @@ giocatore di barare.</p></li>
 <section id="foorequisiti-implementativi" class="level2" data-number="5.5">
 <h2 data-number="5.5"><span class="header-section-number">5.5</span> Requisiti
 Implementativi</h2>
-<p>...</p>
+<ul>
+<li><p>Utilizzo di JDK X ?</p></li>
+<li><p>Per il salvataggio delle domande e delle relative risposte deve essere
+utilizzata la notazione JSON in modo che l&#x2019;integrazione con il software possa
+utilizzare librerie generiche gi&#xE0; disponibili.</p></li>
+<li><p>Per lo sviluppo dovr&#xE0; essere utilizzato l&#x2019;IDE IntelliJ in modo da avere
+consistenza tra i membri del team di sviluppo.</p></li>
+</ul>
 </section>
 </section>
 <section id="foodesign-architetturale" class="level1" data-number="6">
@@ -741,7 +923,7 @@ Architetturale</h1>
 <section id="fooarchitettura-generale" class="level2" data-number="6.1">
 <h2 data-number="6.1"><span class="header-section-number">6.1</span>
 Architettura Generale</h2>
-<p>....</p>
+<p>...</p>
 </section>
 <section id="fooscelte-tecnologiche-cruciali" class="level2"
 data-number="6.2">
@@ -753,7 +935,14 @@ Tecnologiche Cruciali</h2>
 data-number="6.3">
 <h2 data-number="6.3"><span class="header-section-number">6.3</span> Pattern
 Architetturali Utilizzati</h2>
-<p>...</p>
+<p>Nel sistema &#xE8; stato utilizzato il pattern Model-View-Controller (MVC) in
+modo da modularizzare quanto pi&#xF9; possibile le parti relative all&#x2019;interfaccia
+grafica, la modellazione dell&#x2019;applicazione e la logica dell&#x2019;applicazione.
+Questo pattern &#xE8; stato utile considerando anche la metodologia di sviluppo
+agile per realizzare versioni successive del sistema implementando, ad
+esempio, un&#x2019;interfaccia basata su linea di comando nelle prime fasi del
+progetto e poi una interfaccia che utilizzasse JavaFX nelle fasi successive di
+sviluppo.</p>
 </section>
 </section>
 <section id="foodesign-di-dettaglio" class="level1" data-number="7">
@@ -877,6 +1066,13 @@ Conclusioni</h1>
 <h2 data-number="11.1"><span class="header-section-number">11.1</span>
 Sviluppi Futuri</h2>
 <p>In futuro ...</p>
+</section>
+</section>
+<section id="fooglossario" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span>
+Glossario</h1>
+<p>Cliente = esperto del dominio</p>
+<p>Esame = Corso = Materia</p>
 <div id="foorefs" class="references csl-bib-body hanging-indent"
 role="doc-bibliography">
 <div id="fooref-uasyncio" class="csl-entry" role="doc-biblioentry">
@@ -894,11 +1090,11 @@ StackOverflow. s.d. <a
 href="https://stackoverflow.com/">https://stackoverflow.com/</a>.
 </div>
 </div>
-</section>
 </section>                    
                 </div>
             </div>
 
+</script>
             <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
         </div>
     </body>
