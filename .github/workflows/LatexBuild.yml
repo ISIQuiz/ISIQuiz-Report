@@ -194,7 +194,7 @@ jobs:
           git clone https://github.com/igor-lirussi/pandoc-uikit
           rm -rdf pandoc-uikit/.git*
           git checkout -f main Extra
-          git checkout -f main Extra/favicon.png
+          cp Extra/favicon.png .
           git checkout -f main Images
           git checkout -f main Miro
           git checkout -f main index.html

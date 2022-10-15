@@ -133,6 +133,11 @@ coltitle=black,center title}}
 
 
 \begin{document}
+
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
+\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
+\renewcommand{\labelenumiv}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}
+
 \maketitle
 \include{Tex/Abstract}
 \tableofcontents
@@ -149,7 +154,6 @@ coltitle=black,center title}}
     \include{Tex/TestingAndPerformance}
     \include{Tex/Retrospettiva}
     \include{Tex/Conclusion}
-    \include{Tex/Glossary}
 
 
 \nocite{*} % Includes all references from the `references.bib` file

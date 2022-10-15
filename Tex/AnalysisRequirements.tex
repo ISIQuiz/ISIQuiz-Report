@@ -5,7 +5,7 @@
 % Attenzione in particolare ai requirement non funzionali: 1) non siano troppo vaghi altrimenti sono inverificabili, e quindi praticamente inutili; 2) se il sistema è distribuito, è inevitable dire cosa vi aspettate in termini di di robustezza a cambiamenti/guasti (quali?, come?), e scalabilità (in quale dimensione? fino a che punto?).
 
 \chapter{Analisi dei Requisiti}
-A seguito dell'intervista con l'esperto del dominio, sono stati elaborati i seguenti requisiti per l'applicativo richiesto. Questi sono stati poi discussi e approvati dal cliente.
+A seguito dell'intervista con l'esperto del dominio, sono stati elaborati i seguenti requisiti per l'applicativo richiesto. Questi sono stati poi discussi e approvati dal committente.
 	\section{Requisiti di Business}
 	\begin{itemize}
         \item selezione di N domande tra i C corsi scelti dell'utente
@@ -25,10 +25,10 @@ A seguito dell'intervista con l'esperto del dominio, sono stati elaborati i segu
     \end{itemize}
  
         \subsection{Mockup}
-    	A seguito dell'intervista fatta con l'esperto del dominio e dei requisiti raccolti, il team di sviluppo ha prodotto i mockup per due diversi applicativi: \ref{mockup1} e \ref{mockup2}. In seguito, questi sono stati sottoposti al cliente, il quale ha riscontrato aspetti positivi e negativi in entrambe le proposte. Di conseguenza, i mockup definitivi \ref{mockupFinished} sono stati sviluppati con la sua collaborazione e supervisione.
+    	A seguito dell'intervista fatta con l'esperto del dominio e dei requisiti raccolti, il team di sviluppo ha prodotto i mockup per due diversi applicativi: \ref{mockup1} e \ref{mockup2}. In seguito, questi sono stati sottoposti al committente, il quale ha riscontrato aspetti positivi e negativi in entrambe le proposte. Di conseguenza, i mockup definitivi \ref{mockupFinished} sono stati sviluppati con la sua collaborazione e supervisione.
 
         \subsubsection{Mockup applicativo uno}\label{mockup1}
-    	\begin{figure}[H]
+        \begin{figure}[H]
             \centering
             \includegraphics[width=\textwidth]{Images/mockup/home1.jpg}
             \caption{Pagina Iniziale}
@@ -98,7 +98,7 @@ A seguito dell'intervista con l'esperto del dominio, sono stati elaborati i segu
             \item \textbf{Modalità di gioco materie a scelta}: domande a scelta multipla su più materie scelte dal giocatore: domande a scelta multipla su alcuni dei corsi scelti dal giocatore tra tutti i corsi disponibili: al giocatore verranno poste N domande scelte casualmente tra tutti i corsi selezionati. Ogni domanda dovrà essere risposta in T tempo massimo altrimenti verrà considerata errata.
             
             \item \textbf{Modalità di gioco materia specifica}: domande a scelta multipla su una materia scelta dal giocatore: domande a scelta multipla su un corso scelto dal giocatore tra tutti i corsi disponibili: al giocatore verranno poste N domande scelte casualmente tra quelle disponibili per il corso. Ogni domanda dovrà essere risposta in T tempo massimo altrimenti verrà considerata errata.
-            
+
             \item \textbf{Interfaccia grafica} (CLI e poi JavaFX): visualizzazione menu principale, visualizzazione della domanda e di 4 possibili risposte da scegliere durante il gioco, visualizzazione dei risultati post partita. La prima iterazione del programma dovrà fornire una semplice interfaccia grafica che permetta di interagire con le funzionalità principali del gioco scrivendo le operazioni da eseguire tramite il terminale.
                 \begin{enumerate}
                     \item Menu principale: la prima pagina che verrà mostrata all'avvio
@@ -138,7 +138,7 @@ A seguito dell'intervista con l'esperto del dominio, sono stati elaborati i segu
             
             \item \textbf{Punteggio finale} del quiz appena effettuato: al termine della partita verrà visualizzato il punteggio ottenuto dal giocatore in base al numero di risposte corrette o errate date nella partita conclusa. (Il punteggio verrà calcolato sommando i punti relativi ad ogni domanda risposta correttamente? Se vengono utilizzati degli aiuti il punteggio cala?)
             
-            \item \textbf{Visualizzazione e salvataggio delle statistiche personali}: nello specifico le statistiche personali includono:
+            \item \textbf{Visualizzazione e salvataggio delle statistiche personali}: in specifico le statistiche personali includono:
                 \begin{enumerate}
                     \item Totale domande risposte
                     \item Totale risposte corrette
