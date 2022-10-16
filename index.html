@@ -27,7 +27,7 @@ PARADIGMI DI PROGRAMMAZIONE E SVILUPPO<br />
                 <meta name="author" content="Lirussi Igor igor.lirussi@studio.unibo.it" />
                 <meta name="author" content="Omiccioli Riccardo riccardo.omiccioli@studio.unibo.it" />
                 <meta name="author" content="Teodorani Cecilia cecilia.teodorani@studio.unibo.it   " />
-                        <meta name="date" content="2022-10-15" />
+                        <meta name="date" content="2022-10-16" />
                 <title> RELAZIONE DI PROGETTO DI PARADIGMI DI PROGRAMMAZIONE E SVILUPPO  ISIQuiz  </title>
         <style type="text/css">code{white-space: pre;}</style>
                                 <link rel="stylesheet" href="./pandoc-uikit/uikit.css" />
@@ -47,7 +47,7 @@ PARADIGMI DI PROGRAMMAZIONE E SVILUPPO<br />
 <br />
 <strong>ISIQuiz</strong><br />
 <br /></h1>
-                                        <h1 class="uk-heading" style="margin:0">2022-10-15</h1>
+                                        <h1 class="uk-heading" style="margin:0">2022-10-16</h1>
                                                             <p class="uk-text-large">Gambaletta
 Daniele<br />
 <a
@@ -322,11 +322,6 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
                                                         id="footoc-sprint-0"><span
                                                         class="toc-section-number">10.2</span>
                                                         Sprint 0</a></li>
-                                                        <li><a
-                                                        href="#foosprint-1"
-                                                        id="footoc-sprint-1"><span
-                                                        class="toc-section-number">10.3</span>
-                                                        Sprint 1</a></li>
                                                         </ul></li>
                                                         <li><a
                                                         href="#fooconclusioni"
@@ -573,6 +568,7 @@ class="header-section-number">3.4.2.0.0.1</span> Tool utilizzati</h6>
 <li><p><a
 href="https://miro.com/app/board/uXjVPN93uLs=/?share_link_id=56431555728">Miro
 board</a></p></li>
+<li><p>Jira</p></li>
 </ul>
 <p>CI progetto, Test, Coverage, Documentazione, Quality assurance, bla bla</p>
 </section>
@@ -628,12 +624,19 @@ superiore alle quattro visibili per ogni domanda. Quali modalit&#xE0; di gioco
 vorresti avere a disposizione?</p>
 <p>Mi piacerebbe poter scegliere se rispondere a domande di uno specifico
 corso o di pi&#xF9; corsi durante lo stesso quiz.</p></li>
-<li><p>Riguardo al tempo disponibile per rispondere, preferisce avere un tempo
+<li><p>Riguardo al tempo disponibile per rispondere, preferisci avere un tempo
 limite per ogni singolo quesito o per l&#x2019;intera sessione di gioco?</p>
 <p>Sicuramente vorrei avere un tempo limitato ad ogni domanda, per non
 incorrere nella tentazione di barare. Qualora fosse possibile avere anche una
 modalit&#xE0; di gioco con un tempo limite globale sarebbe molto
 divertente.</p></li>
+<li><p>Sarebbe interessante mettere un sistema di punteggi e se si come
+vorresti venisse implementato?</p>
+<p>Secondo me aggiungere un punteggio renderebbe ancora pi&#xF9; stimolante il
+gioco e permetterebbe di confrontarmi con i miei colleghi di corso. Ogni
+domanda potrebbe avere un punteggio in base alla sua complessit&#xE0;, inoltre si
+potrebbe calcolare in base a quanto tempo si impiega per rispondere e a quanti
+aiuti vengono utilizzati.</p></li>
 <li><p>Invece quali schermate di gioco vorresti visualizzare?</p>
 <p>Dal menu principale vorrei poter scegliere le varie modalit&#xE0; di gioco,
 poter aggiungere ed esportare le domande e le risposte dei corsi e
@@ -803,10 +806,10 @@ terminale.</p>
 <li><p>Pagina statistiche: contiene informazioni sulle statistiche relative
 alle partite concluse e agli achievement raggiunti</p>
 <ol>
-<li><p>Testo con totale domande risposte</p></li>
-<li><p>Testo con totale domande risposte correttamente</p></li>
-<li><p>Testo con totale domande risposte sbagliate</p></li>
-<li><p>Testo con percentuale risposte corrette</p></li>
+<li><p>Totale domande risposte</p></li>
+<li><p>Totale domande risposte correttamente</p></li>
+<li><p>Totale domande risposte sbagliate</p></li>
+<li><p>Percentuale risposte corrette</p></li>
 </ol></li>
 <li><p>Pagina impostazioni: permette di editare le domande e le risposte oltre
 a salvarle ed importarle da file</p>
@@ -823,10 +826,11 @@ file contenente le domande di un corso</p></li>
 partita i corsi dai quali devono essere prese le domande ed alcune
 impostazioni di gioco</p>
 <ol>
-<li><p>Lista selezioni corsi disponibili</p></li>
-<li><p>Casella selezione tempo per risposta ?</p></li>
-<li><p>Casella selezione tempo totale ?</p></li>
-<li><p>Casella selezione numero domande al quale rispondere ?</p></li>
+<li><p>Selezione corsi disponibili</p></li>
+<li><p>Selezione tempo per risposta</p></li>
+<li><p>Selezione tempo totale</p></li>
+<li><p>Selezione numero domande della partita</p></li>
+<li><p>Selezione numero di aiuti</p></li>
 </ol></li>
 <li><p>Pagina riepilogo post partita: permette di visualizzare il punteggio
 ottenuto nella partita appena conclusa e una lista con il riepilogo di tutte
@@ -866,7 +870,7 @@ dell&#x2019;utente</strong>:</p>
 <li><p>Aggiunta di una nuova domanda</p></li>
 <li><p>Aggiunta di 3 o pi&#xF9; risposte errate relative ad una domanda</p></li>
 <li><p>Aggiunta di 1 o pi&#xF9; risposta corretta relativa ad una domanda</p></li>
-<li><p>Aggiunta di un punteggio per una domanda ?</p></li>
+<li><p>Aggiunta di un punteggio per una domanda</p></li>
 </ol></li>
 </ol>
 </section>
@@ -1045,32 +1049,6 @@ miglioramenti per il prossimo sprint.</p></li>
 <section id="foosprint-0" class="level2" data-number="10.2">
 <h2 data-number="10.2"><span class="header-section-number">10.2</span> Sprint
 0</h2>
-<p>Abbiamo studiato...</p>
-<section id="foodeliverables" class="level5" data-number="10.2.0.0.1">
-<h5 data-number="10.2.0.0.1"><span
-class="header-section-number">10.2.0.0.1</span> Deliverables</h5>
-<p>obiettivi raggiunti</p>
-<ul>
-<li><p>uno</p></li>
-<li><p>due</p></li>
-<li><p>tre</p></li>
-</ul>
-</section>
-</section>
-<section id="foosprint-1" class="level2" data-number="10.3">
-<h2 data-number="10.3"><span class="header-section-number">10.3</span> Sprint
-1</h2>
-<p>Nello sprint 1 ...</p>
-<section id="foodeliverables-1" class="level5" data-number="10.3.0.0.1">
-<h5 data-number="10.3.0.0.1"><span
-class="header-section-number">10.3.0.0.1</span> Deliverables</h5>
-<p>Abbiamo creato...</p>
-<ul>
-<li><p>uno</p></li>
-<li><p>due</p></li>
-<li><p>tre</p></li>
-</ul>
-</section>
 </section>
 </section>
 <section id="fooconclusioni" class="level1" data-number="11">
