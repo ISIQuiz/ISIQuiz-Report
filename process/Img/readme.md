@@ -1,0 +1,2 @@
+Here are present some images for the final statistics and considerations, including images and comments on graphs and screenshot of the final product backlog views.
+Also Sprint backlog images for every sprint.
