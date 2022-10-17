@@ -18,6 +18,13 @@ jobs:
           pre_compile: "tlmgr update --self --all" #updates latex packets
           args: "-pdf -jobname=main -file-line-error -halt-on-error -interaction=nonstopmode -logfilewarninglist -Werror "
           post_compile: "latexmk -c"
+      - name: Compile LaTeX document "process pdf"
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: process.tex
+          pre_compile: "tlmgr update --self --all" #updates latex packets
+          args: "-pdf -jobname=process -file-line-error -halt-on-error -interaction=nonstopmode -logfilewarninglist -Werror "
+          post_compile: "latexmk -c"
       - name: Split log
         if: failure()
         shell: bash
@@ -41,6 +48,7 @@ jobs:
           name: Artifacts
           path: |
             main.pdf
+            process.pdf
           
   TelegramFailureBuildJob:
       needs: [BuildLatexJob] #when finished this job
