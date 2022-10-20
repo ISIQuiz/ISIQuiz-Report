@@ -1,7 +1,7 @@
 name: Meeting Reminder
 on:
   schedule:
-    - cron: "0 11 22 10 *" # Minutes-Hour(UTC Time!)-Day-Month
+    - cron: "0 7 22 10 *" # Minutes-Hour(UTC Time!)-Day-Month
   workflow_dispatch:
 jobs:
   BuildLatexJob:
