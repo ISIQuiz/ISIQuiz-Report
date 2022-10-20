@@ -27,7 +27,7 @@ PARADIGMI DI PROGRAMMAZIONE E SVILUPPO<br />
                 <meta name="author" content="Lirussi Igor igor.lirussi@studio.unibo.it" />
                 <meta name="author" content="Omiccioli Riccardo riccardo.omiccioli@studio.unibo.it" />
                 <meta name="author" content="Teodorani Cecilia cecilia.teodorani@studio.unibo.it   " />
-                        <meta name="date" content="2022-10-19" />
+                        <meta name="date" content="2022-10-20" />
                 <title> RELAZIONE DI PROGETTO DI PARADIGMI DI PROGRAMMAZIONE E SVILUPPO  ISIQuiz  </title>
         <style type="text/css">code{white-space: pre;}</style>
                                 <link rel="stylesheet" href="./pandoc-uikit/uikit.css" />
@@ -47,7 +47,7 @@ PARADIGMI DI PROGRAMMAZIONE E SVILUPPO<br />
 <br />
 <strong>ISIQuiz</strong><br />
 <br /></h1>
-                                        <h1 class="uk-heading" style="margin:0">2022-10-19</h1>
+                                        <h1 class="uk-heading" style="margin:0">2022-10-20</h1>
                                                             <p class="uk-text-large">Gambaletta
 Daniele<br />
 <a
@@ -274,7 +274,23 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
                                                         id="footoc-design-di-dettaglio"><span
                                                         class="toc-section-number">7</span>
                                                         Design di
-                                                        Dettaglio</a></li>
+                                                        Dettaglio</a>
+                                                        <ul>
+                                                        <li><a
+                                                        href="#foomodel"
+                                                        id="footoc-model"><span
+                                                        class="toc-section-number">7.1</span>
+                                                        Model</a></li>
+                                                        <li><a href="#fooview"
+                                                        id="footoc-view"><span
+                                                        class="toc-section-number">7.2</span>
+                                                        View</a></li>
+                                                        <li><a
+                                                        href="#foocontroller"
+                                                        id="footoc-controller"><span
+                                                        class="toc-section-number">7.3</span>
+                                                        Controller</a></li>
+                                                        </ul></li>
                                                         <li><a
                                                         href="#fooimplementazione"
                                                         id="footoc-implementazione"><span
@@ -323,20 +339,23 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
                                                         class="toc-section-number">10.1</span>
                                                         Svolgimento</a></li>
                                                         <li><a
-                                                        href="#foosprint-1"
-                                                        id="footoc-sprint-1"><span
+                                                        href="#foosprint-1-review"
+                                                        id="footoc-sprint-1-review"><span
                                                         class="toc-section-number">10.2</span>
-                                                        Sprint 1</a></li>
+                                                        Sprint 1
+                                                        Review</a></li>
                                                         <li><a
-                                                        href="#foosprint-2"
-                                                        id="footoc-sprint-2"><span
+                                                        href="#foosprint-2-review"
+                                                        id="footoc-sprint-2-review"><span
                                                         class="toc-section-number">10.3</span>
-                                                        Sprint 2</a></li>
+                                                        Sprint 2
+                                                        Review</a></li>
                                                         <li><a
-                                                        href="#foosprint-3"
-                                                        id="footoc-sprint-3"><span
+                                                        href="#foosprint-3-review"
+                                                        id="footoc-sprint-3-review"><span
                                                         class="toc-section-number">10.4</span>
-                                                        Sprint 3</a></li>
+                                                        Sprint 3
+                                                        Review</a></li>
                                                         </ul></li>
                                                         <li><a
                                                         href="#fooconclusioni"
@@ -369,6 +388,11 @@ interesse. Lo scopo di <strong>ISIQuiz</strong> &#xE8; quindi quello di gamifica
 il ripasso pre-esame attraverso uno strumento stimolante che permetta agli
 studenti di tracciare i propri progressi e allenarsi sulle domande che per lui
 risultano pi&#xF9; critiche.</p>
+<figure>
+<img src="Extra/ISIQuizLogoLineTransparent.png" id="foofig:Logo"
+style="width:80.0%" alt="Il logo in-line" />
+<figcaption aria-hidden="true">Il <strong>logo</strong> in-line</figcaption>
+</figure>
 <section id="foooverview" class="level2" data-number="1.1">
 <h2 data-number="1.1"><span class="header-section-number">1.1</span>
 Overview</h2>
@@ -387,11 +411,6 @@ notevolmente lo studente in questione. Inoltre, la dinamica "a gruppo"
 garantisce una copertura adeguata di tutte le nozioni pi&#xF9; importanti. L&#x2019;idea &#xE8;
 quindi quella di creare un applicazione che garantisca una esperienza simile,
 quando la situazione sopracitata non &#xE8; possibile.</p>
-<figure>
-<img src="Extra/ISIQuizLogoLineTransparent.png" id="foofig:Logo"
-style="width:80.0%" alt="Il logo in-line" />
-<figcaption aria-hidden="true">Il <strong>logo</strong> in-line</figcaption>
-</figure>
 </section>
 <section id="fooproblemi" class="level2" data-number="1.2">
 <h2 data-number="1.2"><span class="header-section-number">1.2</span>
@@ -1040,12 +1059,38 @@ agile per realizzare versioni successive del sistema implementando, ad
 esempio, un&#x2019;interfaccia basata su linea di comando nelle prime fasi del
 progetto e poi una interfaccia che utilizzasse JavaFX nelle fasi successive di
 sviluppo.</p>
+<p>Il funzionamento del pattern MVC &#xE8; il seguente:</p>
+<ul>
+<li><p>Il Model fornisce i metodi per accedere ai dati;</p></li>
+<li><p>La View si occupa di interagire con l&#x2019;utente, notificare il Controller
+e visualizzare i dati del Model;</p></li>
+<li><p>Il Controller riceve i comandi dell&#x2019;utente e si occupa di aggiornare lo
+stato della View e del Model.</p></li>
+</ul>
 </section>
 </section>
 <section id="foodesign-di-dettaglio" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span> Design di
 Dettaglio</h1>
-<p>...</p>
+<p>In questo capitolo, partendo dal design architetturale sopra descritto,
+verr&#xE0; analizzata in dettaglio la struttura del sistema descrivendo le
+caratteristiche dei componenti e la relazione che c&#x2019;&#xE8; tra loro.</p>
+<section id="foomodel" class="level2" data-number="7.1">
+<h2 data-number="7.1"><span class="header-section-number">7.1</span>
+Model</h2>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</section>
+<section id="fooview" class="level2" data-number="7.2">
+<h2 data-number="7.2"><span class="header-section-number">7.2</span> View</h2>
+</section>
+<section id="foocontroller" class="level2" data-number="7.3">
+<h2 data-number="7.3"><span class="header-section-number">7.3</span>
+Controller</h2>
+</section>
 </section>
 <section id="fooimplementazione" class="level1" data-number="8">
 <h1 data-number="8"><span class="header-section-number">8</span>
@@ -1124,17 +1169,57 @@ miglioramenti per il prossimo sprint.</p></li>
 </ul>
 </section>
 </section>
-<section id="foosprint-1" class="level2" data-number="10.2">
+<section id="foosprint-1-review" class="level2" data-number="10.2">
 <h2 data-number="10.2"><span class="header-section-number">10.2</span> Sprint
-1</h2>
+1 Review</h2>
+<p>Durante questo primo sprint abbiamo completato l&#x2019;organizzazione di
+massima.</p>
+<section id="foodeliverables" class="level5" data-number="10.2.0.0.1">
+<h5 data-number="10.2.0.0.1"><span
+class="header-section-number">10.2.0.0.1</span> Deliverables</h5>
+<p>I deliverables per questo sprint sono stati i seguenti:</p>
+<ul>
+<li><p>Intervista con il cliente corredata da domande</p></li>
+<li><p>Ubiquitous Language</p></li>
+<li><p>Setup Organizzazione GitHub</p></li>
+<li><p>Setup Report, con relativa repository e CI</p></li>
+</ul>
 </section>
-<section id="foosprint-2" class="level2" data-number="10.3">
+</section>
+<section id="foosprint-2-review" class="level2" data-number="10.3">
 <h2 data-number="10.3"><span class="header-section-number">10.3</span> Sprint
-2</h2>
+2 Review</h2>
+<p>Durante questo sprint abbiamo realizzato l&#x2019;analisi dei requisiti del
+sistema e ideata l&#x2019;architettura generale del sistema, dalla quale sono sorti
+alcuni dubbi che sono stati poi discussi e chiariti con l&#x2019;esperto del dominio.
+Sono state realizzare due versioni dei mockup dell&#x2019;applicazione, le quali
+hanno ricevuto entrambe giudizi positivi, ma andranno successivamente unite e
+raffinate per soddisfare al meglio i requisiti del committente.</p>
+<section id="foodeliverables-1" class="level5" data-number="10.3.0.0.1">
+<h5 data-number="10.3.0.0.1"><span
+class="header-section-number">10.3.0.0.1</span> Deliverables</h5>
+<p>I deliverables per questo sprint sono stati i seguenti:</p>
+<ul>
+<li><p>Mockup</p></li>
+<li><p>Diagramma dei casi d&#x2019;uso</p></li>
+<li><p>Diagramma delle classi</p></li>
+</ul>
 </section>
-<section id="foosprint-3" class="level2" data-number="10.4">
+</section>
+<section id="foosprint-3-review" class="level2" data-number="10.4">
 <h2 data-number="10.4"><span class="header-section-number">10.4</span> Sprint
-3</h2>
+3 Review</h2>
+<p>Abbiamo studiato/implementato...</p>
+<section id="foodeliverables-2" class="level5" data-number="10.4.0.0.1">
+<h5 data-number="10.4.0.0.1"><span
+class="header-section-number">10.4.0.0.1</span> Deliverables</h5>
+<p>obiettivi raggiunti</p>
+<ul>
+<li><p>uno</p></li>
+<li><p>due</p></li>
+<li><p>tre</p></li>
+</ul>
+</section>
 </section>
 </section>
 <section id="fooconclusioni" class="level1" data-number="11">
