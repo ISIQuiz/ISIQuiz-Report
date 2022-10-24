@@ -5,7 +5,7 @@
 % Attenzione in particolare ai requirement non funzionali: 1) non siano troppo vaghi altrimenti sono inverificabili, e quindi praticamente inutili; 2) se il sistema è distribuito, è inevitable dire cosa vi aspettate in termini di di robustezza a cambiamenti/guasti (quali?, come?), e scalabilità (in quale dimensione? fino a che punto?).
 
 \chapter{Analisi dei Requisiti}
-A seguito dell'intervista con l'esperto del dominio, sono stati elaborati i seguenti requisiti per l'applicativo richiesto. Questi sono stati poi discussi e approvati dal committente.
+A seguito dell'intervista con l'esperto del dominio, sono emersi i seguenti requisiti per l'applicativo richiesto. Questi sono stati poi discussi e approvati dal committente.
 	\section{Requisiti di Business}
 	\begin{itemize}
         \item selezione di N domande tra i C corsi scelti dell'utente
@@ -48,68 +48,137 @@ A seguito dell'intervista con l'esperto del dominio, sono stati elaborati i segu
         \end{figure}
 
         \subsection{Mockup}
-    	A seguito dell'intervista fatta con l'esperto del dominio e dei requisiti raccolti, il team di sviluppo ha prodotto due versioni di mockup (\ref{mockup1} e \ref{mockup2}). In seguito, questi sono stati sottoposti al committente, il quale ha riscontrato aspetti positivi e negativi in entrambe le proposte. Di conseguenza, i mockup definitivi \ref{mockupFinished} sono stati sviluppati con la sua collaborazione e supervisione. Per garantire una maggior comprensione della navigazione all'interno dell'applicativo, è stato prodotto lo schema \ref{fig:mockup_nav}.
-
+    	A seguito dell'intervista fatta con l'esperto del dominio e dei requisiti raccolti con esso, il team di sviluppo ha prodotto due versioni di mockup (\ref{mockup1} e \ref{mockup2}). In seguito, questi sono stati sottoposti al committente, il quale ha riscontrato aspetti positivi e negativi in entrambe le proposte. Di conseguenza, i mockup definitivi \ref{mockupFinished} sono stati sviluppati con la sua collaborazione e supervisione. Per garantire una maggior comprensione della navigazione all'interno dell'applicativo, è stato prodotto lo schema \ref{fig:mockup_nav}.
+     
         \subsubsection{Mockup prima versione}\label{mockup1}
+        
         \begin{figure}[H]
-            \centering
+          \centering
+          \begin{minipage}[b]{0.48\textwidth}
             \includegraphics[width=\textwidth]{Images/mockup/home1.jpg}
             \caption{Pagina Iniziale}
             \label{fig:HomePage1}
-        \end{figure}
-        
-        \begin{figure}[H]
-            \centering
+          \end{minipage}
+          \hfill
+          \begin{minipage}[b]{0.48\textwidth}
             \includegraphics[width=\textwidth]{Images/mockup/start1.jpg}
             \caption{Settaggio di una partita prima di iniziarla}
             \label{fig:Start1}
+          \end{minipage}
         \end{figure}
-          
+
         \begin{figure}[H]
-            \centering
+          \centering
+          \begin{minipage}[b]{0.48\textwidth}
             \includegraphics[width=\textwidth]{Images/mockup/quiz1.jpg}
             \caption{Quiz}
             \label{fig:Quiz1}
-        \end{figure}
-        
-        \begin{figure}[H]
-            \centering
-            \includegraphics[width=\textwidth]{Images/mockup/achivements1.jpg}
+          \end{minipage}
+          \hfill
+          \begin{minipage}[b]{0.48\textwidth}
+            \includegraphics[width=\textwidth]{Images/mockup/achievements1.jpg}
             \caption{Statistiche di gioco e obiettivi raggiunti}
-            \label{fig:Achievements1}
+          \end{minipage}
         \end{figure}
           
         \begin{figure}[H]
-            \centering
+          \centering
+          \begin{minipage}[b]{0.48\textwidth}
             \includegraphics[width=\textwidth]{Images/mockup/settings1.jpg}
             \caption{Impostazioni Generali}
             \label{fig:Settings1}
+          \end{minipage}
+          \hfill
         \end{figure}
         
         \subsubsection{Mockup seconda versione}\label{mockup2}
         
         \begin{figure}[H]
-            \centering
+          \centering
+          \begin{minipage}[b]{0.48\textwidth}
             \includegraphics[width=\textwidth]{Images/mockup/home2.jpg}
             \caption{Pagina Iniziale}
             \label{fig:HomePage2}
-        \end{figure}
-        
-        \begin{figure}[H]
-            \centering
+          \end{minipage}
+          \hfill
+          \begin{minipage}[b]{0.48\textwidth}
             \includegraphics[width=\textwidth]{Images/mockup/quiz2.jpg}
             \caption{Quiz}
             \label{fig:Quiz2}
+          \end{minipage}
         \end{figure}
-        
+          
         \begin{figure}[H]
-            \centering
+          \centering
+          \begin{minipage}[b]{0.48\textwidth}
             \includegraphics[width=\textwidth]{Images/mockup/import2.jpg}
             \caption{Inserimento di nuove domande e relative risposte per un determinato corso}
             \label{fig:Import2}
+          \end{minipage}
+          \hfill
         \end{figure}
         
         \subsubsection{Mockup definitivi}\label{mockupFinished}
+        
+        \begin{figure}[H]
+          \centering
+          \begin{minipage}[b]{0.48\textwidth}
+            \includegraphics[width=\textwidth]{Images/mockup/home3.png}
+            \caption{Pagina iniziale}
+            \label{fig:home3}
+          \end{minipage}
+          \hfill
+          \begin{minipage}[b]{0.48\textwidth}
+            \includegraphics[width=\textwidth]{Images/mockup/start3.png}
+            \caption{Settaggio di una partita prima di iniziarla}
+            \label{fig:start3}
+          \end{minipage}
+        \end{figure}
+
+        \begin{figure}[H]
+          \centering
+          \begin{minipage}[b]{0.48\textwidth}
+            \includegraphics[width=\textwidth]{Images/mockup/custom.png}
+            \caption{Settaggio parametri per una partita personalizzata}
+            \label{fig:custom}
+          \end{minipage}
+          \hfill
+          \begin{minipage}[b]{0.48\textwidth}
+            \includegraphics[width=\textwidth]{Images/mockup/quiz3.png}
+            \caption{Quiz}
+            \label{fig:quiz3}
+          \end{minipage}
+        \end{figure}
+
+        \begin{figure}[H]
+          \centering
+          \begin{minipage}[b]{0.48\textwidth}
+             \includegraphics[width=\textwidth]{Images/mockup/review.png}
+            \caption{Revisione al termine di un quiz}
+            \label{fig:review}
+          \end{minipage}
+          \hfill
+          \begin{minipage}[b]{0.48\textwidth}
+            \includegraphics[width=\textwidth]{Images/mockup/settings3.png}
+            \caption{Impostazioni generali}
+            \label{fig:settings3}
+          \end{minipage}
+        \end{figure}
+
+        \begin{figure}[H]
+          \centering
+          \begin{minipage}[b]{0.48\textwidth}
+            \includegraphics[width=\textwidth]{Images/mockup/import3.png}
+            \caption{Inserimento di nuove domande e relative risposte per un determinato corso}
+            \label{fig:import3}
+          \end{minipage}
+          \hfill
+          \begin{minipage}[b]{0.48\textwidth}
+            \includegraphics[width=\textwidth]{Images/mockup/achievements3.png}
+            \caption{Statistiche di gioco e obiettivi raggiunti}
+            \label{fig:achievements3}
+          \end{minipage}
+        \end{figure}
 
         \begin{figure}[H]
             \centering

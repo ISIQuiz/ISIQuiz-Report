@@ -16,6 +16,14 @@
 \usepackage{color}
 \usepackage{multicol}
 \tcbuselibrary{skins}
+\usepackage{geometry}
+    \geometry{
+        a4paper,
+        left=25mm,
+        right=25mm,
+        top=30mm,
+        bottom=30mm
+    }
 
 %\usepackage[italian]{babel}
 
@@ -138,6 +146,7 @@ coltitle=black,center title}}
 
 \begin{document}
 
+% Subsection numbers
 \renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
 \renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
 \renewcommand{\labelenumiv}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}
