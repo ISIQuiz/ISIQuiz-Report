@@ -89,7 +89,8 @@ Nel progetto la Continuous Integration (CI) e L'Automatizzazione delle mansioni 
         \subparagraph{Tool utilizzati}
         \begin{itemize}
             \item Sbt 1.7.2
-            \item ScalaTest
+            \item ScalaTest 3.2.14
+            \item Sbt-assembly 2.0.0
             \item GitHub Actions
             \item GitHub Pages
             \item Telegram Bots
@@ -101,8 +102,16 @@ Nel progetto la Continuous Integration (CI) e L'Automatizzazione delle mansioni 
             \item  PlanItPoker \cite{planitpoker}
         \end{itemize}
     CI progetto, Test, Coverage, Documentazione, Quality assurance, bla bla
-        
+    Per quanto riguarda la continuous integration del programma, come prima cosa è stato fatto il setup dello Scala Build Tool, specificando la versione di scala da utilizzare nel progetto, la versione di sbt stesso, inserendo le dipendenze di scalatest e il plugin sbt-assembly negli appositi file di configurazione. In modo analogo alla relazione, sono state poi utilizzate le GitHub actions per automatizzare la verifica dei test e per la release dei jar eseguibili. In particolare nell'immagine seguente è possibile osservare la pipeline esegutita ogni volta che delle nuove modifiche vengono spostate dal branch di develop al main branch.
 
+    \begin{figure}[H]
+        \caption{Pipeline progetto Scala}
+        \label{fig:scala-ci-github}
+        \centering
+        \includegraphics[width=1\textwidth]{Images/scalaCI-pipeline.png}
+    \end{figure}
+
+    La pipeline realizzata è strutturata in modo tale da eseguire tutti i test implementati e poi, solo in caso di successo della totalità di essi, la creazione dello uber jar (ovvero un jar contentene tutte le dipendenze e le risorse necessarie per l'esecuzione indipendente) sfruttando il plugin sbt-assembly. Il jar eseguibile realizzato viene infine caricato tra le release del progetto.
 
 
 
