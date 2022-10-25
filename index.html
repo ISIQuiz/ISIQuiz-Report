@@ -27,7 +27,7 @@ PARADIGMI DI PROGRAMMAZIONE E SVILUPPO<br />
                 <meta name="author" content="Lirussi Igor igor.lirussi@studio.unibo.it" />
                 <meta name="author" content="Omiccioli Riccardo riccardo.omiccioli@studio.unibo.it" />
                 <meta name="author" content="Teodorani Cecilia cecilia.teodorani@studio.unibo.it   " />
-                        <meta name="date" content="2022-10-24" />
+                        <meta name="date" content="2022-10-25" />
                 <title> RELAZIONE DI PROGETTO DI PARADIGMI DI PROGRAMMAZIONE E SVILUPPO  ISIQuiz  </title>
         <style type="text/css">code{white-space: pre;}</style>
                                 <link rel="stylesheet" href="./pandoc-uikit/uikit.css" />
@@ -47,7 +47,7 @@ PARADIGMI DI PROGRAMMAZIONE E SVILUPPO<br />
 <br />
 <strong>ISIQuiz</strong><br />
 <br /></h1>
-                                        <h1 class="uk-heading" style="margin:0">2022-10-24</h1>
+                                        <h1 class="uk-heading" style="margin:0">2022-10-25</h1>
                                                             <p class="uk-text-large">Gambaletta
 Daniele<br />
 <a
@@ -353,6 +353,11 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
                                                         id="footoc-sprint-3"><span
                                                         class="toc-section-number">10.4</span>
                                                         Sprint 3</a></li>
+                                                        <li><a
+                                                        href="#foosprint-4"
+                                                        id="footoc-sprint-4"><span
+                                                        class="toc-section-number">10.5</span>
+                                                        Sprint 4</a></li>
                                                         </ul></li>
                                                         <li><a
                                                         href="#fooconclusioni"
@@ -617,7 +622,8 @@ Progetto</h3>
 class="header-section-number">3.4.2.0.0.1</span> Tool utilizzati</h6>
 <ul>
 <li><p>Sbt 1.7.2</p></li>
-<li><p>ScalaTest</p></li>
+<li><p>ScalaTest 3.2.14</p></li>
+<li><p>Sbt-assembly 2.0.0</p></li>
 <li><p>GitHub Actions</p></li>
 <li><p>GitHub Pages</p></li>
 <li><p>Telegram Bots</p></li>
@@ -633,7 +639,27 @@ Boards</a></p></li>
 <li><p>PlanItPoker <span class="citation"
 data-cites="planitpoker">(planitpoker, s.d.)</span></p></li>
 </ul>
-<p>CI progetto, Test, Coverage, Documentazione, Quality assurance, bla bla</p>
+<p>CI progetto, Test, Coverage, Documentazione, Quality assurance, bla bla Per
+quanto riguarda la continuous integration del programma, come prima cosa &#xE8;
+stato fatto il setup dello Scala Build Tool, specificando la versione di scala
+da utilizzare nel progetto, la versione di sbt stesso, inserendo le dipendenze
+di scalatest e il plugin sbt-assembly negli appositi file di configurazione.
+In modo analogo alla relazione, sono state poi utilizzate le GitHub actions
+per automatizzare la verifica dei test e per la release dei jar eseguibili. In
+particolare nell&#x2019;immagine seguente &#xE8; possibile osservare la pipeline esegutita
+ogni volta che delle nuove modifiche vengono spostate dal branch di develop al
+main branch.</p>
+<figure>
+<img src="Images/scalaCI-pipeline.png" id="foofig:scala-ci-github"
+style="width:100.0%" alt="Pipeline progetto Scala" />
+<figcaption aria-hidden="true">Pipeline progetto Scala</figcaption>
+</figure>
+<p>La pipeline realizzata &#xE8; strutturata in modo tale da eseguire tutti i test
+implementati e poi, solo in caso di successo della totalit&#xE0; di essi, la
+creazione dello uber jar (ovvero un jar contentene tutte le dipendenze e le
+risorse necessarie per l&#x2019;esecuzione indipendente) sfruttando il plugin
+sbt-assembly. Il jar eseguibile realizzato viene infine caricato tra le
+release del progetto.</p>
 </section>
 </section>
 </section>
@@ -1293,6 +1319,21 @@ class="header-section-number">10.4.0.0.1</span> Deliverables</h5>
 <li><p>Schema di navigazione delle pagine dei mockup</p></li>
 <li><p>Diagramma delle classi in dettaglio</p></li>
 <li><p>Setup base progetto Scala su GitHub</p></li>
+</ul>
+</section>
+</section>
+<section id="foosprint-4" class="level2" data-number="10.5">
+<h2 data-number="10.5"><span class="header-section-number">10.5</span> Sprint
+4</h2>
+<p>Abbiamo studiato/implementato...</p>
+<section id="foodeliverables-3" class="level5" data-number="10.5.0.0.1">
+<h5 data-number="10.5.0.0.1"><span
+class="header-section-number">10.5.0.0.1</span> Deliverables</h5>
+<p>obiettivi raggiunti</p>
+<ul>
+<li><p>uno</p></li>
+<li><p>due</p></li>
+<li><p>tre</p></li>
 </ul>
 </section>
 </section>
