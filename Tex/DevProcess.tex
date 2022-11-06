@@ -31,18 +31,21 @@ Per sviluppare il progetto è stata scelto il framework Scrum. Questo per permet
     \paragraph{Scrum poker} Per stimare il livello di effort necessario per il completamento di ogni task è stata utilizzata la tecnica che viene chiamata \textbf{scrum poker}. Questa tecnica consiste nella lettura e discussione di un task e degli aspetti che lo riguardano e nella scelta, da parte di ogni membro del team, di un valore di effort stimato scegliendo tra 1, 2, 3, 5, 8, 13, 20 il numero che ritiene più adeguato a rappresentare la complessità del task tenendo conto ad esempio del tempo ritenuto necessario per lo sviluppo o la complessità stimata del task stesso. A seguito della scelta di un numero da parte di ogni membro vengono rivelati i numeri scelti e si cerca di raggiungere consenso sulla scelta del numero finale, eventualmente argomentando la propria decisione. La scelta del set di numeri da assegnare è tale da avere volutamente ampi intervalli tra i numeri per ridurre conflitti e raggiungere con maggiore semplicità una situazione di consenso.
 
 \section{Gestione di Progetto}
-In questa sezione verrà spiegato come il progetto...
+In questa sezione verrà spiegato come il progetto è stato gestito con diversi tool seguendo la metodologia Scrum.
     \paragraph{Gantt Chart} 
-    ... 
+    Per l'organizzazione del progetto con il Gantt è stato scelto \href{https://riccardo-omiccioli.atlassian.net/jira/software/projects/IQ/boards/1/roadmap}{Jira} ...
+    
+    \paragraph{Collaborative Design Board}
+    Per le Board di Design è stato utilizzato \href{https://miro.com/app/board/uXjVPN93uLs=/?share_link_id=56431555728}{Miro} ...
+
+    \paragraph{Product-Backlog}
+    Per le Board di Scrum è stato utilizzato \href{https://github.com/orgs/ISIQuiz/projects/3}{GitHub-Projects} ...
     
     \paragraph{Licensing} 
     ...
     
     \paragraph{Versioning}
     ...
-    
-    \paragraph{GitHub-Projects}
-    Per le Board di Scrum è stato utilizzato GitHub-Projects...
     
     \paragraph{Telegram}
     scelta Telegram...
@@ -96,13 +99,18 @@ Nel progetto la Continuous Integration (CI) e L'Automatizzazione delle mansioni 
             \item Telegram Bots
             \item Dependabot
             \item Sonarcloud/Codacy/Codefactor
-            \item \href{https://miro.com/app/board/uXjVPN93uLs=/?share_link_id=56431555728}{Miro board}
-            \item  \href{https://riccardo-omiccioli.atlassian.net/jira/software/projects/IQ/boards/1/roadmap}{Jira}
-            \item  \href{https://github.com/orgs/ISIQuiz/projects/3}{GitHub Boards}
-            \item  PlanItPoker \cite{planitpoker}
+            \item \href{https://riccardo-omiccioli.atlassian.net/jira/software/projects/IQ/boards/1/roadmap}{Jira}
+            \item \href{https://miro.com/app/board/uXjVPN93uLs=/?share_link_id=56431555728}{Miro}
+            \item \href{https://github.com/orgs/ISIQuiz/projects/3}{GitHub Boards}
+            \item PlanItPoker \cite{planitpoker}
         \end{itemize}
     CI progetto, Test, Coverage, Documentazione, Quality assurance, bla bla
-    Per quanto riguarda la continuous integration del programma, come prima cosa è stato fatto il setup dello Scala Build Tool, specificando la versione di scala da utilizzare nel progetto, la versione di sbt stesso, inserendo le dipendenze di scalatest e il plugin sbt-assembly negli appositi file di configurazione. In modo analogo alla relazione, sono state poi utilizzate le GitHub actions per automatizzare la verifica dei test e per la release dei jar eseguibili. In particolare nell'immagine seguente è possibile osservare la pipeline esegutita ogni volta che delle nuove modifiche vengono spostate dal branch di develop al main branch.
+
+        \subsubsection{Quality Assurance}
+        Per quanto riguarda la gestione di progetto con i vari branches, è stato scelto un branch develop su cui fare merge di ogni feature. Queste vengono implementate su branch a parte a partire dalle issue relative individuate nel refinement del Product Backlog. 
+        Per garantire il giusto processo di sviluppo sono state attivate delle \textbf{Branch Protection Rules} che forzano la persona che contribuisce al codice a chiedere una pull request, prima di fare la merge forzosa da linea di comando. La pull request deve passare almeno una review da parte di altri sviluppatori, prima di essere introdotta nel branch di development. Inoltre sono stati introdotti gli status check, che vanno passati prima di poter fare la merge, questi comprendono il passare i test. 
+        
+    Per quanto riguarda la continuous integration del programma, come prima cosa è stato fatto il setup dello Scala Build Tool, specificando la versione di scala da utilizzare nel progetto, la versione di sbt stesso, inserendo le dipendenze di scalatest e il plugin sbt-assembly negli appositi file di configurazione. In modo analogo alla relazione, sono state poi utilizzate le GitHub actions per automatizzare la verifica dei test e per la release dei jar eseguibili. In particolare nell'immagine seguente è possibile osservare la pipeline eseguita ogni volta che delle nuove modifiche vengono spostate dal branch di develop al main branch.
 
     \begin{figure}[H]
         \caption{Pipeline progetto Scala}
