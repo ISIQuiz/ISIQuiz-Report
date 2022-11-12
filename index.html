@@ -27,7 +27,7 @@ PARADIGMI DI PROGRAMMAZIONE E SVILUPPO<br />
                 <meta name="author" content="Lirussi Igor &#xA0;&#xA0;igor.lirussi@studio.unibo.it&#xA0;&#xA0;" />
                 <meta name="author" content="Omiccioli Riccardo riccardo.omiccioli@studio.unibo.it" />
                 <meta name="author" content="Teodorani Cecilia cecilia.teodorani@studio.unibo.it      " />
-                        <meta name="date" content="2022-11-07" />
+                        <meta name="date" content="2022-11-12" />
                 <title> RELAZIONE DI PROGETTO DI PARADIGMI DI PROGRAMMAZIONE E SVILUPPO  ISIQuiz  </title>
         <style type="text/css">code{white-space: pre;}</style>
                                 <link rel="stylesheet" href="./pandoc-uikit/uikit.css" />
@@ -47,7 +47,7 @@ PARADIGMI DI PROGRAMMAZIONE E SVILUPPO<br />
 <br />
 <strong>ISIQuiz</strong><br />
 <br /></h1>
-                                        <h1 class="uk-heading" style="margin:0">2022-11-07</h1>
+                                        <h1 class="uk-heading" style="margin:0">2022-11-12</h1>
                                                             <p class="uk-text-large">Gambaletta
 Daniele<br />
 <a
@@ -173,14 +173,14 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
                                                         del problema</a>
                                                         <ul>
                                                         <li><a
-                                                        href="#foointervista-con-il-committente"
-                                                        id="footoc-intervista-con-il-committente"><span
+                                                        href="#foochap: IntervistaCommittente"
+                                                        id="footoc-chap: IntervistaCommittente"><span
                                                         class="toc-section-number">4.1</span>
                                                         Intervista con il
                                                         committente</a></li>
                                                         <li><a
-                                                        href="#fooubiquitous-language"
-                                                        id="footoc-ubiquitous-language"><span
+                                                        href="#foochap:UbiquitousLanguage"
+                                                        id="footoc-chap:UbiquitousLanguage"><span
                                                         class="toc-section-number">4.2</span>
                                                         Ubiquitous
                                                         Language</a></li>
@@ -205,13 +205,13 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
                                                         Requisiti Utente</a>
                                                         <ul>
                                                         <li><a
-                                                        href="#foouser-stories"
-                                                        id="footoc-user-stories"><span
+                                                        href="#foochap:UserStories"
+                                                        id="footoc-chap:UserStories"><span
                                                         class="toc-section-number">5.2.1</span>
                                                         User Stories</a></li>
                                                         <li><a
-                                                        href="#foomockup"
-                                                        id="footoc-mockup"><span
+                                                        href="#foochap:Mockup"
+                                                        id="footoc-chap:Mockup"><span
                                                         class="toc-section-number">5.2.2</span>
                                                         Mockup</a></li>
                                                         </ul></li>
@@ -331,8 +331,8 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
                                                         Testing e
                                                         Performance</a></li>
                                                         <li><a
-                                                        href="#fooretrospettiva"
-                                                        id="footoc-retrospettiva"><span
+                                                        href="#foochap:Retrospettiva"
+                                                        id="footoc-chap:Retrospettiva"><span
                                                         class="toc-section-number">10</span>
                                                         Retrospettiva</a>
                                                         <ul>
@@ -481,41 +481,102 @@ Sviluppo</h1>
 <section id="foodomain-driven-design" class="level2" data-number="3.1">
 <h2 data-number="3.1"><span class="header-section-number">3.1</span> Domain
 Driven Design</h2>
-<p>Il processo di sviluppo ...</p>
+<p>In questo capitolo viene analizzato il processo di sviluppo definito dal
+team. Fin dall&#x2019;inizio, &#xE8; stato scelto un approccio di design fortemente basato
+sul dominio. Infatti nella discussione preliminare sull&#x2019;idea, sono emersi
+parecchi dubbi sul significato dei vocaboli usati e su concetti generali di
+funzionamento. Questo ha spinto il team ad avvalersi naturalmente di schemi
+per chiarificare e uniformare le astrazioni di ogni team-member. Questi schemi
+sono stati mantenuti e aggiornati per tutta la durata del progetto,
+uniformando l&#x2019;artefatto generato con il modello del dominio. Questo permette
+anche la successiva evoluzione del progetto in modo pi&#xF9; semplice.</p>
 <section id="fooaspetti-principali" class="level3" data-number="3.1.1">
 <h3 data-number="3.1.1"><span class="header-section-number">3.1.1</span>
 Aspetti principali</h3>
-<p>Concetti chiave ...:</p>
+<p>I concetti chiave che hanno assunto particolare importanza nello sviluppo
+sono stati:</p>
 <ul>
-<li><p><strong>Uno</strong>: ...</p></li>
-<li><p><strong>Due</strong>: ...</p></li>
-<li><p><strong>Tre</strong>: ...</p></li>
+<li><p><strong>Domain Expert interview</strong>: Per formalizzare le richieste
+e non permettere al software di allontanarsi da esse nello sviluppo
+l&#x2019;intervista con l&#x2019;esperto del dominio &#xE8; stata formalizzata e trascritta
+assieme a tutte le domande (<a href="#foochap: IntervistaCommittente"
+data-reference-type="ref"
+data-reference="chap: IntervistaCommittente">4.1</a>).</p></li>
+<li><p><strong>Linguaggio Condiviso</strong>: Per evitare continue spiegazioni
+tra i membri del team, per indicare a quale concetto si stesse facendo
+riferimento, &#xE8; stata creata una tabella di "Ubiquitous Language" (<a
+href="#foochap:UbiquitousLanguage" data-reference-type="ref"
+data-reference="chap:UbiquitousLanguage">4.2</a>).</p></li>
+<li><p><strong>User Stories</strong>: Per assicurare che l&#x2019;esperienza sia in
+linea con quella desiderata e che il software copra ogni interazione utente
+richiesta, sono state definite tutte le user stories che sono emerse
+dall&#x2019;intervista con il committente (<a href="#foochap:UserStories"
+data-reference-type="ref"
+data-reference="chap:UserStories">5.2.1</a>).</p></li>
+<li><p><strong>Mockup</strong>: Per verificare che il team abbia carpito
+effettivamente l&#x2019;aspettativa di risultato richiesta e il funzionamento sono
+stati sviluppati dei mockup, che il cliente ha verificato e approvato (<a
+href="#foochap:Mockup" data-reference-type="ref"
+data-reference="chap:Mockup">5.2.2</a>).</p></li>
 </ul>
 </section>
 </section>
 <section id="foometodologia-di-sviluppo" class="level2" data-number="3.2">
 <h2 data-number="3.2"><span class="header-section-number">3.2</span>
 Metodologia di Sviluppo</h2>
-<p>Per sviluppare il progetto &#xE8; stata scelto il framework Scrum. Questo per
-permettere ...</p>
+<p>Per sviluppare il progetto &#xE8; stata scelto il framework Scrum. Infatti il
+processo di sviluppo &#xE8; stato basato, in comune accordo, sulla metodologia
+agile. La motivazione risiede nel fatto che il team &#xE8; composto da 4 persone e
+il prodotto deve essere sviluppato in tempi brevi. Il framework
+<strong>Scrum</strong> infatti permette di suddividere i compiti in maniera
+precisa, sviluppando il progetto in passi incrementali, senza incorrere in
+fraintendimenti o problemi di integrazione all&#x2019;ultimo. La qualit&#xE0;
+dell&#x2019;artefatto generato &#xE8; quindi molto alta e i rischi di insoddisfazione del
+cliente sono minimi, grazie allo sviluppo ciclico che spezza il lavoro in
+piccoli goal e review.</p>
 <section id="fooscrum" class="level3" data-number="3.2.1">
 <h3 data-number="3.2.1"><span class="header-section-number">3.2.1</span>
 Scrum</h3>
-<p>Secondo il framework "Scrum" il lavoro deve essere diviso in pi&#xF9; sprint
-seguendo un approccio iterativo. Il team mantiene due tipi di backlog: il
-product backlog e lo sprint backlog. Bisogna parlare di Sprint Planning,
-Product-backlog, Daily-Scrum, Definition of Done, "refinement" del
-backlog...</p>
-<section id="foodefinition-of-done" class="level5" data-number="3.2.1.0.1">
+<p>. Secondo il framework "Scrum" il lavoro deve essere diviso in pi&#xF9; sprint
+seguendo un approccio iterativo. Per questo motivo l&#x2019;intervallo di tempo
+disponibile per lo sviluppo del progetto &#xE8; stato suddiviso in sotto-intervalli
+di una settimana. Il team mantiene due tipi di backlog questi riflettono
+l&#x2019;organizzazione temporale spiegata sopra: il product backlog e lo sprint
+backlog.</p>
+<section id="fooproduct-backlog" class="level5" data-number="3.2.1.0.1">
 <h5 data-number="3.2.1.0.1"><span
-class="header-section-number">3.2.1.0.1</span> Definition of done</h5>
-<p>Un item del product backlog si ritiene concluso quando tutti i task che lo
-compongono sono stati completati, il codice implementato &#xE8; stato adeguatamente
-testato con esito positivo e la relativa documentazione &#xE8; stata scritta.</p>
+class="header-section-number">3.2.1.0.1</span> Product Backlog</h5>
+<p>Il product backlog racchiude il progresso generale del progetto, in cui
+ogni item riflette una user-story, o una funzionalit&#xE0; ad alto livello, di cui
+il cliente pu&#xF2; apprezzare lo sviluppo. Queste vengono ordinate per urgenza e
+dimensione, e scelto un sottoinsieme, assegnate allo sprint successivo. In
+ogni sprint &#xE8; presente infatti lo sprint backlog, in cui si pu&#xF2; apprezzare in
+maniera molto pi&#xF9; dettagliata e a basso livello l&#x2019;implementazione delle varie
+feature.</p>
 </section>
-<section id="fooscrum-poker" class="level5" data-number="3.2.1.0.2">
+<section id="foosprint-backlog" class="level5" data-number="3.2.1.0.2">
 <h5 data-number="3.2.1.0.2"><span
-class="header-section-number">3.2.1.0.2</span> Scrum poker</h5>
+class="header-section-number">3.2.1.0.2</span> Sprint Backlog</h5>
+<p>Lo sprint backlog, proprio di ogni intervallo, va a raffinare nella
+riunione iniziale (sprint planning) gli item scelti (sprint goal) dal product
+backlog. Questi sono suddivisi in pi&#xF9; task e assegnati a diversi membri del
+team. Nel meeting finale (sprint review) lo sprint backlog viene ispezionato,
+riordinato e utilizzato per ulteriori considerazioni sull&#x2019;iterazione
+successiva. Per maggiori dettagli sul processo di sviluppo per ogni iterazione
+si veda il capitolo <a href="#foochap:Retrospettiva" data-reference-type="ref"
+data-reference="chap:Retrospettiva">10</a>.</p>
+</section>
+<section id="foodefinition-of-done" class="level5" data-number="3.2.1.0.3">
+<h5 data-number="3.2.1.0.3"><span
+class="header-section-number">3.2.1.0.3</span> Definition of done</h5>
+<p>Un item del product backlog o sprint backlog si ritiene concluso quando
+tutti i task che lo compongono sono stati completati, il codice implementato &#xE8;
+stato adeguatamente testato con esito positivo e la relativa documentazione &#xE8;
+stata scritta.</p>
+</section>
+<section id="fooscrum-poker" class="level5" data-number="3.2.1.0.4">
+<h5 data-number="3.2.1.0.4"><span
+class="header-section-number">3.2.1.0.4</span> Scrum poker</h5>
 <p>Per stimare il livello di effort necessario per il completamento di ogni
 task &#xE8; stata utilizzata la tecnica che viene chiamata <strong>scrum
 poker</strong>. Questa tecnica consiste nella lettura e discussione di un task
@@ -530,6 +591,13 @@ argomentando la propria decisione. La scelta del set di numeri da assegnare &#xE
 tale da avere volutamente ampi intervalli tra i numeri per ridurre conflitti e
 raggiungere con maggiore semplicit&#xE0; una situazione di consenso.</p>
 </section>
+<section id="fooruoli" class="level5" data-number="3.2.1.0.5">
+<h5 data-number="3.2.1.0.5"><span
+class="header-section-number">3.2.1.0.5</span> Ruoli</h5>
+<p>I ruoli definiti da Scrum sono stati leggermente modificati, essendo il
+team composto da solo 4 persone. Nello specifico, il "domain-expert" e lo
+"scrum master" sono stati anche programmatori.</p>
+</section>
 </section>
 </section>
 <section id="foogestione-di-progetto" class="level2" data-number="3.3">
@@ -541,8 +609,11 @@ diversi tool seguendo la metodologia Scrum.</p>
 <h5 data-number="3.3.0.0.1"><span
 class="header-section-number">3.3.0.0.1</span> Gantt Chart</h5>
 <p>Per l&#x2019;organizzazione del progetto con il Gantt &#xE8; stato scelto <a
-href="https://riccardo-omiccioli.atlassian.net/jira/software/projects/IQ/boards/1/roadmap">Jira</a>
-...</p>
+href="https://riccardo-omiccioli.atlassian.net/jira/software/projects/IQ/boards/1/roadmap">Jira</a>.
+Questo tool ci ha permesso di avere una visione generale dei momenti del
+progetto, e quali task svolgere in ogni fase. Lo strumento inoltre &#xE8; stato
+utile per la pianificazione e per mantenere la costanza attraverso le
+deadline.</p>
 </section>
 <section id="foocollaborative-design-board" class="level5"
 data-number="3.3.0.0.2">
@@ -550,23 +621,45 @@ data-number="3.3.0.0.2">
 class="header-section-number">3.3.0.0.2</span> Collaborative Design Board</h5>
 <p>Per le Board di Design &#xE8; stato utilizzato <a
 href="https://miro.com/app/board/uXjVPN93uLs=/?share_link_id=56431555728">Miro</a>
-...</p>
+Lo strumento ci ha permesso di lavorare simultaneamente su grafici e schemi
+che sono stati molto utili nella fase iniziale di chiarificazione e
+design.</p>
 </section>
-<section id="fooproduct-backlog" class="level5" data-number="3.3.0.0.3">
+<section id="fooproduct-backlog-1" class="level5" data-number="3.3.0.0.3">
 <h5 data-number="3.3.0.0.3"><span
 class="header-section-number">3.3.0.0.3</span> Product-Backlog</h5>
 <p>Per le Board di Scrum &#xE8; stato utilizzato <a
-href="https://github.com/orgs/ISIQuiz/projects/3">GitHub-Projects</a> ...</p>
+href="https://github.com/orgs/ISIQuiz/projects/3">GitHub-Projects</a> Il tool
+si &#xE8; rivelato molto potente, grazie anche all&#x2019;integrazione diretta con GitHub.
+La chiusura di issue avviene in maniera automatica al merge del branch
+relativo e gli item si spostano automaticamente nella board. Inoltre, la
+possibilit&#xE0; di avere diverse view su tutti i dati ha permesso di sviluppare
+product e sprint backlog senza ripetizioni o duplicazioni. Sono state create
+diverse view anche per facilitare i membri del team nell&#x2019;osservare il
+progresso, la priorit&#xE0; e la grandezza dei task. I vari raffinamenti sono stati
+referenziati alle issue principali tramite la loro descrizione, in modo da
+poter osservare il completamento passo passo delle user-stories. Unica
+mancanza, &#xE8; stato quello di poter assegnare delle issue a pi&#xF9; sprint backlog,
+qualora non venissero completate in uno solo.</p>
 </section>
 <section id="foolicensing" class="level5" data-number="3.3.0.0.4">
 <h5 data-number="3.3.0.0.4"><span
 class="header-section-number">3.3.0.0.4</span> Licensing</h5>
-<p>...</p>
+<p>Per la licenza &#xE8; stata scelta <a
+href="https://choosealicense.com/licenses/">la licenza base</a></p>
 </section>
 <section id="fooversioning" class="level5" data-number="3.3.0.0.5">
 <h5 data-number="3.3.0.0.5"><span
 class="header-section-number">3.3.0.0.5</span> Versioning</h5>
-<p>...</p>
+<p>Riguardo al versioning, la piattaforme scelta &#xE8; stata ovviamente Git. E per
+la sintassi, siccome il progetto &#xE8; stato svolto in tempi ristetti, &#xE8; stato
+scelto il versioning semantico unito a quello temporale, in cui ogni versione
+&#xE8; rappresentata da MAJOR.MINOR.PATCH e dalla data in cui &#xE8; stata implementata.
+Siamo consapevoli delle controindicazioni a riguardo del versioning temporale,
+del fatto che le date non rappresentino necessariamente il cambiamento del
+software e che non diano alcun grado di semantica su di esso, ma l&#x2019;abbiamo
+trovata un&#x2019;informazione utile soprattutto prima della consegna della prima
+Major, essendo il processo stabile e incrementale.</p>
 </section>
 <section id="footelegram" class="level5" data-number="3.3.0.0.6">
 <h5 data-number="3.3.0.0.6"><span
@@ -725,8 +818,7 @@ requisiti del software ad esso collegato. Nel colloquio il problema &#xE8; emers
 chiaramente e la soluzione software &#xE8; stata individuata in maniera univoca. In
 seguito sono stati definiti incontri periodici con il committente per la
 valutazione del progresso e i feedback sui deliverables di ogni sprint.</p>
-<section id="foointervista-con-il-committente" class="level2"
-data-number="4.1">
+<section id="foochap: IntervistaCommittente" class="level2" data-number="4.1">
 <h2 data-number="4.1"><span class="header-section-number">4.1</span>
 Intervista con il committente</h2>
 <p>Sono uno studente di Ingegneria e Scienze Informatiche dell&#x2019;Universit&#xE0; di
@@ -785,7 +877,7 @@ quiz appena concluso ed eventualmente, in caso di risposta errata,
 visualizzare la risposta corretta.</p></li>
 </ol>
 </section>
-<section id="fooubiquitous-language" class="level2" data-number="4.2">
+<section id="foochap:UbiquitousLanguage" class="level2" data-number="4.2">
 <h2 data-number="4.2"><span class="header-section-number">4.2</span>
 Ubiquitous Language</h2>
 <p>Per chiarire il gergo usato tra il committente e gli sviluppatori &#xE8;
@@ -831,7 +923,7 @@ effettuate</p></li>
 <li><p>importare ed esportare nuove domande e risposte indicando la materia a
 cui si riferiscono</p></li>
 </ul>
-<section id="foouser-stories" class="level3" data-number="5.2.1">
+<section id="foochap:UserStories" class="level3" data-number="5.2.1">
 <h3 data-number="5.2.1"><span class="header-section-number">5.2.1</span> User
 Stories</h3>
 <p>Si riportano di seguito le user stories emerse:</p>
@@ -862,7 +954,7 @@ terminata.</p></li>
 <figcaption aria-hidden="true">Schema Casi d&#x2019;Uso</figcaption>
 </figure>
 </section>
-<section id="foomockup" class="level3" data-number="5.2.2">
+<section id="foochap:Mockup" class="level3" data-number="5.2.2">
 <h3 data-number="5.2.2"><span class="header-section-number">5.2.2</span>
 Mockup</h3>
 <p>A seguito dell&#x2019;intervista fatta con l&#x2019;esperto del dominio e dei requisiti
@@ -1264,7 +1356,7 @@ Cecilia</h2>
 Performance</h1>
 <p>... non so se volgiamo farlo, ma forse un due righe non guastano</p>
 </section>
-<section id="fooretrospettiva" class="level1" data-number="10">
+<section id="foochap:Retrospettiva" class="level1" data-number="10">
 <h1 data-number="10"><span class="header-section-number">10</span>
 Retrospettiva</h1>
 <section id="foosvolgimento" class="level2" data-number="10.1">
@@ -1393,8 +1485,8 @@ class="header-section-number">10.5.0.0.1</span> Deliverables</h5>
 <h2 data-number="10.6"><span class="header-section-number">10.6</span> Sprint
 5</h2>
 <p>Durante questo sprint abbiamo sviluppato la possibilit&#xE0; di avviare una
-partita tramite utilizzando il menu principale, inoltre &#xE8; stata implementata
-la visualizzazione delle domande e delle rispettive risposte.</p>
+partita utilizzando il menu principale, inoltre &#xE8; stata implementata la
+visualizzazione delle domande e delle rispettive risposte.</p>
 <section id="foodeliverables-4" class="level5" data-number="10.6.0.0.1">
 <h5 data-number="10.6.0.0.1"><span
 class="header-section-number">10.6.0.0.1</span> Deliverables</h5>
