@@ -52,7 +52,7 @@ jobs:
           
   TelegramFailureBuildJob:
       needs: [BuildLatexJob] #when finished this job
-      if: ${{ false }} && failure() # if its failed
+      if: ${{ false }} # if its failed
       runs-on: ubuntu-latest
       steps:
       - name: Clone Repo with Checkout 
@@ -78,7 +78,7 @@ jobs:
           
   TelegramSuccessBuildJob:
         needs: [BuildLatexJob] #when finished this job
-        if: ${{ false }} && success() #only on success
+        if: ${{ false }} #only on success
         runs-on: ubuntu-latest
         steps:
         - name: Send custom Telegram message
@@ -131,7 +131,7 @@ jobs:
   
   TelegramFailureDeployJob:
       needs: [DeployJob] #when finished this job
-      if: ${{ false }} && failure() # if its failed
+      if: ${{ false }} # if its failed
       runs-on: ubuntu-20.04
       steps:
       - name: Send custom Telegram message
@@ -147,7 +147,7 @@ jobs:
           
   TelegramSuccessDeployJob:
       needs: [DeployJob] #when finished this job
-      if: ${{ false }} && success() # if its ok
+      if: ${{ false }} # if its ok
       runs-on: ubuntu-20.04
       steps:
       - name: Clone Repo with Checkout 
@@ -201,6 +201,7 @@ jobs:
           git clean -fxd
           git clone https://github.com/igor-lirussi/pandoc-uikit
           rm -rdf pandoc-uikit/.git*
+          git checkout -f main .github
           git checkout -f main Extra
           cp Extra/favicon.png .
           git checkout -f main Images
@@ -215,7 +216,7 @@ jobs:
 
   TelegramFailurePandocConverterJob:
       needs: [PandocConverterJob] 
-      if: ${{ false }} && failure()
+      if: ${{ false }}
       runs-on: ubuntu-20.04
       steps:
       - name: Send custom Telegram message
@@ -231,7 +232,7 @@ jobs:
           
   TelegramSuccessPandocConverterJob:
       needs: [PandocConverterJob] 
-      if: ${{ false }} && success()
+      if: ${{ false }}
       runs-on: ubuntu-20.04
       steps:
       - name: Send custom Telegram message
