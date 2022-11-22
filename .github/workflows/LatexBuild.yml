@@ -52,7 +52,7 @@ jobs:
           
   TelegramFailureBuildJob:
       needs: [BuildLatexJob] #when finished this job
-      if: failure() # if its failed
+      if: ${{ false }} && failure() # if its failed
       runs-on: ubuntu-latest
       steps:
       - name: Clone Repo with Checkout 
@@ -78,7 +78,7 @@ jobs:
           
   TelegramSuccessBuildJob:
         needs: [BuildLatexJob] #when finished this job
-        if: success() #only on success
+        if: ${{ false }} && success() #only on success
         runs-on: ubuntu-latest
         steps:
         - name: Send custom Telegram message
@@ -131,7 +131,7 @@ jobs:
   
   TelegramFailureDeployJob:
       needs: [DeployJob] #when finished this job
-      if: failure() # if its failed
+      if: ${{ false }} && failure() # if its failed
       runs-on: ubuntu-20.04
       steps:
       - name: Send custom Telegram message
@@ -147,7 +147,7 @@ jobs:
           
   TelegramSuccessDeployJob:
       needs: [DeployJob] #when finished this job
-      if: success() # if its ok
+      if: ${{ false }} && success() # if its ok
       runs-on: ubuntu-20.04
       steps:
       - name: Clone Repo with Checkout 
@@ -215,7 +215,7 @@ jobs:
 
   TelegramFailurePandocConverterJob:
       needs: [PandocConverterJob] 
-      if: failure()
+      if: ${{ false }} && failure()
       runs-on: ubuntu-20.04
       steps:
       - name: Send custom Telegram message
@@ -231,6 +231,7 @@ jobs:
           
   TelegramSuccessPandocConverterJob:
       needs: [PandocConverterJob] 
+      if: ${{ false }} && success()
       runs-on: ubuntu-20.04
       steps:
       - name: Send custom Telegram message
