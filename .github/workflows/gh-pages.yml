@@ -2,8 +2,9 @@ name: Deploy website from gh-pages branch
 
 on:
   push:
-    branches: ["gh-pages"]
+    branches: ["gh-pages"] #commits by other actions workflows are ignored by GitHub, so they don't trigger this
   workflow_dispatch:
+  workflow_call: #we use an explicit workflow call by another workflow
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -23,6 +24,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Print Branch
+        run: |
+          git branch 
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Build with Jekyll

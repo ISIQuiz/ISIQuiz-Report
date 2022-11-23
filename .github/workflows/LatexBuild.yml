@@ -5,6 +5,8 @@ on:
     tags:
       - '**'
   workflow_dispatch:
+env:
+  TELEGRAM: ${{ false }}
 jobs:
   BuildLatexJob:
     runs-on: ubuntu-latest
@@ -52,7 +54,7 @@ jobs:
           
   TelegramFailureBuildJob:
       needs: [BuildLatexJob] #when finished this job
-      if: ${{ false }} # if its failed
+      if: ${{ failure() && env.TELEGRAM }} # if its failed
       runs-on: ubuntu-latest
       steps:
       - name: Clone Repo with Checkout 
@@ -78,7 +80,7 @@ jobs:
           
   TelegramSuccessBuildJob:
         needs: [BuildLatexJob] #when finished this job
-        if: ${{ false }} #only on success
+        if: ${{ success() && env.TELEGRAM }} #only on success
         runs-on: ubuntu-latest
         steps:
         - name: Send custom Telegram message
@@ -131,7 +133,7 @@ jobs:
   
   TelegramFailureDeployJob:
       needs: [DeployJob] #when finished this job
-      if: ${{ false }} # if its failed
+      if: ${{ failure() && env.TELEGRAM }} # if its failed
       runs-on: ubuntu-20.04
       steps:
       - name: Send custom Telegram message
@@ -147,7 +149,7 @@ jobs:
           
   TelegramSuccessDeployJob:
       needs: [DeployJob] #when finished this job
-      if: ${{ false }} # if its ok
+      if: ${{ success() && env.TELEGRAM }} # if its ok
       runs-on: ubuntu-20.04
       steps:
       - name: Clone Repo with Checkout 
@@ -201,7 +203,9 @@ jobs:
           git clean -fxd
           git clone https://github.com/igor-lirussi/pandoc-uikit
           rm -rdf pandoc-uikit/.git*
-          git checkout -f main .github
+          git checkout -f main README.md
+          mkdir readme
+          mv README.md ./readme
           git checkout -f main Extra
           cp Extra/favicon.png .
           git checkout -f main Images
@@ -213,10 +217,13 @@ jobs:
           git add .
           git commit -m 'Updated gh-pages'
           git push
+      - name: Call Build gh-pages workflow
+        uses: ./.github/workflows/gh-pages.yml
+
 
   TelegramFailurePandocConverterJob:
       needs: [PandocConverterJob] 
-      if: ${{ false }}
+      if: ${{ failure() && env.TELEGRAM }}
       runs-on: ubuntu-20.04
       steps:
       - name: Send custom Telegram message
@@ -232,7 +239,7 @@ jobs:
           
   TelegramSuccessPandocConverterJob:
       needs: [PandocConverterJob] 
-      if: ${{ false }}
+      if: ${{ success() && env.TELEGRAM }}
       runs-on: ubuntu-20.04
       steps:
       - name: Send custom Telegram message
