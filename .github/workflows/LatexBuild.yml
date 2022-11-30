@@ -29,14 +29,15 @@ jobs:
       - name: Split log
         if: failure()
         shell: bash
-        run: cat main.log | grep -n -E 'LaTeX Error|LaTeX Warning|Undefined' > small.log
+        run: |
+          cat main.log | grep -n -E 'LaTeX Error|LaTeX Warning|Undefined' > small.log
+          cat process.log | grep -n -E 'LaTeX Error|LaTeX Warning|Undefined' > small.log
       - name: Upload Logs
         if: failure()
         uses: actions/upload-artifact@v2
         with:
           name: Logs
           path: |
-            main.log
             small.log 
       - name: Print small log
         if: failure()
@@ -53,7 +54,7 @@ jobs:
           
   TelegramFailureBuildJob:
       needs: [BuildLatexJob] #when finished this job
-      if: failure() # if its failed
+      if: false # if its failed
       runs-on: ubuntu-latest
       steps:
       - name: Clone Repo with Checkout 
@@ -79,7 +80,7 @@ jobs:
           
   TelegramSuccessBuildJob:
         needs: [BuildLatexJob] #when finished this job
-        if: success() #only on success
+        if: false #only on success
         runs-on: ubuntu-latest
         steps:
         - name: Send custom Telegram message
@@ -132,7 +133,7 @@ jobs:
   
   TelegramFailureDeployJob:
       needs: [DeployJob] #when finished this job
-      if: failure() # if its failed
+      if: false #failure() # if its failed
       runs-on: ubuntu-20.04
       steps:
       - name: Send custom Telegram message
@@ -148,7 +149,7 @@ jobs:
           
   TelegramSuccessDeployJob:
       needs: [DeployJob] #when finished this job
-      if: success() # if its ok
+      if: false #success() # if its ok
       runs-on: ubuntu-20.04
       steps:
       - name: Clone Repo with Checkout 
@@ -217,13 +218,11 @@ jobs:
           git add .
           git commit -m 'Updated gh-pages'
           git push
-      - name: Call Build gh-pages workflow
-        uses: ./.github/workflows/gh-pages.yml
 
 
   TelegramFailurePandocConverterJob:
       needs: [PandocConverterJob] 
-      if: failure()
+      if: false #failure()
       runs-on: ubuntu-20.04
       steps:
       - name: Send custom Telegram message
@@ -239,7 +238,7 @@ jobs:
           
   TelegramSuccessPandocConverterJob:
       needs: [PandocConverterJob] 
-      if: success()
+      if: false #success()
       runs-on: ubuntu-20.04
       steps:
       - name: Send custom Telegram message
