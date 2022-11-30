@@ -29,8 +29,9 @@ jobs:
       - name: Split log
         if: failure()
         shell: bash
-        run: cat main.log | grep -n -E 'LaTeX Error|LaTeX Warning|Undefined' > small.log
-        run: cat process.log | grep -n -E 'LaTeX Error|LaTeX Warning|Undefined' > small.log
+        run: |
+          cat main.log | grep -n -E 'LaTeX Error|LaTeX Warning|Undefined' > small.log
+          cat process.log | grep -n -E 'LaTeX Error|LaTeX Warning|Undefined' > small.log
       - name: Upload Logs
         if: failure()
         uses: actions/upload-artifact@v2
