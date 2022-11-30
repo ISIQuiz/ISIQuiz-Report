@@ -4,4 +4,4 @@
 ### Il Processo di Sviluppo è disponibile in formato [pdf scaricabile qui](https://github.com/ISIQuiz/ISIQuiz-Report/releases/latest/download/process.pdf "Pdf Download")
 
 
-![ISIQuiz Logo](./Extra/ISIQuizLogoLineTransparent.png "ISIQuiz Logo")
+![ISIQuiz Logo](https://github.com/ISIQuiz/ISIQuiz-Report/raw/gh-pages/Extra/ISIQuizLogoLineTransparent.png "ISIQuiz Logo")
