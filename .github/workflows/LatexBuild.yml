@@ -217,8 +217,6 @@ jobs:
           git add .
           git commit -m 'Updated gh-pages'
           git push
-      - name: Call Build gh-pages workflow
-        uses: ./.github/workflows/gh-pages.yml
 
 
   TelegramFailurePandocConverterJob:
