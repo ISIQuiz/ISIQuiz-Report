@@ -27,7 +27,7 @@ PARADIGMI DI PROGRAMMAZIONE E SVILUPPO<br />
                 <meta name="author" content="Lirussi Igor &#xA0;&#xA0;igor.lirussi@studio.unibo.it&#xA0;&#xA0;" />
                 <meta name="author" content="Omiccioli Riccardo riccardo.omiccioli@studio.unibo.it" />
                 <meta name="author" content="Teodorani Cecilia cecilia.teodorani@studio.unibo.it      " />
-                        <meta name="date" content="2022-11-30" />
+                        <meta name="date" content="2022-12-04" />
                 <title> RELAZIONE DI PROGETTO DI PARADIGMI DI PROGRAMMAZIONE E SVILUPPO  ISIQuiz  </title>
         <style type="text/css">code{white-space: pre;}</style>
                                 <link rel="stylesheet" href="./pandoc-uikit/uikit.css" />
@@ -47,7 +47,7 @@ PARADIGMI DI PROGRAMMAZIONE E SVILUPPO<br />
 <br />
 <strong>ISIQuiz</strong><br />
 <br /></h1>
-                                        <h1 class="uk-heading" style="margin:0">2022-11-30</h1>
+                                        <h1 class="uk-heading" style="margin:0">2022-12-04</h1>
                                                             <p class="uk-text-large">Gambaletta
 Daniele<br />
 <a
@@ -228,8 +228,8 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
                                                         class="toc-section-number">5.3.1</span>
                                                         Obbligatori</a></li>
                                                         <li><a
-                                                        href="#fooopzionali"
-                                                        id="footoc-opzionali"><span
+                                                        href="#foochap:req_non_funzionali"
+                                                        id="footoc-chap:req_non_funzionali"><span
                                                         class="toc-section-number">5.3.2</span>
                                                         Opzionali</a></li>
                                                         </ul></li>
@@ -260,15 +260,9 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
                                                         Architettura
                                                         Generale</a></li>
                                                         <li><a
-                                                        href="#fooscelte-tecnologiche-cruciali"
-                                                        id="footoc-scelte-tecnologiche-cruciali"><span
-                                                        class="toc-section-number">6.2</span>
-                                                        Scelte Tecnologiche
-                                                        Cruciali</a></li>
-                                                        <li><a
                                                         href="#foopattern-architetturali-utilizzati"
                                                         id="footoc-pattern-architetturali-utilizzati"><span
-                                                        class="toc-section-number">6.3</span>
+                                                        class="toc-section-number">6.2</span>
                                                         Pattern Architetturali
                                                         Utilizzati</a></li>
                                                         </ul></li>
@@ -434,7 +428,7 @@ nello studio, o di non ricordarselo a sufficienza. Infatti, essere testati su
 concetti generali da altri studenti che li padroneggiano meglio rassicura
 notevolmente lo studente in questione. Inoltre, la dinamica "a gruppo"
 garantisce una copertura adeguata di tutte le nozioni pi&#xF9; importanti. L&#x2019;idea &#xE8;
-quindi quella di creare un applicazione che garantisca una esperienza simile,
+quindi quella di creare un&#x2019;applicazione che garantisca una esperienza simile,
 quando la situazione sopracitata non &#xE8; possibile.</p>
 </section>
 <section id="fooproblemi" class="level2" data-number="1.2">
@@ -443,9 +437,9 @@ Problemi</h2>
 <p>I problemi che hanno portato alla necessit&#xE0; di creare il software quindi
 sono:</p>
 <ul>
-<li><p>Incertezza sulla memorizzazione degli argomenti studiati</p></li>
-<li><p>Incertezza sulla copertura di tutti gli argomenti dell&#x2019;esame</p></li>
-<li><p>Poco tempo per il ripasso o ulteriore studio</p></li>
+<li><p>incertezza sulla memorizzazione degli argomenti studiati;</p></li>
+<li><p>incertezza sulla copertura di tutti gli argomenti dell&#x2019;esame;</p></li>
+<li><p>Poco tempo per il ripasso o ulteriore studio.</p></li>
 </ul>
 </section>
 <section id="fooobiettivi" class="level2" data-number="1.3">
@@ -453,15 +447,15 @@ sono:</p>
 Obiettivi</h2>
 <p>L&#x2019;obiettivo &#xE8; quello di mitigare l&#x2019;ansia da esame fornendo uno strumento
 valido che soddisfi la necessit&#xE0;, condivisa da ogni studente, di fare un
-"recap" antecedente ad un esame. Infine, sarebbe opportuno che questo processo
-sia reso il pi&#xF9; positivo e piacevole possibile.</p>
+ripasso generale prima di un esame. Infine, sarebbe opportuno che questo
+processo sia reso il pi&#xF9; positivo e piacevole possibile.</p>
 </section>
 </section>
 <section id="foostato-dellarte" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Stato
 dell&#x2019;Arte</h1>
-<p>Di seguito riportiamo una breve discussione sullo stato dell&#x2019;arte, sui
-competitors e sulle soluzioni simili alla nostra.</p>
+<p>Di seguito si riporta una breve discussione sullo stato dell&#x2019;arte, sui
+competitors e sulle soluzioni simili a quella proposta.</p>
 <p>Allo stato attuale, infatti, sono molte le varianti di giochi a quiz
 disponibili. Primariamente la motivazione risiede nel fatto che del format &#xE8;
 stato fatto largo uso fin dall&#x2019;antichit&#xE0; <span class="citation"
@@ -479,16 +473,14 @@ s.d.)</span>, ma le soluzioni trovate sono orientate alla creazione dei quiz
 da parte degli insegnanti per gli studenti.</p>
 <p>La nostra idea si differenzia, in parte, per:</p>
 <ul>
-<li><p>Natura Accademica e orientata a corsi specifici</p></li>
-<li><p>Ripasso possibile sugli errori, per individuare e fortificare le
-lacune</p></li>
-<li><p>Commistione con il concetto di FlashCard, volto alla memorizzazione dei
-contenuti</p></li>
-<li><p>Orientata allo studente, pi&#xF9; che strumento per il docente</p></li>
+<li><p>la natura accademica orientata a corsi specifici di un determinato
+corso di laurea e laurea magistrale;</p></li>
+<li><p>l&#x2019;utente target, in quanto ne usufruisce lo studente e non il
+docente.</p></li>
 </ul>
-<p>C&#x2019;&#xE8; infine da specificare che non &#xE8; nella nostra intenzione rinnovare
-l&#x2019;ambito, ma produrre un prodotto superiore alla norma per una specifica
-necessit&#xE0; riscontrata dagli studenti.</p>
+<p>L&#x2019;intenzione con la quale si vuole portare avanti il progetto &#xE8; quella di
+produrre un prodotto superiore a quelli disponibili nel mercato per una
+specifica necessit&#xE0; riscontrata, non apportare innovazione tecnologica.</p>
 </section>
 <section id="fooprocesso-di-sviluppo" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Processo di
@@ -1204,7 +1196,7 @@ dell&#x2019;utente</strong>:</p>
 </ol></li>
 </ol>
 </section>
-<section id="fooopzionali" class="level3" data-number="5.3.2">
+<section id="foochap:req_non_funzionali" class="level3" data-number="5.3.2">
 <h3 data-number="5.3.2"><span class="header-section-number">5.3.2</span>
 Opzionali</h3>
 <ul>
@@ -1256,6 +1248,8 @@ giocatore di barare.</p></li>
 <h2 data-number="5.5"><span class="header-section-number">5.5</span> Requisiti
 Implementativi</h2>
 <ul>
+<li><p>Linguaggio di programmazione Scala versione 3.2.0</p></li>
+<li><p>Scala FX 19.0.0 per l&#x2019;interfaccia grafica</p></li>
 <li><p>Utilizzo di JDK X ?</p></li>
 <li><p>Per il salvataggio delle domande e delle relative risposte deve essere
 utilizzata la notazione JSON in modo che l&#x2019;integrazione con il software possa
@@ -1275,15 +1269,9 @@ Architettura Generale</h2>
 <p>Inserimento del diagramma delle classi generale in cui si vedono le
 interazioni tra Model View e Controller</p>
 </section>
-<section id="fooscelte-tecnologiche-cruciali" class="level2"
-data-number="6.2">
-<h2 data-number="6.2"><span class="header-section-number">6.2</span> Scelte
-Tecnologiche Cruciali</h2>
-<p>...</p>
-</section>
 <section id="foopattern-architetturali-utilizzati" class="level2"
-data-number="6.3">
-<h2 data-number="6.3"><span class="header-section-number">6.3</span> Pattern
+data-number="6.2">
+<h2 data-number="6.2"><span class="header-section-number">6.2</span> Pattern
 Architetturali Utilizzati</h2>
 <p>Nel sistema &#xE8; stato utilizzato il pattern Model View Controller (MVC) in
 modo da modularizzare quanto pi&#xF9; possibile le parti relative all&#x2019;interfaccia
@@ -1375,7 +1363,12 @@ Cecilia</h2>
 <section id="footesting-e-performance" class="level1" data-number="9">
 <h1 data-number="9"><span class="header-section-number">9</span> Testing e
 Performance</h1>
-<p>... non so se volgiamo farlo, ma forse un due righe non guastano</p>
+<p>Per i test dell&#x2019;applicazione sono stati utilizzati:</p>
+<ul>
+<li><p>Scala Test versione 3.2.14 per il model dell&#x2019;applicazione</p></li>
+<li><p>JUnit 5 e TestFX versione 4.0.16-alpha per l&#x2019;interfaccia
+grafica</p></li>
+</ul>
 </section>
 <section id="foochap:Retrospettiva" class="level1" data-number="10">
 <h1 data-number="10"><span class="header-section-number">10</span>
@@ -1589,11 +1582,29 @@ class="header-section-number">10.9.0.0.1</span> Deliverables</h5>
 <section id="fooconclusioni" class="level1" data-number="11">
 <h1 data-number="11"><span class="header-section-number">11</span>
 Conclusioni</h1>
-<p>Visione generale sul progetto, pareri personali, ...</p>
 <section id="foosviluppi-futuri" class="level2" data-number="11.1">
 <h2 data-number="11.1"><span class="header-section-number">11.1</span>
 Sviluppi Futuri</h2>
-<p>In futuro ...</p>
+<p>Tutti i requisiti funzionali opzionali sopra citati (capitolo <a
+href="#foochap:req_non_funzionali" data-reference-type="ref"
+data-reference="chap:req_non_funzionali">5.3.2</a>) sono sicuramente i primi
+aspetti da inserire, dal momento che sono stati indicati dall&#x2019;esperto del
+dominio durante l&#x2019;analisi iniziale. In pi&#xF9;, dato che il progetto sviluppato &#xE8;
+un&#x2019;applicazione desktop, non &#xE8; difficile immaginarsi ulteriori funzionalit&#xE0;
+aggiuntive:</p>
+<ul>
+<li><p>Salvataggio di tutti i dati del giocatore e delle partite in cloud: si
+pu&#xF2; creare una classifica generale con tutti gli studenti, basata su quante
+partite hanno effettuato e quante risposte corrette hanno dato sul totale dei
+quiz;</p></li>
+<li><p>Sfida tra pi&#xF9; studenti: in questa modalit&#xE0; di gioco pi&#xF9; utenti possono
+sfidarsi utilizzando l&#x2019;applicativo sui propri dispositivi;</p></li>
+<li><p>Condivisione dei quiz inseriti da un utente: chiunque pu&#xF2; avere a
+disposizione ulteriori corsi e/o quiz sui quali esercitarsi, cercando di
+coprire il pi&#xF9; possibile gli argomenti presenti negli esami;</p></li>
+<li><p>Segnalazione da parte dei giocatori di quiz da correggere, perch&#xE9;
+incompleti o inesatti.</p></li>
+</ul>
 <div id="foorefs" class="references csl-bib-body hanging-indent"
 role="doc-bibliography">
 <div id="fooref-uasyncio" class="csl-entry" role="doc-biblioentry">
