@@ -262,7 +262,7 @@ A seguito dell'intervista con l'esperto del dominio, sono emersi i seguenti requ
         \end{enumerate}  
 
     
-        \subsection{Opzionali}
+        \subsection{Opzionali} \label{chap:req_non_funzionali}
         \begin{itemize}
             \item \textbf{Sfida a tempo}: rispondere a più domande possibili in un intervallo di tempo limitato
             \item \textbf{Aiuti su richiesta}: all’utente vengono messi a disposizione un numero specifico di aiuti ad ogni partita con i quali semplificare la scelta della risposta. Utilizzando uno degli aiuti verrà eliminata una tra le risposte errate, semplificando così la scelta. Potranno essere utilizzati al massimo 2 aiuti per ogni domanda. (Il numero di aiuti a disposizione sarà configurabile dall'utente prima di iniziare una partita?)
@@ -284,6 +284,8 @@ A seguito dell'intervista con l'esperto del dominio, sono emersi i seguenti requ
 
 	\section{Requisiti Implementativi}
         \begin{itemize}
+            \item Linguaggio di programmazione Scala versione 3.2.0
+            \item Scala FX 19.0.0 per l'interfaccia grafica
             \item Utilizzo di JDK X ?
             \item Per il salvataggio delle domande e delle relative risposte deve essere utilizzata la notazione JSON in modo che l'integrazione con il software possa utilizzare librerie generiche già disponibili.
             \item Per lo sviluppo dovrà essere utilizzato l'IDE IntelliJ in modo da avere consistenza tra i membri del team di sviluppo.
