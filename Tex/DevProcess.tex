@@ -1,9 +1,10 @@
 % -*- root: ../main.tex -*-
 %modalità di divisione in itinere dei task, meeting/interazioni pianificate, modalità di revisione in itinere dei task, scelta degli strumenti di test/build/continuous integration
 \chapter{Processo di Sviluppo}
+In questo capitolo viene analizzato l'intero processo di sviluppo definito dal team.
 
 \section{Domain Driven Design}
-In questo capitolo viene analizzato il processo di sviluppo definito dal team. Fin dall'inizio, è stato scelto un approccio di design fortemente basato sul dominio. Infatti nella discussione preliminare sull'idea, sono emersi parecchi dubbi sul significato dei vocaboli usati e su concetti generali di funzionamento. Questo ha spinto il team ad avvalersi naturalmente di schemi per chiarificare e uniformare le astrazioni di ogni team-member. Questi schemi sono stati mantenuti e aggiornati per tutta la durata del progetto, uniformando l'artefatto generato con il modello del dominio. Questo permette anche la successiva evoluzione del progetto in modo più semplice.
+ Fin dall'inizio, è stato scelto un approccio di design fortemente basato sul dominio. Infatti nella discussione preliminare sull'idea, sono emersi molti dubbi sul significato dei vocaboli usati e su concetti generali di funzionamento. Questo ha spinto il team ad avvalersi naturalmente di schemi per chiarificare e uniformare le astrazioni di ogni team-member. Questi schemi sono stati mantenuti e aggiornati per tutta la durata del progetto, uniformando l'artefatto generato con il modello del dominio. Questo permette anche la successiva evoluzione del progetto in modo più semplice.
     \subsection{Aspetti principali}
     I concetti chiave che hanno assunto particolare importanza nello sviluppo sono stati:
     \begin{itemize}
@@ -15,10 +16,10 @@ In questo capitolo viene analizzato il processo di sviluppo definito dal team. F
 
 
 \section{Metodologia di Sviluppo}
-Per sviluppare il progetto è stata scelto il framework Scrum. Infatti il processo di sviluppo è stato basato, in comune accordo, sulla metodologia agile. La motivazione risiede nel fatto che il team è composto da 4 persone e il prodotto deve essere sviluppato in tempi brevi. Il framework \textbf{Scrum} infatti permette di suddividere i compiti in maniera precisa, sviluppando il progetto in passi incrementali, senza incorrere in fraintendimenti o problemi di integrazione all'ultimo. La qualità dell'artefatto generato è quindi molto alta e i rischi di insoddisfazione del cliente sono minimi, grazie allo sviluppo ciclico che spezza il lavoro in piccoli goal e review. 
-    \subsection{Scrum}. 
+Per sviluppare il progetto è stata scelto il framework \textbf{Scrum}. Infatti il processo di sviluppo è stato basato, in comune accordo, sulla metodologia agile. La motivazione risiede nel fatto che il team è composto da quattro persone e il prodotto deve essere sviluppato in tempi brevi. Il framework Scrum infatti permette di suddividere i compiti in modo preciso, sviluppando il progetto in passi incrementali, senza incorrere in fraintendimenti o problemi di integrazione. La qualità dell'artefatto generato è quindi molto alta e i rischi di insoddisfazione del cliente sono minimi, grazie allo sviluppo ciclico che spezza il lavoro in piccoli goal e review. 
+    \subsection{Scrum}
     Secondo il framework "Scrum" il lavoro deve essere diviso in più sprint seguendo un approccio iterativo. Per questo motivo l'intervallo di tempo disponibile per lo sviluppo del progetto è stato suddiviso in sotto-intervalli di una settimana. 
-    Il team mantiene due tipi di backlog questi riflettono l'organizzazione temporale spiegata sopra: il product backlog e lo sprint backlog. 
+    Il team mantiene due tipi di backlog, i quali riflettono l'organizzazione spiegata sopra: il product backlog e lo sprint backlog. 
     
     \paragraph{Product Backlog}Il product backlog racchiude il progresso generale del progetto, in cui ogni item riflette una user-story, o una funzionalità ad alto livello, di cui il cliente può apprezzare lo sviluppo. Queste vengono ordinate per urgenza e dimensione, e scelto un sottoinsieme, assegnate allo sprint successivo. In ogni sprint è presente infatti lo sprint backlog, in cui si può apprezzare in maniera molto più dettagliata e a basso livello l'implementazione delle varie feature. 
 
@@ -29,7 +30,7 @@ Per sviluppare il progetto è stata scelto il framework Scrum. Infatti il proces
     \paragraph{Scrum poker} Per stimare il livello di effort necessario per il completamento di ogni task è stata utilizzata la tecnica che viene chiamata \textbf{scrum poker}. Questa tecnica consiste nella lettura e discussione di un task e degli aspetti che lo riguardano e nella scelta, da parte di ogni membro del team, di un valore di effort stimato scegliendo tra 1, 2, 3, 5, 8, 13, 20 il numero che ritiene più adeguato a rappresentare la complessità del task tenendo conto ad esempio del tempo ritenuto necessario per lo sviluppo o la complessità stimata del task stesso. A seguito della scelta di un numero da parte di ogni membro vengono rivelati i numeri scelti e si cerca di raggiungere consenso sulla scelta del numero finale, eventualmente argomentando la propria decisione. La scelta del set di numeri da assegnare è tale da avere volutamente ampi intervalli tra i numeri per ridurre conflitti e raggiungere con maggiore semplicità una situazione di consenso.
 
     \paragraph{Ruoli}
-    I ruoli definiti da Scrum sono stati leggermente modificati, essendo il team composto da solo 4 persone. Nello specifico, il "domain-expert" e lo "scrum master" sono stati anche programmatori. 
+    I ruoli definiti da Scrum sono stati leggermente modificati, essendo il team composto da solo quattro persone. Nello specifico, il "domain-expert" e lo "scrum master" sono stati anche programmatori. 
     
 
 
@@ -60,7 +61,7 @@ In questa sezione verrà spiegato come il progetto è stato gestito con diversi 
 
 \section{Continuous Integration e Automatizzazione}
 \label{chap:CI}
-Nel progetto la Continuous Integration (CI) e L'Automatizzazione delle mansioni più ripetitive hanno avuto notevole importanza. Una cospicua quantità di tempo è stata dedicata all'inizio per la messa in opera di pipeline che permettano di risparmiare tempo successivamente agli sviluppatori e di garantire la massima qualità al cliente finale.
+Nel progetto la Continuous Integration (CI) e l'automatizzazione delle mansioni più ripetitive hanno avuto notevole importanza. Una cospicua quantità di tempo è stata dedicata all'inizio per la messa in opera di pipeline che permettano di risparmiare tempo successivamente agli sviluppatori e di garantire la massima qualità al cliente finale.
     \subsection{Relazione}
         \subparagraph{Tool utilizzati}
         \begin{itemize}
