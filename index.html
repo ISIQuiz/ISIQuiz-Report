@@ -159,10 +159,11 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
                                                         class="toc-section-number">3.4.1</span>
                                                         Relazione</a></li>
                                                         <li><a
-                                                        href="#fooprogetto"
-                                                        id="footoc-progetto"><span
+                                                        href="#fooprogetto-software"
+                                                        id="footoc-progetto-software"><span
                                                         class="toc-section-number">3.4.2</span>
-                                                        Progetto</a></li>
+                                                        Progetto
+                                                        Software</a></li>
                                                         </ul></li>
                                                         </ul></li>
                                                         <li><a
@@ -237,7 +238,7 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
                                                         href="#foorequisiti-non-funzionali"
                                                         id="footoc-requisiti-non-funzionali"><span
                                                         class="toc-section-number">5.4</span>
-                                                        Requisiti non
+                                                        Requisiti Non
                                                         Funzionali</a></li>
                                                         <li><a
                                                         href="#foorequisiti-implementativi"
@@ -657,7 +658,8 @@ qualora non venissero completate in uno solo.</p>
 <h5 data-number="3.3.0.0.4"><span
 class="header-section-number">3.3.0.0.4</span> Licensing</h5>
 <p>Per la licenza &#xE8; stata scelta <a
-href="https://choosealicense.com/licenses/">la licenza base</a></p>
+href="https://choosealicense.com/licenses/">la licenza MIT base</a>, in quanto
+progetto accademico e non di natura commerciale.</p>
 </section>
 <section id="fooversioning" class="level5" data-number="3.3.0.0.5">
 <h5 data-number="3.3.0.0.5"><span
@@ -685,20 +687,52 @@ style="width:100.0%" alt="Pipeline Git" />
 <figcaption aria-hidden="true">Pipeline Git</figcaption>
 </figure>
 </section>
-<section id="footelegram" class="level5" data-number="3.3.0.0.7">
+<section id="fooquality-assurance" class="level5" data-number="3.3.0.0.7">
 <h5 data-number="3.3.0.0.7"><span
-class="header-section-number">3.3.0.0.7</span> Telegram</h5>
-<p>scelta Telegram...</p>
-<section id="foobot" class="level6" data-number="3.3.0.0.7.1">
-<h6 data-number="3.3.0.0.7.1"><span
-class="header-section-number">3.3.0.0.7.1</span> Bot</h6>
-<p>Telegram bot...</p>
-</section>
+class="header-section-number">3.3.0.0.7</span> Quality Assurance</h5>
+<p>Per quanto riguarda la gestione di progetto con i vari branches, &#xE8; stato
+scelto un branch develop su cui fare merge di ogni feature. Queste vengono
+implementate su branch a parte a partire dalle issue relative individuate nel
+refinement del Product Backlog. Per garantire il giusto processo di sviluppo
+sono state attivate delle <strong>Branch Protection Rules</strong> che forzano
+la persona che contribuisce al codice a chiedere una pull request, prima di
+fare la merge forzosa da linea di comando. La pull request deve passare almeno
+una review da parte di altri sviluppatori, prima di essere introdotta nel
+branch di development. Inoltre sono stati introdotti gli status check, che
+vanno passati prima di poter fare la merge, questi comprendono il passare i
+test.</p>
 </section>
 <section id="foodiscord" class="level5" data-number="3.3.0.0.8">
 <h5 data-number="3.3.0.0.8"><span
 class="header-section-number">3.3.0.0.8</span> Discord</h5>
-<p>Discord...</p>
+<p>Discord &#xE8; stato utilizzato come stumento di comunicazione vocale per i
+meeting, per la sua capacit&#xE0; di condividere lo schermo e di supportare
+chiamate di gruppo. Inoltre, particolarmente utile &#xE8; stata la divisione delle
+chat in canali in cui organizzare logicamente il materiale, i link e le
+discussioni.</p>
+</section>
+<section id="footelegram" class="level5" data-number="3.3.0.0.9">
+<h5 data-number="3.3.0.0.9"><span
+class="header-section-number">3.3.0.0.9</span> Telegram</h5>
+<p>La scelta di Telgram come strumento di comunicazione informale &#xE8; motivata
+dal fatto che sia orientato anche a programmatori con funzionalit&#xE0; avanzate e
+tutti i membri lo utilizzassero antecedentemente. Inoltre la possibilit&#xE0; di
+creare gruppi con Bot e con comandi personalizzati &#xE8; stata particolarmente
+apprezzata.</p>
+<section id="foobot" class="level6" data-number="3.3.0.0.9.1">
+<h6 data-number="3.3.0.0.9.1"><span
+class="header-section-number">3.3.0.0.9.1</span> Bot</h6>
+<p>Per mantenere tutti i membri aggiornati, e per supportare la tempestiva
+review delle pull-request &#xE8; stato creato un Bot Telegram ed inserito nel
+gruppo. Il Bot si &#xE8; occupato di notificare qualora avvengano gli aggiornamenti
+alla relazione, per poter tenere traccia del progresso generale del progetto.
+Inoltre, si &#xE8; rivelato particolarmente efficacie nel comunicare se la CI sotto
+descritta abbia avuto qualche problema nel generare il pdf o il sito,
+operazione che pu&#xF2; concludersi anche dopo 10 minuti, quando il programmatore
+probabilmente dimenticherebbe di controllarla. Un&#x2019;altra occupazione importante
+&#xE8; stata quella di notificare nel gruppo le pull request sui branch principali,
+affinch&#xE8; qualche membro del team possa farne la review al pi&#xF9; presto.</p>
+</section>
 </section>
 </section>
 <section id="foochap:CI" class="level2" data-number="3.4">
@@ -747,14 +781,15 @@ preoccupazione di farlo manualmente, ma ha anche permesso di rendere
 disponibile al cliente sempre l&#x2019;ultima versione aggiornata.</p>
 <p>Per garantire la massima qualit&#xE0;, un <strong>Bot Telegram</strong> &#xE8; stato
 utilizzato come strumento di notifica nel gruppo Telegram dedicato. Il Bot
-notifica come in [Fig. <a href="#foofig:ci-github" data-reference-type="ref"
-data-reference="fig:ci-github">3.2</a>] qualora ci sia qualunque problema in
+notifica come in [Fig. <a href="#foofig:CI-Report" data-reference-type="ref"
+data-reference="fig:CI-Report">3.2</a>] qualora ci sia qualunque problema in
 ogni step della CI, altrimenti avverte che l&#x2019;azione &#xE8; stata portata a termine
 correttamente, inoltrando anche il pdf sul gruppo.</p>
 <figure>
-<img src="Images/gh-pipeline.png" id="foofig:ci-github" style="width:100.0%"
-alt="Pipeline GitHub Actions" />
-<figcaption aria-hidden="true">Pipeline GitHub Actions</figcaption>
+<img src="Images/CI-Report.png" id="foofig:CI-Report" style="width:100.0%"
+alt="Pipeline Continuous Integration per il Report" />
+<figcaption aria-hidden="true">Pipeline Continuous Integration per il
+Report</figcaption>
 </figure>
 <p>Qualora una persona volesse consultare la relazione online, senza scaricare
 il pdf, si &#xE8; fatto uso di <strong>Pandoc</strong> per generare il relativo
@@ -767,9 +802,9 @@ avendo un branch dedicato sul quale tutti i file relativi possono essere
 mantenuti e aggiornati.</p>
 </section>
 </section>
-<section id="fooprogetto" class="level3" data-number="3.4.2">
+<section id="fooprogetto-software" class="level3" data-number="3.4.2">
 <h3 data-number="3.4.2"><span class="header-section-number">3.4.2</span>
-Progetto</h3>
+Progetto Software</h3>
 <section id="footool-utilizzati-1" class="level6" data-number="3.4.2.0.0.1">
 <h6 data-number="3.4.2.0.0.1"><span
 class="header-section-number">3.4.2.0.0.1</span> Tool utilizzati</h6>
@@ -778,8 +813,11 @@ class="header-section-number">3.4.2.0.0.1</span> Tool utilizzati</h6>
 <li><p>ScalaTest 3.2.14</p></li>
 <li><p>Sbt-assembly 2.0.0</p></li>
 <li><p>GitHub Actions</p></li>
-<li><p>GitHub Pages</p></li>
 <li><p>Telegram Bots</p></li>
+<li><p>GitHub Boards</p></li>
+<li><p>ScalaDoc</p></li>
+<li><p>ScalaCoverage</p></li>
+<li><p>GitHub Pages</p></li>
 <li><p>Dependabot</p></li>
 <li><p>Sonarcloud/Codacy/Codefactor</p></li>
 <li><p><a
@@ -791,42 +829,58 @@ Boards</a></p></li>
 <li><p>PlanItPoker <span class="citation"
 data-cites="planitpoker">(planitpoker, s.d.)</span></p></li>
 </ul>
-<p>CI progetto, Test, Coverage, Documentazione, Quality assurance, bla bla</p>
-</section>
-<section id="fooquality-assurance" class="level4" data-number="3.4.2.1">
-<h4 data-number="3.4.2.1"><span class="header-section-number">3.4.2.1</span>
-Quality Assurance</h4>
-<p>Per quanto riguarda la gestione di progetto con i vari branches, &#xE8; stato
-scelto un branch develop su cui fare merge di ogni feature. Queste vengono
-implementate su branch a parte a partire dalle issue relative individuate nel
-refinement del Product Backlog. Per garantire il giusto processo di sviluppo
-sono state attivate delle <strong>Branch Protection Rules</strong> che forzano
-la persona che contribuisce al codice a chiedere una pull request, prima di
-fare la merge forzosa da linea di comando. La pull request deve passare almeno
-una review da parte di altri sviluppatori, prima di essere introdotta nel
-branch di development. Inoltre sono stati introdotti gli status check, che
-vanno passati prima di poter fare la merge, questi comprendono il passare i
-test.</p>
-<p>Per quanto riguarda la continuous integration del programma, come prima
-cosa &#xE8; stato fatto il setup dello Scala Build Tool, specificando la versione
-di scala da utilizzare nel progetto, la versione di sbt stesso, inserendo le
-dipendenze di scalatest e il plugin sbt-assembly negli appositi file di
-configurazione. In modo analogo alla relazione, sono state poi utilizzate le
-GitHub actions per automatizzare la verifica dei test e per la release dei jar
-eseguibili. In particolare nell&#x2019;immagine seguente &#xE8; possibile osservare la
+<p>Per quanto riguarda la continuous integration del software, come prima cosa
+&#xE8; stato fatto il setup dello <strong>Scala Build Tool</strong>, specificando
+la versione di scala da utilizzare nel progetto, la versione di sbt stesso,
+inserendo le dipendenze di scalatest e il plugin sbt-assembly negli appositi
+file di configurazione. In modo analogo alla relazione, sono state poi
+utilizzate le GitHub actions per automatizzare la verifica dei test e per la
+release dei jar eseguibili. In particolare ad ogni commit i test sono lanciati
+in remoto con <strong>ScalaTest</strong> e, qualora non risultino in un
+successo, la merge sul branch dev o main non pu&#xF2; avvenire. Questo &#xE8; stato
+stabilito a seconda delle specifiche di qualit&#xE0; del software discusse nel
+paragrafo di qualit&#xE0; del software. In caso la Pull Request possa essere
+mergiata, tramite <strong>GitHub-Actions</strong> un messaggio Telegram &#xE8;
+mandato dal <strong>Telegram-bot</strong> sul gruppo per notificare l&#x2019;avvenuta
+risoluzione del task e la necessit&#xE0; di una review.</p>
+<figure>
+<img src="Images/CI-Test-PR.png" id="foofig:CI-Test-PR" style="width:80.0%"
+alt="Pipeline per il Test con Pull Request" />
+<figcaption aria-hidden="true">Pipeline per il Test con Pull
+Request</figcaption>
+</figure>
+<p>Qualora un nuovo task venga completato in automatico la issue relativa
+viene chiusa su <strong>GitHubBoards</strong> e introdotto nel branch dev, &#xE8;
+stata utilizzata la Continuous Integration anche per generare la pagina
+principale per il sito relativo al software, prendendo il "readme" della
+repository, questa pagina contiene i link alla documentazione e alla coverage.
+In parallelo, viene infatti creata la documentazione del software tramite
+<strong>ScalaDoc</strong>, sottoforma di sito, e inserita in un sottodominio
+raggiungibile a partire dalla pagina web relativa. Infine, anche la coverage
+dei test viene mostrata in un altro sottodominio generato appositamente con
+<strong>ScalaCoverage</strong>. Il tutto viene portato online con
+<strong>GitHub-Pages</strong>, facilmente raggiungibile dai programmatori
+interessati o dai membri del team per la quality check.</p>
+<figure>
+<img src="Images/CI-Website.png" id="fooCI-Website" style="width:80.0%"
+alt="Pipeline per il Deploy del sito" />
+<figcaption aria-hidden="true">Pipeline per il Deploy del sito</figcaption>
+</figure>
+<p>Per la release al pubblico &#xE8; stato utilizzato il branch Main, in cui il
+software stabile &#xE8; tracciato. Nell&#x2019;immagine seguente &#xE8; possibile osservare la
 pipeline eseguita ogni volta che delle nuove modifiche vengono spostate dal
 branch di develop al main branch.</p>
 <figure>
-<img src="Images/scalaCI-pipeline.png" id="foofig:scala-ci-github"
-style="width:100.0%" alt="Pipeline progetto Scala" />
-<figcaption aria-hidden="true">Pipeline progetto Scala</figcaption>
+<img src="Images/CI-Test-Deploy.png" id="foofig:CI-Test-Deploy"
+style="width:100.0%" alt="Pipeline per il Deploy" />
+<figcaption aria-hidden="true">Pipeline per il Deploy</figcaption>
 </figure>
 <p>La pipeline realizzata &#xE8; strutturata in modo tale da eseguire tutti i test
 implementati e poi, solo in caso di successo della totalit&#xE0; di essi, la
-creazione dello uber jar (ovvero un jar contentene tutte le dipendenze e le
+creazione dello "uber jar" (ovvero un jar contentene tutte le dipendenze e le
 risorse necessarie per l&#x2019;esecuzione indipendente) sfruttando il plugin
-sbt-assembly. Il jar eseguibile realizzato viene infine caricato tra le
-release del progetto.</p>
+<strong>sbt-assembly</strong>. Il jar eseguibile realizzato viene infine
+caricato tra le release del progetto ed &#xE8; disponibile per il download.</p>
 </section>
 </section>
 </section>
@@ -924,6 +978,12 @@ approvati dal committente.</p>
 <section id="foorequisiti-di-business" class="level2" data-number="5.1">
 <h2 data-number="5.1"><span class="header-section-number">5.1</span> Requisiti
 di Business</h2>
+<p>L&#x2019;importanza strategica del software risiede nel fornire agli studenti un
+valido strumento di ripasso e test delle competenze acquisite. Le aree
+semantiche di maggiore importanza sono l&#x2019;interrogazione delle conoscenze
+tramite quesiti, il feedback sugli errori, la personalizzazione dei quiz, e
+delle statistiche globali e a fine partita. I principali punti sono sotto
+riportati:</p>
 <ul>
 <li><p>selezione di N domande tra i C corsi scelti dell&#x2019;utente</p></li>
 <li><p>gestione delle domande e delle relative risposte permettendo l&#x2019;editing,
@@ -1239,7 +1299,7 @@ tempo totale di gioco</p></li>
 </section>
 <section id="foorequisiti-non-funzionali" class="level2" data-number="5.4">
 <h2 data-number="5.4"><span class="header-section-number">5.4</span> Requisiti
-non Funzionali</h2>
+Non Funzionali</h2>
 <ul>
 <li><p>Interfaccia grafica intuitiva e che fornisca feedback coerenti
 all&#x2019;utente per comunicargli lo stato delle sue azioni (ad esempio indicando
