@@ -6,15 +6,18 @@
 
 \chapter{Analisi dei Requisiti}
 A seguito dell'intervista con l'esperto del dominio, sono emersi i seguenti requisiti per l'applicativo richiesto. Questi sono stati poi discussi e approvati dal committente.
-	\section{Requisiti di Business}
-	\begin{itemize}
+\section{Requisiti di Business}
+    L'importanza strategica del software risiede nel fornire agli studenti un valido strumento di ripasso e test delle competenze acquisite.
+    Le aree semantiche di maggiore importanza sono l'interrogazione delle conoscenze tramite quesiti, il feedback sugli errori, la personalizzazione dei quiz, e delle statistiche globali e a fine partita. 
+    I principali punti sono sotto riportati:
+    \begin{itemize}
         \item selezione di N domande tra i C corsi scelti dell'utente
         \item gestione delle domande e delle relative risposte permettendo l'editing, il salvataggio e il caricamento delle stesse
         \item elaborare un riepilogo al termine di ogni partita
         \item elaborare e salvare alcune statistiche di interesse relativamente ad un utente
     \end{itemize}
 	
-	\section{Requisiti Utente}
+\section{Requisiti Utente}
     Uno user dell'applicazione dovrà quindi essere in grado di:
     \begin{itemize}
         \item ripassare: visualizzare domande e scegliere tra le possibili risposte
@@ -189,7 +192,7 @@ A seguito dell'intervista con l'esperto del dominio, sono emersi i seguenti requ
             \label{fig:mockup_nav}
         \end{figure}
 	    
-	\section{Requisiti Funzionali} 
+\section{Requisiti Funzionali} 
         \subsection{Obbligatori}
         All’interno di ogni partita, vengono presentate all’utente diverse domande di natura accademica, ognuna delle quali viene accompagnata da un numero predeterminato di risposte possibili, alcune corrette ed altre sbagliate. L’utente dovrà individuare le risposte corrette in un tempo massimo per non fallire la domanda. 
 
@@ -270,7 +273,7 @@ A seguito dell'intervista con l'esperto del dominio, sono emersi i seguenti requ
             \item \textbf{Medaglie-achievement} quando si completano delle sfide (es. più punti di un certo limite, più giornate continuativamente, aver risposto bene a tutte le domande di una materia)
             \item Salvataggio delle statistiche relative al tempo medio di risposta e tempo totale di gioco
         \end{itemize}
-	\section{Requisiti non Funzionali}
+	\section{Requisiti Non Funzionali}
         \begin{itemize}
             \item Interfaccia grafica intuitiva e che fornisca feedback coerenti all'utente per comunicargli lo stato delle sue azioni (ad esempio indicando con colore verde e checkmark una risposta qualora essa sia corretta)
             \item Interfaccia grafica accessibile agli utenti daltonici
@@ -282,7 +285,7 @@ A seguito dell'intervista con l'esperto del dominio, sono emersi i seguenti requ
         
         \end{itemize}
 
-	\section{Requisiti Implementativi}
+\section{Requisiti Implementativi}
         \begin{itemize}
             \item Linguaggio di programmazione Scala versione 3.2.0
             \item Scala FX 19.0.0 per l'interfaccia grafica
