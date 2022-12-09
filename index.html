@@ -27,7 +27,7 @@ PARADIGMI DI PROGRAMMAZIONE E SVILUPPO<br />
                 <meta name="author" content="Lirussi Igor &#xA0;&#xA0;igor.lirussi@studio.unibo.it&#xA0;&#xA0;" />
                 <meta name="author" content="Omiccioli Riccardo riccardo.omiccioli@studio.unibo.it" />
                 <meta name="author" content="Teodorani Cecilia cecilia.teodorani@studio.unibo.it      " />
-                        <meta name="date" content="2022-12-08" />
+                        <meta name="date" content="2022-12-09" />
                 <title> RELAZIONE DI PROGETTO DI PARADIGMI DI PROGRAMMAZIONE E SVILUPPO  ISIQuiz  </title>
         <style type="text/css">code{white-space: pre;}</style>
                                 <link rel="stylesheet" href="./pandoc-uikit/uikit.css" />
@@ -47,7 +47,7 @@ PARADIGMI DI PROGRAMMAZIONE E SVILUPPO<br />
 <br />
 <strong>ISIQuiz</strong><br />
 <br /></h1>
-                                        <h1 class="uk-heading" style="margin:0">2022-12-08</h1>
+                                        <h1 class="uk-heading" style="margin:0">2022-12-09</h1>
                                                             <p class="uk-text-large">Gambaletta
 Daniele<br />
 <a
@@ -89,16 +89,6 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
                                                         id="footoc-overview"><span
                                                         class="toc-section-number">1.1</span>
                                                         Overview</a></li>
-                                                        <li><a
-                                                        href="#fooproblemi"
-                                                        id="footoc-problemi"><span
-                                                        class="toc-section-number">1.2</span>
-                                                        Problemi</a></li>
-                                                        <li><a
-                                                        href="#fooobiettivi"
-                                                        id="footoc-obiettivi"><span
-                                                        class="toc-section-number">1.3</span>
-                                                        Obiettivi</a></li>
                                                         </ul></li>
                                                         <li><a
                                                         href="#foostato-dellarte"
@@ -154,10 +144,10 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
                                                         e Automatizzazione</a>
                                                         <ul>
                                                         <li><a
-                                                        href="#foorelazione"
-                                                        id="footoc-relazione"><span
+                                                        href="#fooreport"
+                                                        id="footoc-report"><span
                                                         class="toc-section-number">3.4.1</span>
-                                                        Relazione</a></li>
+                                                        Report</a></li>
                                                         <li><a
                                                         href="#fooprogetto-software"
                                                         id="footoc-progetto-software"><span
@@ -406,55 +396,30 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
 <h1 data-number="1"><span class="header-section-number">1</span>
 Introduzione</h1>
 <p>ISIQuiz &#xE8; un progetto che nasce con l&#x2019;intento di sviluppare un
-<strong>gioco a quiz</strong>, che permetta ad uno studente di ripassare il
+<strong>gioco a quiz</strong> che permetta ad uno studente di ripassare il
 contenuto dei corsi di <strong>Ingegneria e Scienze Informatiche</strong>
 attraverso domande a scelta multipla che coprono una o pi&#xF9; materie di suo
 interesse. Lo scopo di <strong>ISIQuiz</strong> &#xE8; quindi quello di gamificare
 il ripasso pre-esame attraverso uno strumento stimolante che permetta agli
-studenti di tracciare i propri progressi e allenarsi sulle domande che per lui
-risultano pi&#xF9; critiche.</p>
-<figure>
-<img src="Extra/ISIQuizLogoLineTransparent.png" id="foofig:Logo"
-style="width:80.0%" alt="Il logo in-line" />
-<figcaption aria-hidden="true">Il <strong>logo</strong> in-line</figcaption>
-</figure>
+studenti di tracciare i propri progressi.</p>
+<p><span id="foofig:Logo" label="fig:Logo"></span> <img
+src="Extra/ISIQuizLogoLineTransparent.png" style="width:80.0%"
+alt="image" /></p>
 <section id="foooverview" class="level2" data-number="1.1">
 <h2 data-number="1.1"><span class="header-section-number">1.1</span>
 Overview</h2>
-<p>L&#x2019;idea &#xE8; nata dall&#x2019;osservazione dei meeting di studenti coetanei nelle
-giornate antecedenti un prova orale o scritta che contenga della teoria. In
-tale periodo &#xE8; chiaro che l&#x2019;"ansia da esame" raggiunge il suo picco, per la
-scarsit&#xE0; di tempo per lo studio e per l&#x2019;esame imminente. Qualora ci siano
-delle nozioni non pratiche, infatti, nel gruppo si crea una dinamica simile a
-docente-studente, dove a turno ognuno fa domande ad altri di carattere
-generale sugli argomenti che meglio padroneggia. Curiosamente, il ruolo
-preferito sembra essere quello di colui a cui vengono rivolte le domande. Ci&#xF2;
-&#xE8; inconsciamente volto a mitigare la paura di aver "mancato" qualche argomento
-nello studio, o di non ricordarselo a sufficienza. Infatti, essere testati su
-concetti generali da altri studenti che li padroneggiano meglio rassicura
-notevolmente lo studente in questione. Inoltre, la dinamica "a gruppo"
-garantisce una copertura adeguata di tutte le nozioni pi&#xF9; importanti. L&#x2019;idea &#xE8;
-quindi quella di creare un&#x2019;applicazione che garantisca una esperienza simile,
-quando la situazione sopracitata non &#xE8; possibile.</p>
-</section>
-<section id="fooproblemi" class="level2" data-number="1.2">
-<h2 data-number="1.2"><span class="header-section-number">1.2</span>
-Problemi</h2>
-<p>I problemi che hanno portato alla necessit&#xE0; di creare il software quindi
-sono:</p>
-<ul>
-<li><p>incertezza sulla memorizzazione degli argomenti studiati;</p></li>
-<li><p>incertezza sulla copertura di tutti gli argomenti dell&#x2019;esame;</p></li>
-<li><p>poco tempo per il ripasso o ulteriore studio.</p></li>
-</ul>
-</section>
-<section id="fooobiettivi" class="level2" data-number="1.3">
-<h2 data-number="1.3"><span class="header-section-number">1.3</span>
-Obiettivi</h2>
-<p>L&#x2019;obiettivo &#xE8; quello di mitigare l&#x2019;ansia da esame fornendo uno strumento
-valido che soddisfi la necessit&#xE0;, condivisa da ogni studente, di fare un
-ripasso generale prima di un esame. Infine, sarebbe opportuno che questo
-processo sia reso il pi&#xF9; positivo e piacevole possibile.</p>
+<p>L&#x2019;idea &#xE8; nata dall&#x2019;osservazione degli incontri tra studenti nelle giornate
+antecedenti ad una prova orale o scritta. Per preparasi al meglio sulle
+nozioni teoriche, nel gruppo si crea una dinamica simile a docente-studente,
+dove a turno ognuno fa domande di carattere generale su alcuni argomenti alle
+quali gli altri presenti cercano di rispondere. In questo modo, lo studente
+che risponde alle domande &#xE8; in grado di ripassare e, con un numero sufficiente
+di quesiti, coprire gli argomenti dell&#x2019;intera materia. Questa modalit&#xE0; di
+ripasso in gruppo favorisce una copertura migliore del programma del corso
+rispetto ad uno studio individuale, nel quale alcuni argomenti potrebbero
+essere involontariamente trascurati. Lo scopo di questo progetto &#xE8; quindi
+quello di cercare di ricreare le dinamiche appena indicate nel caso in cui non
+sia possibile un incontro di gruppo tra gli studenti.</p>
 </section>
 </section>
 <section id="foostato-dellarte" class="level1" data-number="2">
@@ -509,48 +474,44 @@ Aspetti principali</h3>
 <p>I concetti chiave che hanno assunto particolare importanza nello sviluppo
 sono stati:</p>
 <ul>
-<li><p><strong>Domain Expert interview</strong>: Per formalizzare le richieste
-e non permettere al software di allontanarsi da esse nello sviluppo
+<li><p><strong>Domain Expert interview</strong>: per formalizzare le richieste
+e non permettere al software di allontanarsi da esse nello sviluppo,
 l&#x2019;intervista con l&#x2019;esperto del dominio &#xE8; stata formalizzata e trascritta
-assieme a tutte le domande (<a href="#foochap: IntervistaCommittente"
+insieme a tutte le domande (capitolo <a href="#foochap: IntervistaCommittente"
 data-reference-type="ref"
-data-reference="chap: IntervistaCommittente">4.1</a>).</p></li>
-<li><p><strong>Linguaggio Condiviso</strong>: Per evitare continue spiegazioni
+data-reference="chap: IntervistaCommittente">4.1</a>)</p></li>
+<li><p><strong>Linguaggio Condiviso</strong>: per evitare continue spiegazioni
 tra i membri del team, per indicare a quale concetto si stesse facendo
-riferimento, &#xE8; stata creata una tabella di "Ubiquitous Language" (<a
+riferimento, &#xE8; stata creata una tabella di "Ubiquitous Language" (capitolo <a
 href="#foochap:UbiquitousLanguage" data-reference-type="ref"
-data-reference="chap:UbiquitousLanguage">4.2</a>).</p></li>
-<li><p><strong>User Stories</strong>: Per assicurare che l&#x2019;esperienza sia in
+data-reference="chap:UbiquitousLanguage">4.2</a>)</p></li>
+<li><p><strong>User Stories</strong>: per assicurare che l&#x2019;esperienza sia in
 linea con quella desiderata e che il software copra ogni interazione utente
 richiesta, sono state definite tutte le user stories che sono emerse
-dall&#x2019;intervista con il committente (<a href="#foochap:UserStories"
+dall&#x2019;intervista con il committente (capitolo <a href="#foochap:UserStories"
 data-reference-type="ref"
-data-reference="chap:UserStories">5.2.1</a>).</p></li>
-<li><p><strong>Mockup</strong>: Per verificare che il team abbia carpito
-effettivamente l&#x2019;aspettativa di risultato richiesta e il funzionamento sono
-stati sviluppati dei mockup, che il cliente ha verificato e approvato (<a
-href="#foochap:Mockup" data-reference-type="ref"
-data-reference="chap:Mockup">5.2.2</a>).</p></li>
+data-reference="chap:UserStories">5.2.1</a>)</p></li>
+<li><p><strong>Mockup</strong>: per verificare che il team abbia compreso a
+pieno l&#x2019;aspettativa del risultato, sono stati sviluppati dei mockup, che il
+cliente ha verificato e approvato (capitolo <a href="#foochap:Mockup"
+data-reference-type="ref" data-reference="chap:Mockup">5.2.2</a>)</p></li>
 </ul>
 </section>
 </section>
 <section id="foometodologia-di-sviluppo" class="level2" data-number="3.2">
 <h2 data-number="3.2"><span class="header-section-number">3.2</span>
 Metodologia di Sviluppo</h2>
-<p>Per sviluppare il progetto &#xE8; stata scelto il framework
-<strong>Scrum</strong>. Infatti il processo di sviluppo &#xE8; stato basato, in
+<p>Per sviluppare il progetto &#xE8; stato scelto il framework
+<strong>Scrum</strong>, infatti il processo di sviluppo &#xE8; stato basato, in
 comune accordo, sulla metodologia agile. La motivazione risiede nel fatto che
 il team &#xE8; composto da quattro persone e il prodotto deve essere sviluppato in
 tempi brevi. Il framework Scrum infatti permette di suddividere i compiti in
-modo preciso, sviluppando il progetto in passi incrementali, senza incorrere
-in fraintendimenti o problemi di integrazione. La qualit&#xE0; dell&#x2019;artefatto
-generato &#xE8; quindi molto alta e i rischi di insoddisfazione del cliente sono
-minimi, grazie allo sviluppo ciclico che spezza il lavoro in piccoli goal e
-review.</p>
+modo preciso, sviluppando il progetto in passi incrementali, assicurando di
+coprire man mano tutti i requisiti richiesti dal cliente.</p>
 <section id="fooscrum" class="level3" data-number="3.2.1">
 <h3 data-number="3.2.1"><span class="header-section-number">3.2.1</span>
 Scrum</h3>
-<p>Secondo il framework "Scrum" il lavoro deve essere diviso in pi&#xF9; sprint
+<p>Secondo il framework Scrum il lavoro deve essere diviso in pi&#xF9; sprint
 seguendo un approccio iterativo. Per questo motivo l&#x2019;intervallo di tempo
 disponibile per lo sviluppo del progetto &#xE8; stato suddiviso in sotto-intervalli
 di una settimana. Il team mantiene due tipi di backlog, i quali riflettono
@@ -561,20 +522,19 @@ class="header-section-number">3.2.1.0.1</span> Product Backlog</h5>
 <p>Il product backlog racchiude il progresso generale del progetto, in cui
 ogni item riflette una user-story, o una funzionalit&#xE0; ad alto livello, di cui
 il cliente pu&#xF2; apprezzare lo sviluppo. Queste vengono ordinate per urgenza e
-dimensione, e scelto un sottoinsieme, assegnate allo sprint successivo. In
-ogni sprint &#xE8; presente infatti lo sprint backlog, in cui si pu&#xF2; apprezzare in
-maniera molto pi&#xF9; dettagliata e a basso livello l&#x2019;implementazione delle varie
-feature.</p>
+dimensione e, scelto un sottoinsieme, assegnate allo sprint successivo. In
+ogni sprint &#xE8; presente infatti lo sprint backlog, in cui si pu&#xF2; apprezzare
+l&#x2019;implementazione pi&#xF9; dettagliata e a basso livello delle varie feature.</p>
 </section>
 <section id="foosprint-backlog" class="level5" data-number="3.2.1.0.2">
 <h5 data-number="3.2.1.0.2"><span
 class="header-section-number">3.2.1.0.2</span> Sprint Backlog</h5>
-<p>Lo sprint backlog, proprio di ogni intervallo, va a raffinare nella
+<p>Lo sprint backlog, relativo ad ogni iterazione, va a raffinare nella
 riunione iniziale (sprint planning) gli item scelti (sprint goal) dal product
 backlog. Questi sono suddivisi in pi&#xF9; task e assegnati a diversi membri del
 team. Nel meeting finale (sprint review) lo sprint backlog viene ispezionato,
 riordinato e utilizzato per ulteriori considerazioni sull&#x2019;iterazione
-successiva. Per maggiori dettagli sul processo di sviluppo per ogni iterazione
+successiva. Per maggiori dettagli sul processo di sviluppo di ogni iterazione
 si veda il capitolo <a href="#foochap:Retrospettiva" data-reference-type="ref"
 data-reference="chap:Retrospettiva">10</a>.</p>
 </section>
@@ -582,33 +542,31 @@ data-reference="chap:Retrospettiva">10</a>.</p>
 <h5 data-number="3.2.1.0.3"><span
 class="header-section-number">3.2.1.0.3</span> Definition of done</h5>
 <p>Un item del product backlog o sprint backlog si ritiene concluso quando
-tutti i task che lo compongono sono stati completati, il codice implementato &#xE8;
-stato adeguatamente testato con esito positivo e la relativa documentazione &#xE8;
-stata scritta.</p>
+tutti i task che lo compongono sono stati completati.</p>
 </section>
 <section id="fooscrum-poker" class="level5" data-number="3.2.1.0.4">
 <h5 data-number="3.2.1.0.4"><span
 class="header-section-number">3.2.1.0.4</span> Scrum poker</h5>
 <p>Per stimare il livello di effort necessario per il completamento di ogni
 task &#xE8; stata utilizzata la tecnica che viene chiamata <strong>scrum
-poker</strong>. Questa tecnica consiste nella lettura e discussione di un task
-e degli aspetti che lo riguardano e nella scelta, da parte di ogni membro del
-team, di un valore di effort stimato scegliendo tra 1, 2, 3, 5, 8, 13, 20 il
-numero che ritiene pi&#xF9; adeguato a rappresentare la complessit&#xE0; del task
-tenendo conto ad esempio del tempo ritenuto necessario per lo sviluppo o la
-complessit&#xE0; stimata del task stesso. A seguito della scelta di un numero da
-parte di ogni membro vengono rivelati i numeri scelti e si cerca di
-raggiungere consenso sulla scelta del numero finale, eventualmente
-argomentando la propria decisione. La scelta del set di numeri da assegnare &#xE8;
-tale da avere volutamente ampi intervalli tra i numeri per ridurre conflitti e
-raggiungere con maggiore semplicit&#xE0; una situazione di consenso.</p>
+poker</strong>. Questa tecnica consiste in una fase preliminare di lettura e
+discussione di un task e degli aspetti che lo riguardano. Successivamente,
+ogni membro del team sceglie tra 1, 2, 3, 5, 8, 13, 20 il numero che ritiene
+pi&#xF9; adeguato a rappresentare la complessit&#xE0; del task, ad esempio tenendo conto
+del tempo ritenuto necessario per lo sviluppo o la difficolt&#xE0; stimata del task
+stesso. A seguito della scelta di un numero da parte di ogni membro, vengono
+rivelati i numeri scelti e si cerca di raggiungere consenso sulla scelta del
+numero finale, eventualmente argomentando la propria decisione. La scelta del
+set di numeri da assegnare &#xE8; tale da avere volutamente ampi intervalli tra i
+numeri per ridurre conflitti e raggiungere con maggiore semplicit&#xE0; una
+situazione di consenso.</p>
 </section>
 <section id="fooruoli" class="level5" data-number="3.2.1.0.5">
 <h5 data-number="3.2.1.0.5"><span
 class="header-section-number">3.2.1.0.5</span> Ruoli</h5>
-<p>I ruoli definiti da Scrum sono stati leggermente modificati, essendo il
-team composto da solo quattro persone. Nello specifico, il "domain-expert" e
-lo "scrum master" sono stati anche programmatori.</p>
+<p>Dal momento che il team &#xE8; composto da solo quattro persone, il
+"domain-expert", lo "scrum master" e il "product owner" hanno preso parte allo
+sviluppo del progetto anche come programmatori.</p>
 </section>
 </section>
 </section>
@@ -620,119 +578,115 @@ diversi tool seguendo la metodologia Scrum.</p>
 <section id="foogantt-chart" class="level5" data-number="3.3.0.0.1">
 <h5 data-number="3.3.0.0.1"><span
 class="header-section-number">3.3.0.0.1</span> Gantt Chart</h5>
-<p>Per l&#x2019;organizzazione del progetto con il Gantt &#xE8; stato scelto <a
+<p>Per l&#x2019;organizzazione generale del progetto &#xE8; stato utilizzato un diagramma
+di Gantt realizzato grazie ai tool forniti da <a
 href="https://riccardo-omiccioli.atlassian.net/jira/software/projects/IQ/boards/1/roadmap">Jira</a>.
-Questo tool ci ha permesso di avere una visione generale dei momenti del
-progetto, e quali task svolgere in ogni fase. Lo strumento inoltre &#xE8; stato
-utile per la pianificazione e per mantenere la costanza attraverso le
-deadline.</p>
+Questo ci ha permesso di avere una visione globale dei momenti del progetto e
+dei task da svolgere in ogni fase. Inoltre, lo strumento &#xE8; stato utile per
+monitorare il lavoro svolto nelle varie deadline.</p>
 </section>
 <section id="foocollaborative-design-board" class="level5"
 data-number="3.3.0.0.2">
 <h5 data-number="3.3.0.0.2"><span
 class="header-section-number">3.3.0.0.2</span> Collaborative Design Board</h5>
-<p>Per le Board di Design &#xE8; stato utilizzato <a
-href="https://miro.com/app/board/uXjVPN93uLs=/?share_link_id=56431555728">Miro</a>
-Lo strumento ci ha permesso di lavorare simultaneamente su grafici e schemi
-che sono stati molto utili nella fase iniziale di chiarificazione e
-design.</p>
+<p>Per lavorare simultaneamente su grafici e schemi che sono stati molto utili
+nelle fasi iniziali di analisi e design, &#xE8; stato utilizzato <a
+href="https://miro.com/app/board/uXjVPN93uLs=/?share_link_id=56431555728">Miro</a>.</p>
 </section>
 <section id="fooproduct-backlog-1" class="level5" data-number="3.3.0.0.3">
 <h5 data-number="3.3.0.0.3"><span
 class="header-section-number">3.3.0.0.3</span> Product-Backlog</h5>
-<p>Per le Board di Scrum &#xE8; stato utilizzato <a
-href="https://github.com/orgs/ISIQuiz/projects/3">GitHub-Projects</a> Il tool
-si &#xE8; rivelato molto potente, grazie anche all&#x2019;integrazione diretta con GitHub.
-La chiusura di issue avviene in maniera automatica al merge del branch
-relativo e gli item si spostano automaticamente nella board. Inoltre, la
-possibilit&#xE0; di avere diverse view su tutti i dati ha permesso di sviluppare
-product e sprint backlog senza ripetizioni o duplicazioni. Sono state create
-diverse view anche per facilitare i membri del team nell&#x2019;osservare il
+<p>Per realizzare le board secondo il framework Scrum &#xE8; stato utilizzato <a
+href="https://github.com/orgs/ISIQuiz/projects/3">GitHub-Projects</a>, un tool
+che si &#xE8; rivelato molto potente, grazie anche all&#x2019;integrazione diretta con <a
+href="https://github.com">GitHub</a>. Ad esempio, la chiusura delle issue
+avviene automaticamente con la merge del relativo branch relativo e gli item
+corrispondenti vengono spostati correttamente nella board. Inoltre, la
+possibilit&#xE0; di avere diverse viste sugli stessi dati ha permesso di sviluppare
+product e sprint backlog senza ripetizioni o duplicazioni. La creazione di
+diverse view ha permesso anche ai membri del team di osservare facilmente il
 progresso, la priorit&#xE0; e la grandezza dei task. I vari raffinamenti sono stati
 referenziati alle issue principali tramite la loro descrizione, in modo da
 poter osservare il completamento passo passo delle user-stories. Unica
-mancanza, &#xE8; stato quello di poter assegnare delle issue a pi&#xF9; sprint backlog,
-qualora non venissero completate in uno solo.</p>
+mancanza da parte del tool, &#xE8; quella di non poter assegnare delle issue a pi&#xF9;
+sprint backlog, qualora non venissero completate solamente in uno di essi.</p>
 </section>
 <section id="foolicensing" class="level5" data-number="3.3.0.0.4">
 <h5 data-number="3.3.0.0.4"><span
 class="header-section-number">3.3.0.0.4</span> Licensing</h5>
 <p>Per la licenza &#xE8; stata scelta <a
 href="https://choosealicense.com/licenses/">la licenza MIT base</a>, in quanto
-progetto accademico e non di natura commerciale.</p>
+il progetto &#xE8; di natura accademica e non commerciale.</p>
 </section>
 <section id="fooversioning" class="level5" data-number="3.3.0.0.5">
 <h5 data-number="3.3.0.0.5"><span
 class="header-section-number">3.3.0.0.5</span> Versioning</h5>
-<p>Riguardo al versioning, la piattaforme scelta &#xE8; stata ovviamente Git. E per
-la sintassi, siccome il progetto &#xE8; stato svolto in tempi ristetti, &#xE8; stato
-scelto il versioning semantico unito a quello temporale, in cui ogni versione
-&#xE8; rappresentata da MAJOR.MINOR.PATCH e dalla data in cui &#xE8; stata implementata.
-Siamo consapevoli delle controindicazioni a riguardo del versioning temporale,
-del fatto che le date non rappresentino necessariamente il cambiamento del
-software e che non diano alcun grado di semantica su di esso, ma l&#x2019;abbiamo
-trovata un&#x2019;informazione utile soprattutto prima della consegna della prima
-Major, essendo il processo stabile e incrementale.</p>
+<p>Riguardo al versioning, la piattaforme scelta &#xE8; stata <a
+href="https://git-scm.com">Git</a>. Dato che il progetto &#xE8; stato svolto in
+tempi ristetti, &#xE8; stato scelto il versioning semantico unito a quello
+temporale, per cui in ogni versione &#xE8; presente un&#x2019;indicazione data da
+MAJOR.MINOR.PATCH in unione alla data di rilascio.</p>
 </section>
 <section id="foogit-flow" class="level5" data-number="3.3.0.0.6">
 <h5 data-number="3.3.0.0.6"><span
 class="header-section-number">3.3.0.0.6</span> Git Flow</h5>
-<p>La metodologia di sviuluppo a livello di branch &#xE8; stata ispirata a "Git
-Flow", ma con delle varianti personalizzate per facilitare il team nella
-sincronizzazione di un progetto di tale portata. Di seguito si riporta lo
-schema esemplificativo.</p>
+<p>Per la gestione del workflow del repository del progetto, &#xE8; stato
+utilizzato il modello di branching <strong>Git Flow</strong> (come
+schematizzato in Figura <a href="#foofig:git-flow" data-reference-type="ref"
+data-reference="fig:git-flow">3.1</a>). Il branch <em>main</em> &#xE8; stato
+utilizzato solamente per pubblicare le release del software finito o suoi
+eventuali aggiornamenti. Il branch <em>dev</em> viene invece aggiornato con le
+versioni stabili di tutte le feature man mano che vengono implementate. Per
+ogni issue indicata negli sprint backlog, viene creato un branch apposito a
+partire da <em>dev</em>, nel quale verr&#xE0; implementata la nuova funzionalit&#xE0;
+per poi essere infine riportata sul branch <em>dev</em> una volta
+terminata.</p>
 <figure>
-<img src="Images/pipeline-git.png" id="foofig:pipeline-git"
-style="width:100.0%" alt="Pipeline Git" />
-<figcaption aria-hidden="true">Pipeline Git</figcaption>
+<img src="Images/git-flow.png" id="foofig:git-flow" style="width:100.0%"
+alt="Workflow di Git utilizzato" />
+<figcaption aria-hidden="true">Workflow di Git utilizzato</figcaption>
 </figure>
 </section>
 <section id="fooquality-assurance" class="level5" data-number="3.3.0.0.7">
 <h5 data-number="3.3.0.0.7"><span
 class="header-section-number">3.3.0.0.7</span> Quality Assurance</h5>
-<p>Per quanto riguarda la gestione di progetto con i vari branches, &#xE8; stato
-scelto un branch develop su cui fare merge di ogni feature. Queste vengono
-implementate su branch a parte a partire dalle issue relative individuate nel
-refinement del Product Backlog. Per garantire il giusto processo di sviluppo
-sono state attivate delle <strong>Branch Protection Rules</strong> che forzano
-la persona che contribuisce al codice a chiedere una pull request, prima di
-fare la merge forzosa da linea di comando. La pull request deve passare almeno
-una review da parte di altri sviluppatori, prima di essere introdotta nel
-branch di development. Inoltre sono stati introdotti gli status check, che
-vanno passati prima di poter fare la merge, questi comprendono il passare i
-test.</p>
+<p>Per garantire il giusto processo di sviluppo appena indicato, sono state
+attivate delle <strong>Branch Protection Rules</strong>. Esse obbligano uno
+sviluppatore che contribuisce al progetto ad eseguire una pull request prima
+di poter fare la merge sul branch <em>dev</em> del codice da lui implementato
+nel branch di una feature. Ogni pull request deve ricevere l&#x2019;approvazione dal
+almeno uno degli altri membri del progetto e deve anche eseguire correttamente
+tutti i test automatici presenti nel progetto. Le stesse regole sono state
+applicate anche quando viene effettuata una release sul branch <em>main</em>
+del codice presente sul branche <em>dev</em>.</p>
 </section>
 <section id="foodiscord" class="level5" data-number="3.3.0.0.8">
 <h5 data-number="3.3.0.0.8"><span
 class="header-section-number">3.3.0.0.8</span> Discord</h5>
-<p>Discord &#xE8; stato utilizzato come stumento di comunicazione vocale per i
-meeting, per la sua capacit&#xE0; di condividere lo schermo e di supportare
-chiamate di gruppo. Inoltre, particolarmente utile &#xE8; stata la divisione delle
-chat in canali in cui organizzare logicamente il materiale, i link e le
-discussioni.</p>
+<p><a href="https://discord.com">Discord</a> &#xE8; stato utilizzato come strumento
+di comunicazione vocale per i meeting, per la sua capacit&#xE0; di condividere lo
+schermo e di supportare chiamate di gruppo. Inoltre, particolarmente utile &#xE8;
+stata la divisione delle chat in canali in cui organizzare logicamente il
+materiale, i link e le discussioni.</p>
 </section>
 <section id="footelegram" class="level5" data-number="3.3.0.0.9">
 <h5 data-number="3.3.0.0.9"><span
 class="header-section-number">3.3.0.0.9</span> Telegram</h5>
-<p>La scelta di Telgram come strumento di comunicazione informale &#xE8; motivata
-dal fatto che sia orientato anche a programmatori con funzionalit&#xE0; avanzate e
-tutti i membri lo utilizzassero antecedentemente. Inoltre la possibilit&#xE0; di
-creare gruppi con Bot e con comandi personalizzati &#xE8; stata particolarmente
-apprezzata.</p>
-<section id="foobot" class="level6" data-number="3.3.0.0.9.1">
-<h6 data-number="3.3.0.0.9.1"><span
-class="header-section-number">3.3.0.0.9.1</span> Bot</h6>
-<p>Per mantenere tutti i membri aggiornati, e per supportare la tempestiva
-review delle pull-request &#xE8; stato creato un Bot Telegram ed inserito nel
-gruppo. Il Bot si &#xE8; occupato di notificare qualora avvengano gli aggiornamenti
-alla relazione, per poter tenere traccia del progresso generale del progetto.
-Inoltre, si &#xE8; rivelato particolarmente efficacie nel comunicare se la CI sotto
-descritta abbia avuto qualche problema nel generare il pdf o il sito,
-operazione che pu&#xF2; concludersi anche dopo 10 minuti, quando il programmatore
-probabilmente dimenticherebbe di controllarla. Un&#x2019;altra occupazione importante
-&#xE8; stata quella di notificare nel gruppo le pull request sui branch principali,
-affinch&#xE8; qualche membro del team possa farne la review al pi&#xF9; presto.</p>
+<p>La scelta di <a href="https://telegram.org">Telegram</a> come strumento di
+comunicazione informale &#xE8; motivata dal fatto che dispone di funzionalit&#xE0;
+avanzate orientate ai programmatori e che tutti i membri del gruppo la
+utilizzano personalmente come applicazione di messaggistica.</p>
 </section>
+<section id="footelegram-bot" class="level5" data-number="3.3.0.0.10">
+<h5 data-number="3.3.0.0.10"><span
+class="header-section-number">3.3.0.0.10</span> Telegram Bot</h5>
+<p>Per mantenere tutti i membri aggiornati sul progresso del progetto, &#xE8; stato
+creato ed inserito nel gruppo Telegram un Bot. Tale Bot &#xE8; stato utilizzato per
+notificare ogni richiesta di review di una pull request e ciascun caricamento
+di una nuova versione del report. Dato l&#x2019;elevato tempo necessario alla CI per
+terminare il processo di generazione del PDF del report o del sito web del
+progetto, le notifiche del Bot sono state utili per verificare l&#x2019;esito di tali
+operazioni una volta portate a termine.</p>
 </section>
 </section>
 <section id="foochap:CI" class="level2" data-number="3.4">
@@ -743,145 +697,149 @@ mansioni pi&#xF9; ripetitive hanno avuto notevole importanza. Una cospicua quant
 di tempo &#xE8; stata dedicata all&#x2019;inizio per la messa in opera di pipeline che
 permettano di risparmiare tempo successivamente agli sviluppatori e di
 garantire la massima qualit&#xE0; al cliente finale.</p>
-<section id="foorelazione" class="level3" data-number="3.4.1">
+<section id="fooreport" class="level3" data-number="3.4.1">
 <h3 data-number="3.4.1"><span class="header-section-number">3.4.1</span>
-Relazione</h3>
-<section id="footool-utilizzati" class="level6" data-number="3.4.1.0.0.1">
-<h6 data-number="3.4.1.0.0.1"><span
-class="header-section-number">3.4.1.0.0.1</span> Tool utilizzati</h6>
+Report</h3>
+<p>I tool utilizzati per la CI del report sono:</p>
 <ul>
-<li><p>LaTeX</p></li>
-<li><p>Overleaf</p></li>
-<li><p>GitHub Actions</p></li>
-<li><p>Telegram Bots</p></li>
-<li><p>Pandoc</p></li>
-<li><p>GitHub Pages</p></li>
+<li><p><a href="https://www.latex-project.org/">LaTeX</a></p></li>
+<li><p><a href="https://www.overleaf.com/">Overleaf</a></p></li>
+<li><p><a href="https://github.com/features/actions">GitHub
+Actions</a></p></li>
+<li><p><a href="https://core.telegram.org/bots/api">Telegram Bots</a></p></li>
+<li><p><a href="https://pandoc.org/">Pandoc</a></p></li>
+<li><p><a href="https://pages.github.com/">GitHub Pages</a></p></li>
 </ul>
-<p>La relazione di progetto &#xE8; stata svolta in <strong>LaTeX</strong>. Questa
-decisione &#xE8; motivata dal fatto che esso permette facilmente di organizzare
-lunghi testi in capitoli e sottocapitoli, eventualmente riordinando intere
-parti senza preoccuparsi dell&#x2019;indice o della formattazione. Inoltre, permette
-la gestione in maniera pi&#xF9; accurata, rispetto al Markdown, di elementi
-grafici, tabelle, stili, link e referenze, producendo un pdf finale molto pi&#xF9;
-professionale.</p>
-<p>Come strumento complementare &#xE8; stato scelto <strong>Overleaf</strong>. La
-piattaforma permette di collaborare ininterrottamente e simultaneamente sullo
-stesso blocco di testo. Questo &#xE8; risultato particolarmente utile nelle
-discussioni e nel produrre la documentazione negli "Sprint-planning" e,
-sopratutto, negli "Sprint-review". Particolarmente significative sono state le
-funzioni di poter generare immediatamente il pdf per osservare il risultato e
-poter raggiungere il cursore di altri membri del gruppo per osservare la
-documentazione prodotta in itinere. Ci&#xF2; ha snellito molto il processo e ha
-eliminato laboriose review dei commit fatti con relativi commenti.</p>
-<p>Dal lato "Continuous Integration", sono state sfruttate a pieno le
-<strong>GitHub-Actions</strong> messe a disposizione da GitHub. Queste
-permettono di generare il pdf finale in automatico e di renderlo pubblico con
-Release istantanee ad ogni cambiamento. Ci&#xF2; ha non solo alleviato la
-preoccupazione di farlo manualmente, ma ha anche permesso di rendere
-disponibile al cliente sempre l&#x2019;ultima versione aggiornata.</p>
-<p>Per garantire la massima qualit&#xE0;, un <strong>Bot Telegram</strong> &#xE8; stato
-utilizzato come strumento di notifica nel gruppo Telegram dedicato. Il Bot
-notifica come in [Fig. <a href="#foofig:CI-Report" data-reference-type="ref"
-data-reference="fig:CI-Report">3.2</a>] qualora ci sia qualunque problema in
-ogni step della CI, altrimenti avverte che l&#x2019;azione &#xE8; stata portata a termine
-correttamente, inoltrando anche il pdf sul gruppo.</p>
+<section id="foolatex" class="level5" data-number="3.4.1.0.1">
+<h5 data-number="3.4.1.0.1"><span
+class="header-section-number">3.4.1.0.1</span> LaTeX</h5>
+<p>La relazione di progetto &#xE8; stata svolta in LaTeX. Questa decisione &#xE8;
+motivata dal fatto che esso permette facilmente di organizzare lunghi testi in
+capitoli e sottocapitoli, eventualmente riordinando intere parti senza
+preoccuparsi dell&#x2019;indice o della formattazione. Inoltre, permette la gestione
+in maniera pi&#xF9; accurata, rispetto al Markdown, di elementi grafici, tabelle,
+stili, link e referenze, producendo un PDF finale di qualit&#xE0; elevata.</p>
+</section>
+<section id="foooverleaf" class="level5" data-number="3.4.1.0.2">
+<h5 data-number="3.4.1.0.2"><span
+class="header-section-number">3.4.1.0.2</span> Overleaf</h5>
+<p>Come strumento complementare &#xE8; stato scelto Overleaf, una piattaforma che
+permette la collaborazione ininterrottamente e simultanea sullo stesso blocco
+di testo. Questo &#xE8; risultato utile nella produzione dei documenti relativi
+agli "Sprint-planning" e, sopratutto, durante gli "Sprint-review".</p>
+</section>
+<section id="foogithub-actions" class="level5" data-number="3.4.1.0.3">
+<h5 data-number="3.4.1.0.3"><span
+class="header-section-number">3.4.1.0.3</span> GitHub-Actions</h5>
+<p>Per la Continuous Integration, sono state sfruttate a pieno le
+GitHub-Actions messe a disposizione da GitHub. Queste permettono di generare
+il PDF finale in automatico e di renderlo pubblico con Release istantanee ad
+ogni cambiamento. Ci&#xF2; ha non solo alleviato la preoccupazione di farlo
+manualmente, ma ha anche permesso di rendere disponibile al cliente sempre
+l&#x2019;ultima versione aggiornata.</p>
+</section>
+<section id="foobot-telegram" class="level5" data-number="3.4.1.0.4">
+<h5 data-number="3.4.1.0.4"><span
+class="header-section-number">3.4.1.0.4</span> Bot Telegram</h5>
+<p>Per garantire la massima qualit&#xE0;, un Bot Telegram &#xE8; stato utilizzato come
+strumento di notifica nel gruppo Telegram dedicato. Il Bot notifica, come in
+Figura <a href="#foofig:CI-Report" data-reference-type="ref"
+data-reference="fig:CI-Report">3.2</a>, qualora ci sia qualunque problema in
+ogni step della CI o, in caso di successo, avverte che l&#x2019;azione &#xE8; stata
+portata a termine correttamente ed inoltra il PDF sul gruppo.</p>
 <figure>
 <img src="Images/CI-Report.png" id="foofig:CI-Report" style="width:100.0%"
-alt="Pipeline Continuous Integration per il Report" />
+alt="Pipeline Continuous Integration per il report" />
 <figcaption aria-hidden="true">Pipeline Continuous Integration per il
-Report</figcaption>
+report</figcaption>
 </figure>
+</section>
+<section id="foopandoc" class="level5" data-number="3.4.1.0.5">
+<h5 data-number="3.4.1.0.5"><span
+class="header-section-number">3.4.1.0.5</span> Pandoc</h5>
 <p>Qualora una persona volesse consultare la relazione online, senza scaricare
-il pdf, si &#xE8; fatto uso di <strong>Pandoc</strong> per generare il relativo
-sito web, consultabile comodamente sul browser. Per la paginazione, un
-template html/css &#xE8; stato utilizzato per rendere la vista pi&#xF9;
-accattivante.</p>
-<p>Il deploy del sito, infine, &#xE8; stato utilizzato
-<strong>GitHub-Pages</strong> che permette di semplificarne la messa in opera
-avendo un branch dedicato sul quale tutti i file relativi possono essere
-mantenuti e aggiornati.</p>
+il PDF, si &#xE8; fatto uso di Pandoc per generare il relativo sito web
+consultabile direttamente sul browser. Per la paginazione, &#xE8; stato utilizzato
+un template HTML/CSS per rendere la vista pi&#xF9; accattivante.</p>
+</section>
+<section id="foogithub-pages" class="level5" data-number="3.4.1.0.6">
+<h5 data-number="3.4.1.0.6"><span
+class="header-section-number">3.4.1.0.6</span> GitHub-Pages</h5>
+<p>Per il deploy del sito &#xE8; stato utilizzato GitHub-Pages che permette di
+semplificarne la messa in opera avendo un branch dedicato sul quale tutti i
+file relativi possono essere mantenuti e aggiornati.</p>
 </section>
 </section>
 <section id="fooprogetto-software" class="level3" data-number="3.4.2">
 <h3 data-number="3.4.2"><span class="header-section-number">3.4.2</span>
 Progetto Software</h3>
-<section id="footool-utilizzati-1" class="level6" data-number="3.4.2.0.0.1">
-<h6 data-number="3.4.2.0.0.1"><span
-class="header-section-number">3.4.2.0.0.1</span> Tool utilizzati</h6>
+<p>I tool utilizzati per la CI del software sono:</p>
 <ul>
 <li><p>Sbt 1.7.2</p></li>
 <li><p>ScalaTest 3.2.14</p></li>
 <li><p>Sbt-assembly 2.0.0</p></li>
 <li><p>GitHub Actions</p></li>
-<li><p>Telegram Bots</p></li>
-<li><p>GitHub Boards</p></li>
-<li><p>ScalaDoc</p></li>
-<li><p>ScalaCoverage</p></li>
-<li><p>GitHub Pages</p></li>
-<li><p>Dependabot</p></li>
-<li><p>Sonarcloud/Codacy/Codefactor</p></li>
-<li><p><a
-href="https://riccardo-omiccioli.atlassian.net/jira/software/projects/IQ/boards/1/roadmap">Jira</a></p></li>
-<li><p><a
-href="https://miro.com/app/board/uXjVPN93uLs=/?share_link_id=56431555728">Miro</a></p></li>
 <li><p><a href="https://github.com/orgs/ISIQuiz/projects/3">GitHub
 Boards</a></p></li>
-<li><p>PlanItPoker <span class="citation"
-data-cites="planitpoker">(planitpoker, s.d.)</span></p></li>
+<li><p>GitHub Pages</p></li>
+<li><p>Dependabot</p></li>
+<li><p>ScalaDoc</p></li>
+<li><p>ScalaCoverage</p></li>
+<li><p>Telegram Bots</p></li>
+<li><p>Sonarcloud/Codacy/Codefactor</p></li>
+<li><p>Jira</p></li>
+<li><p>Miro</p></li>
+<li><p><a href="https://www.planitpoker.com">PlanItPoker</a></p></li>
 </ul>
-<p>Per quanto riguarda la continuous integration del software, come prima cosa
+<p>Per quanto riguarda la Continuous Integration del software, come prima cosa
 &#xE8; stato fatto il setup dello <strong>Scala Build Tool</strong>, specificando
 la versione di scala da utilizzare nel progetto, la versione di sbt stesso,
 inserendo le dipendenze di scalatest e il plugin sbt-assembly negli appositi
 file di configurazione. In modo analogo alla relazione, sono state poi
-utilizzate le GitHub actions per automatizzare la verifica dei test e per la
-release dei jar eseguibili. In particolare ad ogni commit i test sono lanciati
-in remoto con <strong>ScalaTest</strong> e, qualora non risultino in un
-successo, la merge sul branch dev o main non pu&#xF2; avvenire. Questo &#xE8; stato
-stabilito a seconda delle specifiche di qualit&#xE0; del software discusse nel
-paragrafo di qualit&#xE0; del software. In caso la Pull Request possa essere
-mergiata, tramite <strong>GitHub-Actions</strong> un messaggio Telegram &#xE8;
-mandato dal <strong>Telegram-bot</strong> sul gruppo per notificare l&#x2019;avvenuta
-risoluzione del task e la necessit&#xE0; di una review.</p>
+utilizzate le <strong>GitHub-Actions</strong> per automatizzare la verifica
+dei test e per la release dei jar eseguibili. In particolare, ad ogni commit,
+i test vengono eseguiti nella <strong>GitHub-Actions</strong> bloccando, in
+caso di fallimento, la merge sugli altri branch. Nel caso in cui sia possibile
+eseguire il merge di una pull request, viene inviato un messaggio sul gruppo
+Telegram, grazie a <strong>GitHub-Actions</strong> e
+<strong>Telegram-bot</strong>, che notifica l&#x2019;avvenuta risoluzione del task e
+la necessit&#xE0; di una review.</p>
 <figure>
 <img src="Images/CI-Test-PR.png" id="foofig:CI-Test-PR" style="width:80.0%"
-alt="Pipeline per il Test con Pull Request" />
-<figcaption aria-hidden="true">Pipeline per il Test con Pull
-Request</figcaption>
+alt="Pipeline per l&#x2019;esecuzione dei test e la notifica di una pull request" />
+<figcaption aria-hidden="true">Pipeline per l&#x2019;esecuzione dei test e la
+notifica di una pull request</figcaption>
 </figure>
-<p>Qualora un nuovo task venga completato in automatico la issue relativa
-viene chiusa su <strong>GitHubBoards</strong> e introdotto nel branch dev, &#xE8;
-stata utilizzata la Continuous Integration anche per generare la pagina
-principale per il sito relativo al software, prendendo il "readme" della
-repository, questa pagina contiene i link alla documentazione e alla coverage.
-In parallelo, viene infatti creata la documentazione del software tramite
-<strong>ScalaDoc</strong>, sottoforma di sito, e inserita in un sottodominio
-raggiungibile a partire dalla pagina web relativa. Infine, anche la coverage
-dei test viene mostrata in un altro sottodominio generato appositamente con
-<strong>ScalaCoverage</strong>. Il tutto viene portato online con
-<strong>GitHub-Pages</strong>, facilmente raggiungibile dai programmatori
-interessati o dai membri del team per la quality check.</p>
+<p>Nel caso in cui una pull request venga correttamente chiusa portando il
+codice sviluppato sul branch <em>dev</em>, la issue relativa alla feature
+implementata viene automaticamente chiusa su <strong>GitHubBoards</strong>. La
+Continuous Integration &#xE8; stata utilizzata anche per generare la pagina
+principale del sito web del software, dove sono presenti i link al report,
+alla coverage e alla documentazione del software realizzata tramite
+<strong>ScalaDoc</strong>. Per automatizzare il processo di deploy del sito
+web &#xE8; stato utilizzato <strong>GitHub-Pages</strong>, mentre per generare la
+parte relativa al riepilogo dei test &#xE8; stato usato
+<strong>ScalaCoverage</strong>.</p>
 <figure>
 <img src="Images/CI-Website.png" id="fooCI-Website" style="width:80.0%"
-alt="Pipeline per il Deploy del sito" />
-<figcaption aria-hidden="true">Pipeline per il Deploy del sito</figcaption>
+alt="Pipeline per il deploy del sito web" />
+<figcaption aria-hidden="true">Pipeline per il deploy del sito
+web</figcaption>
 </figure>
-<p>Per la release al pubblico &#xE8; stato utilizzato il branch Main, in cui il
-software stabile &#xE8; tracciato. Nell&#x2019;immagine seguente &#xE8; possibile osservare la
-pipeline eseguita ogni volta che delle nuove modifiche vengono spostate dal
-branch di develop al main branch.</p>
+<p>Per le release del software &#xE8; stata realizzata una pipeline eseguita ogni
+volta che delle funzionalit&#xE0; vengono spostate dal branch <em>dev</em> al
+branch <em>main</em>. Tale pipilene &#xE8; strutturata in modo tale da eseguire
+tutti i test e generare lo <em>uber jar</em> (ovvero un <em>jar</em>
+contenente tutte le dipendenze e le risorse necessarie per l&#x2019;esecuzione
+indipendente) in caso di completo successo dei test. Per la creazione del jar
+eseguibile &#xE8; stato utilizzato <strong>Sbt-assembly</strong> e viene
+automaticamente caricato tra nelle release del progetto.</p>
 <figure>
 <img src="Images/CI-Test-Deploy.png" id="foofig:CI-Test-Deploy"
-style="width:100.0%" alt="Pipeline per il Deploy" />
-<figcaption aria-hidden="true">Pipeline per il Deploy</figcaption>
+style="width:100.0%" alt="Pipeline per il deploy delle release" />
+<figcaption aria-hidden="true">Pipeline per il deploy delle
+release</figcaption>
 </figure>
-<p>La pipeline realizzata &#xE8; strutturata in modo tale da eseguire tutti i test
-implementati e poi, solo in caso di successo della totalit&#xE0; di essi, la
-creazione dello "uber jar" (ovvero un jar contentene tutte le dipendenze e le
-risorse necessarie per l&#x2019;esecuzione indipendente) sfruttando il plugin
-<strong>sbt-assembly</strong>. Il jar eseguibile realizzato viene infine
-caricato tra le release del progetto ed &#xE8; disponibile per il download.</p>
-</section>
 </section>
 </section>
 </section>
@@ -899,24 +857,24 @@ valutazione del progresso e i feedback sui deliverables di ogni sprint.</p>
 <section id="foochap: IntervistaCommittente" class="level2" data-number="4.1">
 <h2 data-number="4.1"><span class="header-section-number">4.1</span>
 Intervista con il committente</h2>
+<div class="myquote">
 <p>Sono uno studente di Ingegneria e Scienze Informatiche dell&#x2019;Universit&#xE0; di
 Bologna presso la sede di Cesena. In questi anni ho dovuto studiare e
-ripassare la teoria per molti esami e ho trovato utile porre a me stesso delle
-domande alle quali dover rispondere, cos&#xEC; da verificare la conoscenza della
-materia. In particolare, dopo aver acquisito una discreta quantit&#xE0; di nozioni,
-ho riscontrato la necessit&#xE0; di rivedere, in maniera generale, se riuscissi a
-ricordare i concetti principali per ogni topic dell&#x2019;esame in questione. Per
-questo motivo, sarebbe utile poter avere a disposizione uno strumento che
-permetta di rendere pi&#xF9; stimolante il ripasso pre esame. Ad esempio, vorrei
-non dover pi&#xF9; scrivere su un foglio le domande e le relative risposte corrette
-e sbagliate. In pi&#xF9;, vorrei poterle integrare con quelle dei miei compagni e
-viceversa, in modo da coprire il pi&#xF9; possibile tutti gli argomenti di un
-esame. Vorrei anche potermi esercitare sulle domande che sbaglio pi&#xF9; spesso,
-per migliorare le lacune. Trovo utile poter ripassare pi&#xF9; materie
+ripassare la teoria per molti esami e ho trovato utile ripassare con i miei
+compagni rispondendo ad alcune domande alle quali dover rispondere, cos&#xEC; da
+verificare la conoscenza della materia. In particolare, dopo aver acquisito
+una discreta quantit&#xE0; di nozioni, ho riscontrato la necessit&#xE0; di rivedere, in
+maniera generale, se riuscissi a ricordare i concetti principali per ogni
+topic dell&#x2019;esame in questione. Per questo motivo, sarebbe utile poter avere a
+disposizione uno strumento che permetta di rendere pi&#xF9; stimolante il ripasso
+pre esame. Ad esempio, vorrei non dover pi&#xF9; scrivere su un foglio le domande e
+le relative risposte corrette e sbagliate. In pi&#xF9;, vorrei poterle integrare
+con quelle dei miei compagni e viceversa, in modo da coprire il pi&#xF9; possibile
+tutti gli argomenti di un esame. Trovo utile poter ripassare pi&#xF9; materie
 contemporaneamente nei periodi di sessione, in cui ho pi&#xF9; esami nella stessa
-settimana. Inoltre poter rispondere a pi&#xF9; domande possibili nel minor tempo
-possibile, cos&#xEC; da essere sicuro di riuscire a rispondere velocemente durante
-gli orali.</p>
+settimana. Inoltre vorrei poter rispondere a pi&#xF9; domande possibili nel minor
+tempo possibile, cos&#xEC; da essere sicuro di riuscire a rispondere velocemente
+durante gli orali.</p>
 <ol>
 <li><p>Abbiamo pensato che il modo pi&#xF9; divertente per poter studiare e
 ripassare potrebbe essere quello di fare un gioco a quiz, dove viene posta una
@@ -944,16 +902,16 @@ vorresti venisse implementato?</p>
 <p>Secondo me aggiungere un punteggio renderebbe ancora pi&#xF9; stimolante il
 gioco e permetterebbe di confrontarmi con i miei colleghi di corso. Ogni
 domanda potrebbe avere un punteggio in base alla sua complessit&#xE0;, inoltre si
-potrebbe calcolare in base a quanto tempo si impiega per rispondere e a quanti
-aiuti vengono utilizzati.</p></li>
+potrebbe calcolare in base a quanto tempo si impiega per rispondere.</p></li>
 <li><p>Invece quali schermate di gioco vorresti visualizzare?</p>
-<p>Dal menu principale vorrei poter scegliere le varie modalit&#xE0; di gioco,
-poter aggiungere ed esportare le domande e le risposte dei corsi e
-visualizzare le statistiche sulle partite effettuate in precedenza. Invece a
-fine partita vorrei visualizzare un riepilogo di tutte le domande presenti nel
-quiz appena concluso ed eventualmente, in caso di risposta errata,
-visualizzare la risposta corretta.</p></li>
+<p>Vorrei poter scegliere le varie modalit&#xE0; di gioco, poter aggiungere ed
+esportare le domande e le risposte dei corsi e visualizzare le statistiche
+sulle partite effettuate in precedenza. A fine partita vorrei visualizzare un
+riepilogo di tutte le domande presenti nel quiz appena concluso ed
+eventualmente, in caso di risposta errata, visualizzare la risposta
+corretta.</p></li>
 </ol>
+</div>
 </section>
 <section id="foochap:UbiquitousLanguage" class="level2" data-number="4.2">
 <h2 data-number="4.2"><span class="header-section-number">4.2</span>
@@ -1389,11 +1347,12 @@ Model</h2>
 <h2 data-number="7.2"><span class="header-section-number">7.2</span> View</h2>
 <p>Inserimento del diagramma delle classi della View.</p>
 <p>Per scegliere il colore primario del sito e il colore del testo
-sovrastante, si &#xE8; utilizzato <em>Material Design - Color Tool</em><span
-class="citation" data-cites="mdct">(Color Tool, s.d.)</span>, cos&#xEC; che
-avessero il giusto contrasto e, per controllare che veramente soddisfacessero
-le <em>WCAG (Web Content Accessibility Guidelines)</em><span class="citation"
-data-cites="wa">(webAIM, s.d.)</span>, &#xE8; stato utilizzato <em>WebAIM</em>.</p>
+sovrastante, si &#xE8; utilizzato <a
+href="https://m2.material.io/resources/color/#!/?view.left=1&amp;view.right=1&amp;primary.color=8a171a&amp;secondary.color=DEDEDE">Material
+Design - Color Tool</a>, cos&#xEC; che avessero il giusto contrasto e, per
+controllare che veramente soddisfacessero le <em>WCAG (Web Content
+Accessibility Guidelines)</em>, &#xE8; stato utilizzato <a
+href="https://webaim.org/resources/contrastchecker/?fcolor=DEDEDE&amp;bcolor=8A171A">WebAIM</a>.</p>
 </section>
 <section id="foocontroller" class="level2" data-number="7.3">
 <h2 data-number="7.3"><span class="header-section-number">7.3</span>
@@ -1709,20 +1668,6 @@ incompleti o inesatti.</p></li>
 </ul>
 <div id="foorefs" class="references csl-bib-body hanging-indent"
 role="doc-bibliography">
-<div id="fooref-uasyncio" class="csl-entry" role="doc-biblioentry">
-author. s.d.<span>&#xAB;<span>Title </span>&#xBB;</span>. <a
-href="https://github.com/resource.md"
-class="uri">https://github.com/resource.md</a>.
-</div>
-<div id="fooref-yolov3" class="csl-entry" role="doc-biblioentry">
-Author1, Author3, Author2. 2018. <span>&#xAB;Article Title&#xBB;</span>. <em>arXiv</em>.
-<a
-href="https://pjreddie.com/media/files/papers/paper.pdf">https://pjreddie.com/media/files/papers/paper.pdf</a>.
-</div>
-<div id="fooref-mdct" class="csl-entry" role="doc-biblioentry">
-Color Tool, Material Design -. s.d. <a
-href="https://m2.material.io/resources/color/#!/?view.left=1&amp;view.right=1&amp;primary.color=8a171a&amp;secondary.color=DEDEDE">https://m2.material.io/resources/color/#!/?view.left=1&amp;view.right=1&amp;primary.color=8a171a&amp;secondary.color=DEDEDE</a>.
-</div>
 <div id="fooref-gameshow" class="csl-entry" role="doc-biblioentry">
 gameshow. s.d. <a
 href="https://en.wikipedia.org/wiki/Game_show">https://en.wikipedia.org/wiki/Game_show</a>.
@@ -1731,20 +1676,12 @@ href="https://en.wikipedia.org/wiki/Game_show">https://en.wikipedia.org/wiki/Gam
 jeopardy. s.d. <a
 href="https://en.wikipedia.org/wiki/Jeopardy!">https://en.wikipedia.org/wiki/Jeopardy!</a>
 </div>
-<div id="fooref-planitpoker" class="csl-entry" role="doc-biblioentry">
-planitpoker. s.d. <a
-href="https://www.planitpoker.com">https://www.planitpoker.com</a>.
-</div>
 <div id="fooref-quizgame" class="csl-entry" role="doc-biblioentry">
 quizgame. s.d. <a
 href="https://en.wikipedia.org/wiki/Quiz">https://en.wikipedia.org/wiki/Quiz</a>.
 </div>
 <div id="fooref-quizlet" class="csl-entry" role="doc-biblioentry">
 quizlet. s.d. <a href="https://quizlet.com">https://quizlet.com</a>.
-</div>
-<div id="fooref-wa" class="csl-entry" role="doc-biblioentry">
-webAIM. s.d. <a
-href="https://webaim.org/resources/contrastchecker/?fcolor=DEDEDE&amp;bcolor=8A171A">https://webaim.org/resources/contrastchecker/?fcolor=DEDEDE&amp;bcolor=8A171A</a>.
 </div>
 <div id="fooref-whowantstobeamillionaire" class="csl-entry"
 role="doc-biblioentry">
