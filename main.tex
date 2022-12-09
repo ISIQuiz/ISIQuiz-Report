@@ -9,7 +9,7 @@
 \usepackage{graphicx}
 \usepackage{rotating}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage{tcolorbox}
+\usepackage[most]{tcolorbox}
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage{colortbl}
@@ -61,7 +61,6 @@ sorting=ynt
 \usepackage{indentfirst}
 \usepackage{tocloft}
 \usepackage{ifthen}
-%\usepackage[most]{tcolorbox}
 \usepackage{pgfplots}
 %\usepackage{Style/pgfplotsthemetol}
 \pgfplotsset{compat=1.16}
@@ -98,6 +97,11 @@ sorting=ynt
        
 %TAB2
 \newcolumntype{Y}{>{\raggedleft\arraybackslash}X}
+
+%colored quotes
+\newtcolorbox{myquote}{colback=yellow!7!white,colframe=yellow!70!white,grow to right by=-10mm,grow to left by=-10mm, boxrule=0pt,boxsep=0pt,breakable} \makeatletter
+
+\newcommand{\customquote}[1]{  \begin{myquote}  #1  \end{myquote}  }
 
 \tcbset{tab1/.style={fonttitle=\bfseries\large,fontupper=\normalsize\sffamily,
 colback=yellow!10!white,colframe=red!75!black,colbacktitle=Salmon!40!white,
