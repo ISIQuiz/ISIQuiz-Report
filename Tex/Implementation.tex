@@ -3,17 +3,150 @@
 % Esporre i principali problemi affrontati durante l'effettiva realizzazione delle componenti hardware/software e illustrare le soluzioni implementative adottate. Se l'elaborato ha previsto l'utilizzo di tecnologie già disponibili sul mercato, discuterne brevemente le caratteristiche e motivarne l'adozione rispetto ad altre soluzioni assimilabili. NOTA: in questa sezione devono essere riportate esclusivamente le porzioni di codice ritenute particolarmente significative. 
 % 10000 - 21000 battute
 %per ogni studente, una sotto-sezione descrittiva di cosa fatto/co-fatto e con chi, e descrizione di aspetti implementativi importanti non già presenti nel design
-\chapter{Implementazione}
-...
-    \section{Gambaletta Daniele}
+\chapter{Implementazione}\label{chap:impl}
+Nell'implementazione non ci sono aspetti particolari da segnalare in quanto lo sviluppo del codice ha seguito piuttosto fedelmente quanto deciso nel design del sistema. Si riportano quindi, per ogni membro del team, i principali componenti implementati ed i ruoli assunti durante il progetto.
+
+\section{Gambaletta Daniele}
     All'interno del progetto ho ricoperto il ruolo di \textbf{domain expert}, quindi sono stato intervistato all'inizio per capire i requisiti dell'applicativo, ho controllato i mockup e li ho fatti correggere in base ai miei gusti personali, ho controllato che venissero rispettate le mie indicazioni durante lo sviluppo e dato feedback finali (presenti nel capitolo \ref{conclusioni}) una volta che è stata rilasciata la versione definitiva.
     
-    \section{Lirussi Igor}
-    Ho svolto il compito di gestire il progetto dal punto di vista della metodologia Scrum facendo lo \textbf{scrum master}. Ho controllato durante tutte le fasi del progetto che utilizzassimo correttamente i principi scelti del lavoro agile, controllando e sistemando le issue, gli sprint e il product backlog.
-    
-    \section{Omiccioli Riccardo}
-   In qualità di \textbf{product owner} del progetto ho: presieduto i vari meeting svolti dal team di sviluppo, identificato i requisiti principali (raffinati poi con il team) dell'applicativo richiesto e organizzato il lavoro del team.
-    
-    \section{Teodorani Cecilia}
+    Model
+    \begin{itemize}
+        \item Session
+        \item PlayerStats
+        \item SavedCourse
+        \item InGamePlayerStats in GameStage
+    \end{itemize}
 
-    Per scegliere il colore primario del sito e il colore del testo sovrastante, si è utilizzato \href{https://m2.material.io/resources/color/#!/?view.left=1&view.right=1&primary.color=8a171a&secondary.color=DEDEDE}{Material Design - Color Tool}, così che avessero il giusto contrasto e, per controllare che veramente soddisfacessero le \textit{WCAG (Web Content Accessibility Guidelines)}, è stato utilizzato \href{https://webaim.org/resources/contrastchecker/?fcolor=DEDEDE&bcolor=8A171A}{WebAIM}.
+    Utils
+    \begin{itemize}
+        \item Json Parser
+        \item Storage Handler
+    \end{itemize}
+    
+    Controller
+    \begin{itemize}
+        \item contributi in AppController con l'aggiunta della Session
+    \end{itemize}
+
+    FXML
+    \begin{itemize}
+        \item statistics
+    \end{itemize}
+    
+\section{Lirussi Igor}
+    Ho svolto il compito di gestire il progetto dal punto di vista della metodologia Scrum facendo lo \textbf{scrum master}. Ho controllato durante tutte le fasi del progetto che utilizzassimo correttamente i principi scelti del lavoro agile, controllando e sistemando le issue, gli sprint e il product backlog.
+
+    FXML struttura
+    \begin{itemize}
+        \item add course menu
+        \item add quiz menu
+        \item edit course menu
+        \item edit quiz menu
+        \item review - grafica
+    \end{itemize}
+
+    Controller
+    \begin{itemize}
+        \item Add course menu
+        \item Add quiz menu
+        \item Edit course menu
+        \item Edit quiz menu
+    \end{itemize}
+    
+\section{Omiccioli Riccardo}
+   In qualità di \textbf{product owner} del progetto ho: presieduto i vari meeting svolti dal team di sviluppo, identificato i requisiti principali (raffinati poi con il team) dell'applicativo richiesto e organizzato il lavoro del team. Il mio lavoro si è principalmente concentrato nel design e realizzazione dell'architettura generale dell'applicazione implementando, in particolare, la parte relativa ai \textit{controller}, alle \textit{view} e alla comunicazione tra essi.
+   
+    FXML:
+    \begin{itemize}
+        \item Add course menu - in collaborazione con Lirussi
+        \item Add quiz menu - in collaborazione con Lirussi
+        \item Blitz game
+        \item Custom menu
+        \item Default menu
+        \item Edit course menu - in collaborazione con Lirussi
+        \item Edit quiz menu - in collaborazione con Lirussi
+        \item Main menu
+        \item Review menu - in collaborazione con Lirussi
+        \item Select menu - in collaborazione con Teodorani
+        \item Standard game - in collaborazione con Teodorani
+    \end{itemize}
+    Controller:
+    \begin{itemize}
+        \item Package actions
+        \item App controller
+        \item Blitz game controller
+        \item Controller
+        \item Custom menu controller
+        \item Game controller - in collaborazione con Teodorani
+        \item Main menu controller
+        \item Standard game controller - in collaborazione con Teodorani
+        \item Select menu controller - in collaborazione con Teodorani
+    \end{itemize}
+    Model:
+    \begin{itemize}
+        \item Game settings
+        \item Game stage - in collaborazione con Gambaletta, Lirussi e Teodorani
+        \item Timer
+    \end{itemize}
+    View:
+    \begin{itemize}
+        \item Blitz game menu
+        \item Blitz view
+        \item Custom menu
+        \item Default menu
+        \item Main menu - in collaborazione con Teodorani
+        \item Main menu view - in collaborazione con Teodorani
+        \item Select menu - in collaborazione con Teodorani
+        \item Select menu view - in collaborazione con Teodorani
+        \item Standard game menu
+        \item Package updates
+        \item View - in collaborazione con Teodorani
+    \end{itemize}
+    Altro:
+    \begin{itemize}
+        \item Main
+    \end{itemize}
+    
+\section{Teodorani Cecilia}
+    Insieme ad Omiccioli, ho seguito lo sviluppo generale dell'architettura, realizzando alcuni \textit{controller}, \textit{view} e componenti del \textit{model}. Di quest'ultimo mi sono anche occupata di standardizzare tutto il codice al termine dell'implementazione del progetto. In più, mi sono assicurata che il \textit{model} fosse adeguatamente testato, sviluppando test molto dettagliati. Infine, per quanto riguarda la GUI, ho messo a punto tecniche per la user experience e l'accessibilità. Per la prima ho adottato tecniche standard, quali ad esempio il font e la disposizione dei vari componenti nella pagina, mentre per la seconda ho utilizzato dei tool, per garantire che soddisfacessero le \textit{WCAG (Web Content Accessibility Guidelines)}. In particolare, per il colore primario del sito e il colore del testo sovrastante, si è utilizzato \href{https://m2.material.io/resources/color/#!/?view.left=1&view.right=1&primary.color=8a171a&secondary.color=DEDEDE}{Material Design - Color Tool} e \href{https://webaim.org/resources/contrastchecker/?fcolor=DEDEDE&bcolor=8A171A}{WebAIM}.
+    
+    FXML:
+    \begin{itemize}
+        \item Review Menu
+        \item Select Menu - in collaborazione con Omiccioli
+        \item Standard Game - in collaborazione con Omiccioli
+    \end{itemize}
+    Controller:
+    \begin{itemize}
+        \item Select Menu Controller - in collaborazione con Omiccioli
+        \item Game Controller - in collaborazione con Omiccioli
+        \item Standard Game Controller - in collaborazione con Omiccioli
+    \end{itemize}
+    Model:
+    \begin{itemize}
+        \item Answer
+        \item Game Stage - in collaborazione con Gambaletta, Lirussi e Omiccioli
+        \item Course Identifier - in collaborazione con Gambaletta
+        \item Quiz - in collaborazione con Gambaletta
+        \item SavedCourse - in collaborazione con Gambaletta
+        \item Session - in collaborazione con Gambaletta
+    \end{itemize}
+    View (realizzata la struttura di tutti gli update in \textit{nomeFile}MenuView sotto riportati, mentre dei controller grafici \textit{nomeFile}Menu la struttura generale e la navigazione tra le varie pagine):
+    \begin{itemize}
+        \item Add Course Menu - in collaborazione con Lirussi
+        \item Add Course Menu View - in collaborazione con Lirussi
+        \item Add Quiz Menu - in collaborazione con Lirussi
+        \item Add Quiz Menu - in collaborazione con Lirussi
+        \item Custom Menu
+        \item Custom Menu View - in collaborazione con Omiccioli
+        \item Main menu - in collaborazione con Omiccioli
+        \item Main Menu View - in collaborazione con Omiccioli
+        \item Select Menu - in collaborazione con Omiccioli
+        \item Select Menu View - in collaborazione con Omiccioli
+        \item Settings Menu View - in collaborazione con Gambaletta, Lirussi
+        \item Standard Game Menu - in collaborazione con Omiccioli
+        \item Statistics Menu View - in collaborazione con Gambaletta
+        \item View - in collaborazione con Omiccioli
+    \end{itemize}
+
+    
