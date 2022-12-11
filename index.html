@@ -245,8 +245,8 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
                                                         Architetturale</a>
                                                         <ul>
                                                         <li><a
-                                                        href="#fooarchitettura-generale"
-                                                        id="footoc-architettura-generale"><span
+                                                        href="#foochap:architectural-design"
+                                                        id="footoc-chap:architectural-design"><span
                                                         class="toc-section-number">5.1</span>
                                                         Architettura
                                                         Generale</a>
@@ -256,8 +256,8 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
                                                         class="toc-section-number">5.1.1</span>
                                                         View</a></li>
                                                         <li><a
-                                                        href="#foocontroller"
-                                                        id="footoc-controller"><span
+                                                        href="#foochap:generic-controller"
+                                                        id="footoc-chap:generic-controller"><span
                                                         class="toc-section-number">5.1.2</span>
                                                         Controller</a></li>
                                                         <li><a
@@ -285,8 +285,8 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
                                                         class="toc-section-number">6.2</span>
                                                         View</a></li>
                                                         <li><a
-                                                        href="#foocontroller-1"
-                                                        id="footoc-controller-1"><span
+                                                        href="#foocontroller"
+                                                        id="footoc-controller"><span
                                                         class="toc-section-number">6.3</span>
                                                         Controller</a></li>
                                                         </ul></li>
@@ -446,10 +446,10 @@ scegliendo tra pi&#xF9; risposte quella corretta <span class="citation"
 data-cites="whowantstobeamillionaire">(whowantstobeamillionaire, s.d.)</span>,
 o con degli aiuti di diversa natura, o con un tempo limite <span
 class="citation" data-cites="jeopardy">(jeopardy, s.d.)</span>. Anche dal
-punto di vista didattico, sono state sviluppate piattaforme, ad esempio
-Quizlet<span class="citation" data-cites="quizlet">(quizlet, s.d.)</span>, ma
-le soluzioni trovate sono orientate alla creazione dei quiz da parte degli
-insegnanti per gli studenti.</p>
+punto di vista didattico, sono state sviluppate piattaforme, ad esempio <a
+href="https://quizlet.com/">Quizlet</a>, ma le soluzioni trovate sono
+orientate alla creazione dei quiz da parte degli insegnanti per gli
+studenti.</p>
 <p>L&#x2019;idea di questo progetto si differenzia, in parte, per:</p>
 <ul>
 <li><p>la natura accademica orientata a corsi specifici di un determinato
@@ -1295,11 +1295,12 @@ giocatore di barare.</p></li>
 Implementativi</h2>
 <ul>
 <li><p>Linguaggio di programmazione Scala versione 3.2.0</p></li>
-<li><p>Scala FX 19.0.0 per l&#x2019;interfaccia grafica</p></li>
-<li><p>Utilizzo di JDK X ?</p></li>
-<li><p>Per il salvataggio delle domande e delle relative risposte deve essere
-utilizzata la notazione JSON in modo che l&#x2019;integrazione con il software possa
-utilizzare librerie generiche gi&#xE0; disponibili.</p></li>
+<li><p>Libreria <a href="https://github.com/scalafx/scalafx">Scala FX</a>
+19.0.0 per l&#x2019;interfaccia grafica</p></li>
+<li><p>Utilizzo di JDK 11</p></li>
+<li><p>Libreria <a href="https://github.com/playframework/play-json">Play
+JSON</a> 2.10.0-RC7 per il salvataggio dei quiz e delle statistiche attraverso
+la notazione JSON.</p></li>
 <li><p>Per lo sviluppo dovr&#xE0; essere utilizzato l&#x2019;IDE IntelliJ in modo da avere
 consistenza tra i membri del team di sviluppo.</p></li>
 </ul>
@@ -1313,7 +1314,7 @@ livello cercando di spiegare le scelte effettuate in relazione ai requisiti
 che sono stati elaborati precedentemente. Lo scopo &#xE8; quello di esaminare i
 componenti principali che formano l&#x2019;applicazione e di come essi comunichino
 tra loro.</p>
-<section id="fooarchitettura-generale" class="level2" data-number="5.1">
+<section id="foochap:architectural-design" class="level2" data-number="5.1">
 <h2 data-number="5.1"><span class="header-section-number">5.1</span>
 Architettura Generale</h2>
 <p>L&#x2019;architettura generale del sistema si basa sul pattern <strong>Model View
@@ -1321,12 +1322,12 @@ Controller</strong> (MVC) per rendere il pi&#xF9; possibile modulari e separati 
 compiti svolti da ciascun componente. In particolare, &#xE8; stato scelto di
 separare ulteriormente i ruoli di <em>view</em> e <em>controller</em> creando
 delle coppie di essi per ciascuna pagina dell&#x2019;applicazione. In questo modo il
-comportamento di ciascuna pagina risulta completamente separato dalle altre
-pagine, cos&#xEC; permettendo possibili modifiche o funzionalit&#xE0; non previste
-durante la fase di progettazione. Questo &#xE8; stato gestito attraverso un
-"AppController", che contiene al suo interno la coppia di <em>controller</em>
-e <em>view</em> della pagina attualmente caricata e mette a disposizione il
-necessario per navigare da una pagina all&#x2019;altra.</p>
+comportamento di ciascuna pagina risulta completamente separato dalle altre,
+cos&#xEC; permettendo possibili modifiche o funzionalit&#xE0; non previste durante la
+fase di progettazione. Questo &#xE8; stato gestito attraverso un "AppController",
+che contiene al suo interno la coppia di <em>controller</em> e <em>view</em>
+della pagina attualmente caricata e mette a disposizione il necessario per
+navigare da una pagina all&#x2019;altra.</p>
 <figure>
 <img src="Miro/general_architecture.png" id="foofig:mvc-generale"
 alt="Architettura generale dell&#x2019;applicazione" />
@@ -1352,13 +1353,13 @@ Avendo scelto di utilizzare JavaFX per realizzare l&#x2019;interfaccia grafica
 dell&#x2019;applicazione, tali classi di implementazione assumono il ruolo di
 FXControllers delle GUI. Ogni implementazione di una interfaccia grafica di
 una pagina (ad esempio "GraphicStandardGameMenu") deve anche estendere una
-<em>view</em> specifica pagina ("StandardGameMenuView"), la quale contiene
-tutti i possibili aggiornamenti su una generica interfaccia grafica relativa a
-tale pagina. In questo modo, una specifica implementazione deve sia soddisfare
-i vincoli imposti da una generica tipologia di interfaccia grafica sia gestire
-gli aggiornamenti specifici da effettuare su quella pagina.</p>
+<em>view</em> specifica della pagina ("StandardGameMenuView"), la quale
+contiene tutti i possibili aggiornamenti su una generica interfaccia grafica
+relativa a tale pagina. In questo modo, una specifica implementazione deve sia
+soddisfare i vincoli imposti da una generica tipologia di interfaccia grafica
+sia gestire gli aggiornamenti specifici da effettuare su quella pagina.</p>
 </section>
-<section id="foocontroller" class="level3" data-number="5.1.2">
+<section id="foochap:generic-controller" class="level3" data-number="5.1.2">
 <h3 data-number="5.1.2"><span class="header-section-number">5.1.2</span>
 Controller</h3>
 <p>Come precedentemente accennato, l&#x2019;unione e la comunicazione tra la
@@ -1371,15 +1372,15 @@ iterazione successiva e l&#x2019;invio di update all&#x2019;interfaccia grafica.
 L&#x2019;interfaccia "Controller" specifica una generica funzione di gestione delle
 azioni eseguite da un utente. Una "PageView" compone, insieme ad un
 "PageController", una pagina completamente funzionante dell&#x2019;applicazione e la
-comunicazione tra <em>view</em> e <em>controller</em> di una pagina avviene
-unicamente attraverso l&#x2019;invio di azioni e di update. Nel caso della pagina
-relativa ad una partita, come mostrato in Figura <a
-href="#foofig:mvc-generale" data-reference-type="ref"
-data-reference="fig:mvc-generale">5.1</a>, i comportamenti generali di
-qualsiasi modalit&#xE0; di partita sono stati astratti in una interfaccia
-"GameController". Ciascuna modalit&#xE0; di gioco estende "GameController",
-implementando poi la propria logica specifica e gestendo le possibili azioni
-di gioco definite nel <em>controller</em> di tale modalit&#xE0;.</p>
+comunicazione tra <em>view</em> e <em>controller</em> avviene unicamente
+attraverso l&#x2019;invio di azioni e di update. Nel caso della pagina relativa ad
+una partita, come mostrato in Figura <a href="#foofig:mvc-generale"
+data-reference-type="ref" data-reference="fig:mvc-generale">5.1</a>, i
+comportamenti generali di qualsiasi modalit&#xE0; di partita sono stati astratti in
+una interfaccia "GameController". Ciascuna modalit&#xE0; di gioco estende
+"GameController", implementando poi la propria logica specifica e gestendo le
+possibili azioni di gioco definite nel <em>controller</em> di tale
+modalit&#xE0;.</p>
 </section>
 <section id="foomodel" class="level3" data-number="5.1.3">
 <h3 data-number="5.1.3"><span class="header-section-number">5.1.3</span>
@@ -1405,35 +1406,174 @@ data-reference-type="ref" data-reference="chap:design">6</a>.</p>
 <h1 data-number="6"><span class="header-section-number">6</span> Design di
 Dettaglio</h1>
 <p>In questo capitolo, partendo dal design architetturale sopra descritto,
-verr&#xE0; analizzata in dettaglio la struttura del sistema descrivendo le
+verr&#xE0; analizzata in dettaglio la struttura del sistema, descrivendo le
 caratteristiche dei componenti e la relazione che c&#x2019;&#xE8; tra loro.</p>
-<p>View: factory; model: spiegazione della gestione quiz - review e game
-settings generalizzate controller</p>
 <section id="foomodel-1" class="level2" data-number="6.1">
 <h2 data-number="6.1"><span class="header-section-number">6.1</span>
 Model</h2>
-<p>Inserimento del diagramma delle classi del Model</p>
+<p>Il design del <em>model</em> realizzato cerca di rispecchiare il dominio di
+questa applicazione in modo indipendente e generale rispetto
+all&#x2019;implementazione che verr&#xE0; eseguita successivamente. Il design dettagliato
+sar&#xE0; di seguito esposto dividendolo in tre parti concettualmente separate.
+Essi riguardano rispettivamente gli elementi utilizzati durante una partita,
+quelli per il riepilogo e infine quelli relativi alla rappresentazione delle
+statistiche.</p>
+<p>L&#x2019;elemento principale del <em>model</em> utilizzato durante una partita &#xE8;
+"GameStage", come gi&#xE0; indicato in precedenza. Esso &#xE8; contenuto nel
+<em>controller</em>, ma a sua volta contiene tutti i componenti necessari per
+lo svolgimento di una generica partita:</p>
 <ul>
-<li></li>
-<li></li>
-<li></li>
+<li><p>"GameSettings": rappresenta le impostazioni della partita e a sua volta
+si specializza per modellare le specifiche impostazioni relative ad una
+determinata modalit&#xE0; di gioco</p></li>
+<li><p>"Review": mantiene le informazioni riguardati lo svolgimento di una
+partita (verr&#xE0; successivamente analizzato)</p></li>
+<li><p>"QuizInGame": modella il "Quiz", relativo ad uno specifico "Course",
+che viene proposto ad un utente in un particolare momento di gioco,
+comprensivo di una domanda e di alcune possibili "Answer"</p></li>
+<li><p>"CoursesInGame": rappresenta i "Course" selezionati tra i possibili
+"SavedCourse" da utilizzare per estrarre le domande da porre durante la
+partita</p></li>
 </ul>
+<p>Come mostrato in Figura <a href="#foofig:model-game"
+data-reference-type="ref" data-reference="fig:model-game">6.1</a>, gli
+elementi base modellati nell&#x2019;applicazione sono:</p>
+<ul>
+<li><p>"Course": descrive un corso universitario e presenta un identificativo,
+"CourseIdentifier", composto dal nome del corso, il nome dell&#x2019;universit&#xE0; in
+cui si svolge e la facolt&#xE0; relativa. "Course" si specializza in "SavedCourse"
+fungendo da contenitore per un insieme di quiz salvati relativi al
+corso.</p></li>
+<li><p>"Quiz": sono composti dal testo della domanda e da un insieme di
+possibili risposte associate. Sono contenuti in uno dei "SavedCourse" e
+contengono anche informazioni aggiuntive come, ad esempio, il punteggio del
+quiz.</p></li>
+<li><p>"Answer": modella una delle possibili risposte di un quiz ed &#xE8; formata
+dal testo della risposta e da un&#x2019;indicazione della correttezza di tale
+risposta.</p></li>
+</ul>
+<figure>
+<img src="Miro/game_model.png" id="foofig:model-game"
+alt="Architettura del model durante una partita" />
+<figcaption aria-hidden="true">Architettura del <em>model</em> durante una
+partita</figcaption>
+</figure>
+<p>Come mostrato in Figura <a href="#foofig:model-review"
+data-reference-type="ref" data-reference="fig:model-review">6.2</a>, il
+riepilogo di una partita &#xE8; contenuta nel "GameStage" e viene aggiornato
+durante la partita aggiungendo una serie di "QuizAnswered", ovvero i quiz che
+vengono posti all&#x2019;utente durante lo svolgimento del gioco. "QuizAnswered"
+estende il "QuizInGame" con l&#x2019;aggiunta della risposta scelta, il punteggio
+ottenuto e il tempo di risposta.</p>
+<figure>
+<img src="Miro/review_model.png" id="foofig:model-review"
+alt="Architettura del model per il riepilogo" />
+<figcaption aria-hidden="true">Architettura del <em>model</em> per il
+riepilogo</figcaption>
+</figure>
+<p>Per salvare i dati relativi alle statistiche di diverse partite, &#xE8; stata
+realizzata una "Session", la quale viene aggiornata al termine di ogni partita
+con le nuove statistiche di gioco. Come si pu&#xF2; vedere in Figura <a
+href="#foofig:model-statistics" data-reference-type="ref"
+data-reference="fig:model-statistics">6.3</a>, le statistiche mantengono una
+struttura dati su file simile a quella utilizzata per rappresentare i quiz e
+sono infatti modellate attraverso un "CourseInStat" con all&#x2019;interno una serie
+di "QuizInStat". In questo modo viene mantenuta la struttura gerarchica tra
+quiz e corso, permettendo di ottenere eventualmente informazioni utili
+relative alle statistiche dei singoli quiz di un corso.</p>
+<figure>
+<img src="Miro/statistics_model.png" id="foofig:model-statistics"
+alt="Architettura del model per le statistiche" />
+<figcaption aria-hidden="true">Architettura del <em>model</em> per le
+statistiche</figcaption>
+</figure>
 </section>
 <section id="fooview-1" class="level2" data-number="6.2">
 <h2 data-number="6.2"><span class="header-section-number">6.2</span> View</h2>
-<p>Inserimento del diagramma delle classi della View.</p>
-<p>Per scegliere il colore primario del sito e il colore del testo
-sovrastante, si &#xE8; utilizzato <a
-href="https://m2.material.io/resources/color/#!/?view.left=1&amp;view.right=1&amp;primary.color=8a171a&amp;secondary.color=DEDEDE">Material
-Design - Color Tool</a>, cos&#xEC; che avessero il giusto contrasto e, per
-controllare che veramente soddisfacessero le <em>WCAG (Web Content
-Accessibility Guidelines)</em>, &#xE8; stato utilizzato <a
-href="https://webaim.org/resources/contrastchecker/?fcolor=DEDEDE&amp;bcolor=8A171A">WebAIM</a>.</p>
+<p>Come gi&#xE0; spiegato nell&#x2019;Architettura Generale <a
+href="#foochap:architectural-design" data-reference-type="ref"
+data-reference="chap:architectural-design">5.1</a> del sistema, ogni pagina
+dispone di una <em>view</em> specifica. In Figura <a
+href="#foofig:view-dettaglio" data-reference-type="ref"
+data-reference="fig:view-dettaglio">6.4</a> sono mostrate come esempio le
+<em>view</em> relative al menu di selezione dei corsi prima di una partita,
+"SelectMenuView", e quella di una partita standard, "StandardGameMenuView".
+Avendo utilizzato un processo di sviluppo agile, &#xE8; stata inizialmente proposta
+all&#x2019;esperto del dominio una versione dell&#x2019;applicazione con interfaccia grafica
+tramite linea di comando. Tuttavia, il design della <em>view</em> realizzato,
+&#xE8; stato ideato in modo da rendere la view quanto pi&#xF9; possibile indipendente
+dalla specifica implementazione. Infatti nelle fasi successive del progetto,
+quando &#xE8; stata introdotta la GUI tramite JavaFX, &#xE8; stato sufficiente
+realizzare la nuova implementazione rispettando le interfacce predisposte.
+Durante l&#x2019;esecuzione dell&#x2019;applicazione, la corretta implementazione della
+<em>view</em> relativa ad una pagina viene instanziata attraverso una
+"ViewFactory" che restituisce la "PageView" corretta.</p>
+<figure>
+<img src="Miro/view.png" id="foofig:view-dettaglio"
+alt="Architettura della view" />
+<figcaption aria-hidden="true">Architettura della <em>view</em></figcaption>
+</figure>
+<p>Ciascuna <em>view</em> di una pagina mette a disposizione diversi
+"ViewUpdate" che &#xE8; possibile richiamare per aggiornare alcuni degli elementi
+grafici. Gli updates della <em>view</em> possono avere dei parametri generici
+e opzionali il cui valore costituisce le informazioni necessarie per
+effettuare l&#x2019;aggiornamento (Figura <a href="#foofig:view-updates"
+data-reference-type="ref" data-reference="fig:view-updates">6.5</a>). Nel caso
+uno degli update non necessiti di dati, &#xE8; possibile utilizzare un
+"ParameterlessViewUpdate" il quale estende "ViewUpdate", definendo il
+parametro dell&#x2019;aggiornamento come vuoto. Dato che tutte le interfacce grafiche
+delle pagine necessitano di un "DefaultUpdate", ovvero di un aggiornamento di
+base dell&#x2019;interfaccia, esso &#xE8; stato estratto in modo da evitare di definirlo
+molteplici volte.</p>
+<figure>
+<img src="Miro/updates_view.png" id="foofig:view-updates"
+alt="Updates della view" />
+<figcaption aria-hidden="true">Updates della <em>view</em></figcaption>
+</figure>
 </section>
-<section id="foocontroller-1" class="level2" data-number="6.3">
+<section id="foocontroller" class="level2" data-number="6.3">
 <h2 data-number="6.3"><span class="header-section-number">6.3</span>
 Controller</h2>
-<p>Inserimento del diagramma delle classi del Controller</p>
+<p>Per quanto riguarda il <em>controller</em>, sono stati definiti molteplici
+<em>controller</em>, uno per ciascuna pagina analogamente analogo alla
+<em>view</em>. Come infatti si pu&#xF2; notare da Figura <a
+href="#foofig:controller-page" data-reference-type="ref"
+data-reference="fig:controller-page">6.6</a>, sono presenti un
+"SelectMenuController" e "StandardGameController" relativi rispettivamente
+alle pagine di selezione corsi e di una partita in modalit&#xE0; standard. Per come
+&#xE8; stato concepito, il <em>controller</em> &#xE8; completamente indipendente
+dall&#x2019;implementazione specifica dell&#x2019;interfaccia grafica, come gi&#xE0; indicato nel
+capitolo Architettura Generale <a href="#foochap:generic-controller"
+data-reference-type="ref"
+data-reference="chap:generic-controller">5.1.2</a>.</p>
+<figure>
+<img src="Miro/page_controller.png" id="foofig:controller-page"
+alt="Architettura del controller" />
+<figcaption aria-hidden="true">Architettura del
+<em>controller</em></figcaption>
+</figure>
+<p>Come per la <em>view</em>, il <em>controller</em> mette a disposizione una
+serie di azioni che l&#x2019;utente pu&#xF2; eseguire e che vengono gestite dal
+<em>controller</em> della pagina. Una "Action" generale pu&#xF2; portare con s&#xE9; dei
+parametri generici ed opzionali o averli vuoti nel caso si tratti di una
+"ParameterLessAction", ovvero di una azione senza parametri aggiuntivi. Anche
+in questo caso le parti in comune tra i vari <em>controller</em> sono state
+estratte cos&#xEC; come nell&#x2019;esempio di Figura <a href="#foofig:controller-actions"
+data-reference-type="ref" data-reference="fig:controller-actions">6.7</a>,
+dove &#xE8; mostrata la "BackAction" che rappresenta un&#x2019;azione generica per tornare
+alla pagina precedente.</p>
+<figure>
+<img src="Miro/actions_controller.png" id="foofig:controller-actions"
+alt="Actions del controller" />
+<figcaption aria-hidden="true">Actions del <em>controller</em></figcaption>
+</figure>
+<p>Come gi&#xE0; specificato, la comunicazione tra il <em>view</em> e il
+<em>controller</em> di una pagina avviene solamente attraverso le "Action" e i
+"ViewUpdate", nello specifico: la <em>view</em> invia al controller le azioni
+eseguite da un utente attraverso le "Action" specifiche definite e gestite da
+quel <em>controller</em>, mentre il <em>controller</em> manda alla
+<em>view</em> gli update che l&#x2019;interfaccia grafica &#xE8; in grado di
+visualizzare.</p>
 </section>
 </section>
 <section id="fooimplementazione" class="level1" data-number="7">
@@ -1445,7 +1585,7 @@ Implementazione</h1>
 Gambaletta Daniele</h2>
 <p>All&#x2019;interno del progetto ho ricoperto il ruolo di <strong>domain
 expert</strong>, quindi sono stato intervistato all&#x2019;inizio per capire i
-requisiti dell&#x2019;applicativo, ho controllato i mockup e il ho fatti correggere
+requisiti dell&#x2019;applicativo, ho controllato i mockup e li ho fatti correggere
 in base ai miei gusti personali, ho controllato che venissero rispettate le
 mie indicazioni durante lo sviluppo e dato feedback finali (presenti nel
 capitolo <a href="#fooconclusioni" data-reference-type="ref"
@@ -1472,6 +1612,13 @@ del team.</p>
 <section id="footeodorani-cecilia" class="level2" data-number="7.4">
 <h2 data-number="7.4"><span class="header-section-number">7.4</span> Teodorani
 Cecilia</h2>
+<p>Per scegliere il colore primario del sito e il colore del testo
+sovrastante, si &#xE8; utilizzato <a
+href="https://m2.material.io/resources/color/#!/?view.left=1&amp;view.right=1&amp;primary.color=8a171a&amp;secondary.color=DEDEDE">Material
+Design - Color Tool</a>, cos&#xEC; che avessero il giusto contrasto e, per
+controllare che veramente soddisfacessero le <em>WCAG (Web Content
+Accessibility Guidelines)</em>, &#xE8; stato utilizzato <a
+href="https://webaim.org/resources/contrastchecker/?fcolor=DEDEDE&amp;bcolor=8A171A">WebAIM</a>.</p>
 </section>
 </section>
 <section id="footesting-e-performance" class="level1" data-number="8">
