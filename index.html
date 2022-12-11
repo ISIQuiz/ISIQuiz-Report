@@ -291,8 +291,8 @@ href="mailto:cecilia.teodorani@studio.unibo.it"><code>cecilia.teodorani@studio.u
                                                         Controller</a></li>
                                                         </ul></li>
                                                         <li><a
-                                                        href="#fooimplementazione"
-                                                        id="footoc-implementazione"><span
+                                                        href="#foochap:impl"
+                                                        id="footoc-chap:impl"><span
                                                         class="toc-section-number">7</span>
                                                         Implementazione</a>
                                                         <ul>
@@ -1576,10 +1576,13 @@ quel <em>controller</em>, mentre il <em>controller</em> manda alla
 visualizzare.</p>
 </section>
 </section>
-<section id="fooimplementazione" class="level1" data-number="7">
+<section id="foochap:impl" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span>
 Implementazione</h1>
-<p>...</p>
+<p>Nell&#x2019;implementazione non ci sono aspetti particolari da segnalare in quanto
+lo sviluppo del codice ha seguito piuttosto fedelmente quanto deciso nel
+design del sistema. Si riportano quindi, per ogni membro del team, i
+principali componenti implementati ed i ruoli assunti durante il progetto.</p>
 <section id="foogambaletta-daniele" class="level2" data-number="7.1">
 <h2 data-number="7.1"><span class="header-section-number">7.1</span>
 Gambaletta Daniele</h2>
@@ -1591,6 +1594,26 @@ mie indicazioni durante lo sviluppo e dato feedback finali (presenti nel
 capitolo <a href="#fooconclusioni" data-reference-type="ref"
 data-reference="conclusioni">10</a>) una volta che &#xE8; stata rilasciata la
 versione definitiva.</p>
+<p>Model</p>
+<ul>
+<li><p>Session</p></li>
+<li><p>PlayerStats</p></li>
+<li><p>SavedCourse</p></li>
+<li><p>InGamePlayerStats in GameStage</p></li>
+</ul>
+<p>Utils</p>
+<ul>
+<li><p>Json Parser</p></li>
+<li><p>Storage Handler</p></li>
+</ul>
+<p>Controller</p>
+<ul>
+<li><p>contributi in AppController con l&#x2019;aggiunta della Session</p></li>
+</ul>
+<p>FXML</p>
+<ul>
+<li><p>statistics</p></li>
+</ul>
 </section>
 <section id="foolirussi-igor" class="level2" data-number="7.2">
 <h2 data-number="7.2"><span class="header-section-number">7.2</span> Lirussi
@@ -1600,6 +1623,21 @@ metodologia Scrum facendo lo <strong>scrum master</strong>. Ho controllato
 durante tutte le fasi del progetto che utilizzassimo correttamente i principi
 scelti del lavoro agile, controllando e sistemando le issue, gli sprint e il
 product backlog.</p>
+<p>FXML struttura</p>
+<ul>
+<li><p>add course menu</p></li>
+<li><p>add quiz menu</p></li>
+<li><p>edit course menu</p></li>
+<li><p>edit quiz menu</p></li>
+<li><p>review - grafica</p></li>
+</ul>
+<p>Controller</p>
+<ul>
+<li><p>Add course menu</p></li>
+<li><p>Add quiz menu</p></li>
+<li><p>Edit course menu</p></li>
+<li><p>Edit quiz menu</p></li>
+</ul>
 </section>
 <section id="fooomiccioli-riccardo" class="level2" data-number="7.3">
 <h2 data-number="7.3"><span class="header-section-number">7.3</span> Omiccioli
@@ -1607,29 +1645,160 @@ Riccardo</h2>
 <p>In qualit&#xE0; di <strong>product owner</strong> del progetto ho: presieduto i
 vari meeting svolti dal team di sviluppo, identificato i requisiti principali
 (raffinati poi con il team) dell&#x2019;applicativo richiesto e organizzato il lavoro
-del team.</p>
+del team. Il mio lavoro si &#xE8; principalmente concentrato nel design e
+realizzazione dell&#x2019;architettura generale dell&#x2019;applicazione implementando, in
+particolare, la parte relativa ai <em>controller</em>, alle <em>view</em> e
+alla comunicazione tra essi.</p>
+<p>FXML:</p>
+<ul>
+<li><p>Add course menu - in collaborazione con Lirussi</p></li>
+<li><p>Add quiz menu - in collaborazione con Lirussi</p></li>
+<li><p>Blitz game</p></li>
+<li><p>Custom menu</p></li>
+<li><p>Default menu</p></li>
+<li><p>Edit course menu - in collaborazione con Lirussi</p></li>
+<li><p>Edit quiz menu - in collaborazione con Lirussi</p></li>
+<li><p>Main menu</p></li>
+<li><p>Review menu - in collaborazione con Lirussi</p></li>
+<li><p>Select menu - in collaborazione con Teodorani</p></li>
+<li><p>Standard game - in collaborazione con Teodorani</p></li>
+</ul>
+<p>Controller:</p>
+<ul>
+<li><p>Package actions</p></li>
+<li><p>App controller</p></li>
+<li><p>Blitz game controller</p></li>
+<li><p>Controller</p></li>
+<li><p>Custom menu controller</p></li>
+<li><p>Game controller - in collaborazione con Teodorani</p></li>
+<li><p>Main menu controller</p></li>
+<li><p>Standard game controller - in collaborazione con Teodorani</p></li>
+<li><p>Select menu controller - in collaborazione con Teodorani</p></li>
+</ul>
+<p>Model:</p>
+<ul>
+<li><p>Game settings</p></li>
+<li><p>Game stage - in collaborazione con Gambaletta, Lirussi e
+Teodorani</p></li>
+<li><p>Timer</p></li>
+</ul>
+<p>View:</p>
+<ul>
+<li><p>Blitz game menu</p></li>
+<li><p>Blitz view</p></li>
+<li><p>Custom menu</p></li>
+<li><p>Default menu</p></li>
+<li><p>Main menu - in collaborazione con Teodorani</p></li>
+<li><p>Main menu view - in collaborazione con Teodorani</p></li>
+<li><p>Select menu - in collaborazione con Teodorani</p></li>
+<li><p>Select menu view - in collaborazione con Teodorani</p></li>
+<li><p>Standard game menu</p></li>
+<li><p>Package updates</p></li>
+<li><p>View - in collaborazione con Teodorani</p></li>
+</ul>
+<p>Altro:</p>
+<ul>
+<li><p>Main</p></li>
+</ul>
 </section>
 <section id="footeodorani-cecilia" class="level2" data-number="7.4">
 <h2 data-number="7.4"><span class="header-section-number">7.4</span> Teodorani
 Cecilia</h2>
-<p>Per scegliere il colore primario del sito e il colore del testo
-sovrastante, si &#xE8; utilizzato <a
+<p>Insieme ad Omiccioli, ho seguito lo sviluppo generale dell&#x2019;architettura,
+realizzando alcuni <em>controller</em>, <em>view</em> e componenti del
+<em>model</em>. Di quest&#x2019;ultimo mi sono anche occupata di standardizzare tutto
+il codice al termine dell&#x2019;implementazione del progetto. In pi&#xF9;, mi sono
+assicurata che il <em>model</em> fosse adeguatamente testato, sviluppando test
+molto dettagliati. Infine, per quanto riguarda la GUI, ho messo a punto
+tecniche per la user experience e l&#x2019;accessibilit&#xE0;. Per la prima ho adottato
+tecniche standard, quali ad esempio il font e la disposizione dei vari
+componenti nella pagina, mentre per la seconda ho utilizzato dei tool, per
+garantire che soddisfacessero le <em>WCAG (Web Content Accessibility
+Guidelines)</em>. In particolare, per il colore primario del sito e il colore
+del testo sovrastante, si &#xE8; utilizzato <a
 href="https://m2.material.io/resources/color/#!/?view.left=1&amp;view.right=1&amp;primary.color=8a171a&amp;secondary.color=DEDEDE">Material
-Design - Color Tool</a>, cos&#xEC; che avessero il giusto contrasto e, per
-controllare che veramente soddisfacessero le <em>WCAG (Web Content
-Accessibility Guidelines)</em>, &#xE8; stato utilizzato <a
+Design - Color Tool</a> e <a
 href="https://webaim.org/resources/contrastchecker/?fcolor=DEDEDE&amp;bcolor=8A171A">WebAIM</a>.</p>
+<p>FXML:</p>
+<ul>
+<li><p>Review Menu</p></li>
+<li><p>Select Menu - in collaborazione con Omiccioli</p></li>
+<li><p>Standard Game - in collaborazione con Omiccioli</p></li>
+</ul>
+<p>Controller:</p>
+<ul>
+<li><p>Select Menu Controller - in collaborazione con Omiccioli</p></li>
+<li><p>Game Controller - in collaborazione con Omiccioli</p></li>
+<li><p>Standard Game Controller - in collaborazione con Omiccioli</p></li>
+</ul>
+<p>Model:</p>
+<ul>
+<li><p>Answer</p></li>
+<li><p>Game Stage - in collaborazione con Gambaletta, Lirussi e
+Omiccioli</p></li>
+<li><p>Course Identifier - in collaborazione con Gambaletta</p></li>
+<li><p>Quiz - in collaborazione con Gambaletta</p></li>
+<li><p>SavedCourse - in collaborazione con Gambaletta</p></li>
+<li><p>Session - in collaborazione con Gambaletta</p></li>
+</ul>
+<p>View (realizzata la struttura di tutti gli update in
+<em>nomeFile</em>MenuView sotto riportati, mentre dei controller grafici
+<em>nomeFile</em>Menu la struttura generale e la navigazione tra le varie
+pagine):</p>
+<ul>
+<li><p>Add Course Menu - in collaborazione con Lirussi</p></li>
+<li><p>Add Course Menu View - in collaborazione con Lirussi</p></li>
+<li><p>Add Quiz Menu - in collaborazione con Lirussi</p></li>
+<li><p>Add Quiz Menu - in collaborazione con Lirussi</p></li>
+<li><p>Custom Menu</p></li>
+<li><p>Custom Menu View - in collaborazione con Omiccioli</p></li>
+<li><p>Main menu - in collaborazione con Omiccioli</p></li>
+<li><p>Main Menu View - in collaborazione con Omiccioli</p></li>
+<li><p>Select Menu - in collaborazione con Omiccioli</p></li>
+<li><p>Select Menu View - in collaborazione con Omiccioli</p></li>
+<li><p>Settings Menu View - in collaborazione con Gambaletta, Lirussi</p></li>
+<li><p>Standard Game Menu - in collaborazione con Omiccioli</p></li>
+<li><p>Statistics Menu View - in collaborazione con Gambaletta</p></li>
+<li><p>View - in collaborazione con Omiccioli</p></li>
+</ul>
 </section>
 </section>
 <section id="footesting-e-performance" class="level1" data-number="8">
 <h1 data-number="8"><span class="header-section-number">8</span> Testing e
 Performance</h1>
+<section id="footesting" class="level5" data-number="8.0.0.0.1">
+<h5 data-number="8.0.0.0.1"><span
+class="header-section-number">8.0.0.0.1</span> Testing</h5>
 <p>Per i test dell&#x2019;applicazione sono stati utilizzati:</p>
 <ul>
-<li><p>Scala Test versione 3.2.14 per il model dell&#x2019;applicazione</p></li>
+<li><p>Scala Test versione 3.2.14 per il <em>model</em>
+dell&#x2019;applicazione</p></li>
 <li><p>JUnit 5 e TestFX versione 4.0.16-alpha per l&#x2019;interfaccia
 grafica</p></li>
 </ul>
+<p>Come gi&#xE0; detto nel capitolo <a href="#foochap:impl"
+data-reference-type="ref" data-reference="chap:impl">7</a> relativo
+all&#x2019;implementazione, si &#xE8; prestata particolare attenzione nell&#x2019;eseguire test
+dettagliati sui componenti del <em>model</em> assicurando quindi che gli
+elementi del dominio rappresentati all&#x2019;interno del programma fossero
+sufficientemente robusti.</p>
+</section>
+<section id="fooperformance" class="level5" data-number="8.0.0.0.2">
+<h5 data-number="8.0.0.0.2"><span
+class="header-section-number">8.0.0.0.2</span> Performance</h5>
+<p>Per quanto riguarda le performance, il programma &#xE8; stato eseguito con
+successo su diversi dispositivi e si riportano in Figura <a
+href="#foofig:visualvm" data-reference-type="ref"
+data-reference="fig:visualvm">8.1</a> i risultati dell&#x2019;esecuzione di una
+partita standard osservata attraverso il tool <a
+href="https://visualvm.github.io/">VisualVM</a>.</p>
+<figure>
+<img src="Images/VisualVM.png" id="foofig:visualvm"
+alt="Monitoraggio esecuzione di una partita" />
+<figcaption aria-hidden="true">Monitoraggio esecuzione di una
+partita</figcaption>
+</figure>
+</section>
 </section>
 <section id="foochap:Retrospettiva" class="level1" data-number="9">
 <h1 data-number="9"><span class="header-section-number">9</span>
@@ -1865,6 +2034,9 @@ class="header-section-number">9.10.0.0.1</span> Deliverables</h5>
 <section id="fooconclusioni" class="level1" data-number="10">
 <h1 data-number="10"><span class="header-section-number">10</span>
 Conclusioni</h1>
+<p>Complessivamente sono state implementate tutte le user story richieste dal
+domain expert e anche uno dei requisiti opzionali riguardante la modalit&#xE0; di
+gioco a tempo.</p>
 <section id="foosviluppi-futuri" class="level2" data-number="10.1">
 <h2 data-number="10.1"><span class="header-section-number">10.1</span>
 Sviluppi Futuri</h2>
