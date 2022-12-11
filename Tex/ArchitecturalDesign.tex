@@ -7,24 +7,26 @@
 %Ricordate che una scelta architetturale può ritenersi giustificata o meno solo a fronte dei requirement che avete indicato; viceversa, ogni requirement "critico" dovrebbe influenzare qualcuna della scelte architetturali effettuate e descritte.
 %L'architettura deve spiegare quali sono i sotto-componenti del sistema (da 5 a 15, diciamo), ognuno cosa fa, chi parla con chi e per dirsi cosa -- i diagrammi aiutano, ma poi la prosa deve chiaramente indicare questi aspetti.
 \chapter{Design Architetturale}
-    ...
+    In questo capitolo verrà analizzata l'architettura del sistema ad alto livello cercando di spiegare le scelte effettuate in relazione ai requisiti che sono stati elaborati precedentemente. Lo scopo è quello di esaminare i componenti principali che formano l'applicazione e di come essi comunichino tra loro.
+
     \section{Architettura Generale}
-    Inserimento del diagramma delle classi generale in cui si vedono le interazioni tra Model View e Controller
+    L'architettura generale del sistema si basa sul pattern \textbf{Model View Controller} (MVC) per rendere il più possibile modulari e separati i compiti svolti da ciascun componente. In particolare, è stato scelto di separare ulteriormente i ruoli di \textit{view} e \textit{controller} creando delle coppie di essi per ciascuna pagina dell'applicazione. In questo modo il comportamento di ciascuna pagina risulta completamente separato dalle altre pagine, così permettendo possibili modifiche o funzionalità non previste durante la fase di progettazione. Questo è stato gestito attraverso un "AppController", che contiene al suo interno la coppia di \textit{controller} e \textit{view} della pagina attualmente caricata e mette a disposizione il necessario per navigare da una pagina all'altra.
     
     \begin{figure}[H]
         \centering
         \includegraphics[width=\textwidth]{Miro/general_architecture.png}
-        \label{fig:Sprint9BL2}
+        \caption{Architettura generale dell'applicazione}
+        \label{fig:mvc-generale}
     \end{figure}
     
-    \section{Pattern Architetturali Utilizzati}
-        Nel sistema è stato utilizzato il pattern Model View Controller (MVC) in modo da modularizzare quanto più possibile le parti relative all'interfaccia grafica, la modellazione e la logica dell'applicazione. 
-        Questo pattern è stato utile considerando anche la metodologia di sviluppo agile per realizzare versioni successive del sistema implementando, ad esempio, un'interfaccia basata su linea di comando nelle prime fasi del progetto e poi una interfaccia che utilizzasse JavaFX nelle fasi successive di sviluppo.
+    \subsection{View}
+        Nell'architettura realizzata, il componente "View" si occupa della comunicazione con il \textit{controller} inviando ad esso le azioni che un utente effettua sull'interfaccia grafica. Ciascuna pagina dell'applicazione deve estendere l'interfaccia generale "PageView", la quale definisce un metodo per l'aggiornamento della pagina stessa a seguito della ricezione di aggiornamenti da parte del \textit{controller} della pagina corrispondente. "GraphicView" estende una "PageView" aggiungendo tutti i comportamenti comuni relativi ad una GUI. Essa viene a sua volta estesa da ciascuna implementazione delle interfaccie grafiche di ciascuna pagina (nella Figura \ref{fig:mvc-generale} è riportato come esempio solamente l'implementazione della \textit{view} relativa ad una partita standard). Avendo scelto di utilizzare JavaFX per realizzare l'interfaccia grafica dell'applicazione, tali classi di implementazione assumono il ruolo di FXControllers delle GUI. Ogni implementazione di una interfaccia grafica di una pagina (ad esempio "GraphicStandardGameMenu") deve anche estendere una \textit{view} specifica pagina ("StandardGameMenuView"), la quale contiene tutti i possibili aggiornamenti su una generica interfaccia grafica relativa a tale pagina. In questo modo, una specifica implementazione deve sia soddisfare i vincoli imposti da una generica tipologia di interfaccia grafica sia gestire gli aggiornamenti specifici da effettuare su quella pagina.
         
-        Il funzionamento del pattern MVC è il seguente:
-        \begin{itemize}
-            \item Il Model fornisce i metodi per accedere ai dati;
-            \item La View si occupa di interagire con l'utente, notificare il Controller e visualizzare i dati del Model;
-            \item Il Controller riceve i comandi dell'utente e si occupa di aggiornare lo stato della View e del Model.
-        \end{itemize}
-    
+    \subsection{Controller}
+        Come precedentemente accennato, l'unione e la comunicazione tra la \textit{view} e il \textit{controller} di una specifica pagina viene gestita tramite "AppController", il quale mantiene il riferimento ad essi. "AppController" permette la navigazione tra le pagine andando a modificare la pagina attualmente in uso.
+        Ogni \textit{controller} di una pagina deve estendere l'interfaccia "PageController", la quale impone l'esecuzione di una iterazione successiva e l'invio di update all'interfaccia grafica. L'interfaccia "Controller" specifica una generica funzione di gestione delle azioni eseguite da un utente.
+        Una "PageView" compone, insieme ad un "PageController", una pagina completamente funzionante dell'applicazione e la comunicazione tra \textit{view} e \textit{controller} di una pagina avviene unicamente attraverso l'invio di azioni e di update. Nel caso della pagina relativa ad una partita, come mostrato in Figura \ref{fig:mvc-generale}, i comportamenti generali di qualsiasi modalità di partita sono stati astratti in una interfaccia "GameController". Ciascuna modalità di gioco estende "GameController", implementando poi la propria logica specifica e gestendo le possibili azioni di gioco definite nel \textit{controller} di tale modalità.
+ 
+    \subsection{Model}
+        Il \textit{model} dell'applicazione è utilizzato quasi completamente per modellare gli oggetti del dominio necessari allo svolgimento di una partita.
+        Come in Figura \ref{fig:mvc-generale}, esso viene sintetizzato nel "GameStage", il quale modella tutti gli elementi generali presenti in una partita, ad esempio, le impostazioni di gioco, il riepilogo della partita e i corsi utilizzati durante la partita per estrarre i quiz da porre. "GameStage" viene utilizzato e modificato dal \textit{controller} della modalità di gioco secondo la logica implementata e poi viene comunicato alla \textit{view} per effettuare gli aggiornamenti necessari sull'interfaccia grafica. Come già detto, nell'architettura generale è stata presentata una versione molto riassuntiva del \textit{model}, il quale verrà successivamente dettagliato nella parte di Design di Dettaglio \ref{chap:design}.
