@@ -7,50 +7,91 @@
 Nell'implementazione non ci sono aspetti particolari da segnalare in quanto lo sviluppo del codice ha seguito piuttosto fedelmente quanto deciso nel design del sistema. Si riportano quindi, per ogni membro del team, i principali componenti implementati ed i ruoli assunti durante il progetto.
 
 \section{Gambaletta Daniele}
-    All'interno del progetto ho ricoperto il ruolo di \textbf{domain expert}, quindi sono stato intervistato all'inizio per capire i requisiti dell'applicativo, ho controllato i mockup e li ho fatti correggere in base ai miei gusti personali, ho controllato che venissero rispettate le mie indicazioni durante lo sviluppo e dato feedback finali (presenti nel capitolo \ref{conclusioni}) una volta che è stata rilasciata la versione definitiva.
+    All'interno del progetto ho ricoperto il ruolo di \textbf{domain expert}, quindi sono stato intervistato all'inizio per capire i requisiti dell'applicativo, ho controllato i \textit{mockup} e li ho fatti correggere in base ai miei gusti personali, controllando che venissero rispettate le mie indicazioni durante lo sviluppo.
+    Per quanto riguarda l'implementazione, nel \textit{model} mi sono occupato principalmente delle statistiche e di parte dei corsi. Inoltre ho sviluppato le \textit{utils} necessarie alla persistenza dei quiz e delle statistiche, gestendo sia la parte di \textit{parsing} dei dati in formato JSON che quella di salvataggio/caricamento dei \textit{files}. 
     
-    Model
+    Model:
     \begin{itemize}
-        \item Session
         \item PlayerStats
-        \item SavedCourse
-        \item InGamePlayerStats in GameStage
+        \item CourseInStats
+        \item QuizInStats - in collaborazione con Teodorani
+        \item SavedCourse - in collaborazione con Teodorani
+        \item Course
+        \item CourseIdentifier - in collaborazione con Teodorani
+        \item Quiz - in collaborazione con Teodorani
+        \item GameStage - in collaborazione con Omiccioli, Lirussi e Teodorani
+        \item Session - in collaborazione con Teodorani
     \end{itemize}
 
-    Utils
+    View:
     \begin{itemize}
-        \item Json Parser
-        \item Storage Handler
+        \item Settings Menu View - in collaborazione con Teodorani, Lirussi
+        \item Statistics Menu View - in collaborazione con Teodorani
     \end{itemize}
     
-    Controller
+    FXML:
     \begin{itemize}
-        \item contributi in AppController con l'aggiunta della Session
+        \item Statistics
+    \end{itemize}
+    
+    Controller:
+    \begin{itemize}
+        \item AppController - in collaborazione con Omiccioli
+        \item StandardGameController - in collaborazione con Omiccioli, Lirussi e Teodorani
+        \item BlitzGameController - in collaborazione con Omiccioli, Lirussi
+        \item StatisticsMenuController - in collaborazione con Omiccioli
     \end{itemize}
 
-    FXML
+    Utils:
     \begin{itemize}
-        \item statistics
+        \item JsonParser con CourseJsonParser e StatsJsonParser
+        \item FileHandler
+        \item DataStorageHandler 
+        \item ImportHandler
+        \item ExportHandler
     \end{itemize}
+    
     
 \section{Lirussi Igor}
-    Ho svolto il compito di gestire il progetto dal punto di vista della metodologia Scrum facendo lo \textbf{scrum master}. Ho controllato durante tutte le fasi del progetto che utilizzassimo correttamente i principi scelti del lavoro agile, controllando e sistemando le issue, gli sprint e il product backlog.
+    Per la durata del progetto, ricoprendo il ruolo aggiuntivo di \textbf{scrum-master}, ho svolto il compito di gestire il processo di sviluppo (capitolo \ref{chap:dev-process}) dal punto di vista della metodologia Agile, rispettando le sue varie fasi e utilizzando il più possibile il framework Scrum. Ricoprendo questo ruolo, la responsabilità è stata quella di portare il focus dello sviluppo sul processo, più che sul risultato. Mi sono occupato di predisporre l'organizzazione con le relative repository e i tool da utilizzare, collegando ad essi la Continuous Integration (capitolo \ref{chap:CI}) della reportistica e del software, affinché i cambiamenti vengano versionati e ci sia \textit{accountabiliy} su di essi. Inoltre, è stato aggiunto il setup della Quality Assurance (capitolo \ref{chap:QA}) con test, documentazione e coverage, garantendo così la massima attenzione sul metodo di sviluppo. Infine, ad essa sono stati affiancati i bot, i siti generati ed i relativi artefatti. Durante l'implementazione del software, ho organizzato le fasi di sviluppo affinché utilizzassimo correttamente i principi scelti, mantenendo il product backlog (capitolo \ref{chap:product-backlog}), gli sprint e i task con i relativi branch (capitolo \ref{chap:git-flow}).
+    
+    Riguardo alla parte di implementazione, il mio focus è stato sull'aggiunta di quiz (Requisiti \ref{chap:req_funzionali}.\ref{us:aggiunta-quiz}), di corsi (Requisiti \ref{chap:req_funzionali}.\ref{us:aggiunta-corso}) e la modifica di quiz (Requisiti \ref{chap:req_funzionali}.\ref{us:modifica-quiz}) e di corsi (Requisiti \ref{chap:req_funzionali}.\ref{us:modifica-corso}). Questo mi ha portato ad occuparmi nel model dell'implementazione di quiz con domande, e in \textit{controller} e \textit{view} della relativa logica e visualizzazione. Un'altra area di particolar focus è stata il riepilogo finale della partita, come da (Requisiti \ref{chap:req_funzionali}.\ref{us:revisione-quiz}).  Nel \textit{model} mi sono occupato del Game Stage e della Review in esso contenuta, per utilizzarli nei \textit{controller} relativi, i quali comunicano con le interfacce scelte (grafiche e da linea di comando).
 
-    FXML struttura
+    Controller:
     \begin{itemize}
-        \item add course menu
-        \item add quiz menu
-        \item edit course menu
-        \item edit quiz menu
-        \item review - grafica
+        \item Add course controller - in collaborazione con Omiccioli 
+        \item Add quiz controller - in collaborazione con Omiccioli
+        \item Edit course controller - in collaborazione con Omiccioli
+        \item Edit quiz controller - in collaborazione con Omiccioli
+        \item Review controller - in collaborazione con Omiccioli
+    \end{itemize}    
+    Model:
+    \begin{itemize}
+        \item Quiz - in collaborazione con Teodorani e Gambaletta
+        \item Answer - in collaborazione con Teodorani
+        \item Game Stage - in collaborazione con Omiccioli, Teodorani e Gambaletta
+        \item Review 
     \end{itemize}
-
-    Controller
+    Utils:
     \begin{itemize}
-        \item Add course menu
-        \item Add quiz menu
-        \item Edit course menu
-        \item Edit quiz menu
+        \item Timer - in collaborazione con Omiccioli
+    \end{itemize}
+    View:
+    \begin{itemize}
+        \item Add course view  - in collaborazione con Teodorani
+        \item Add quiz view - in collaborazione con Teodorani
+        \item Edit course view - in collaborazione con Teodorani
+        \item Edit quiz view - in collaborazione con Teodorani
+        \item Review view
+        \item Settings Menu View - in collaborazione con Gambaletta e Teodorani
+    \end{itemize}
+    FXML:
+    \begin{itemize}
+        \item Add course menu - in collaborazione con Omiccioli
+        \item Add quiz menu - in collaborazione con Omiccioli
+        \item Edit course menu - in collaborazione con Omiccioli
+        \item Edit quiz menu - in collaborazione con Omiccioli
+        \item Review menu - in collaborazione con Omiccioli e Teodorani
     \end{itemize}
     
 \section{Omiccioli Riccardo}
@@ -86,7 +127,7 @@ Nell'implementazione non ci sono aspetti particolari da segnalare in quanto lo s
     \begin{itemize}
         \item Game settings
         \item Game stage - in collaborazione con Gambaletta, Lirussi e Teodorani
-        \item Timer
+        \item Timer - in collaborazione con Lirussi
     \end{itemize}
     View:
     \begin{itemize}
@@ -112,7 +153,7 @@ Nell'implementazione non ci sono aspetti particolari da segnalare in quanto lo s
     
     FXML:
     \begin{itemize}
-        \item Review Menu
+        \item Review Menu - in collaborazione con Lirussi
         \item Select Menu - in collaborazione con Omiccioli
         \item Standard Game - in collaborazione con Omiccioli
     \end{itemize}
@@ -120,16 +161,17 @@ Nell'implementazione non ci sono aspetti particolari da segnalare in quanto lo s
     \begin{itemize}
         \item Select Menu Controller - in collaborazione con Omiccioli
         \item Game Controller - in collaborazione con Omiccioli
-        \item Standard Game Controller - in collaborazione con Omiccioli
+        \item Standard Game Controller - in collaborazione con Gambaletta, Omiccioli e Lirussi
     \end{itemize}
     Model:
     \begin{itemize}
-        \item Answer
+        \item Answer - in collaborazione con Lirussi
         \item Game Stage - in collaborazione con Gambaletta, Lirussi e Omiccioli
         \item Course Identifier - in collaborazione con Gambaletta
-        \item Quiz - in collaborazione con Gambaletta
+        \item Quiz - in collaborazione con Gambaletta, Lirussi
         \item SavedCourse - in collaborazione con Gambaletta
         \item Session - in collaborazione con Gambaletta
+        \item QuizInStats - in collaborazione con Gambaletta
     \end{itemize}
     View (realizzata la struttura di tutti gli update in \textit{nomeFile}MenuView sotto riportati, mentre dei controller grafici \textit{nomeFile}Menu la struttura generale e la navigazione tra le varie pagine):
     \begin{itemize}

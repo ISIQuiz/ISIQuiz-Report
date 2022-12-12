@@ -1,6 +1,6 @@
 % -*- root: ../main.tex -*-
 %modalità di divisione in itinere dei task, meeting/interazioni pianificate, modalità di revisione in itinere dei task, scelta degli strumenti di test/build/continuous integration
-\chapter{Processo di Sviluppo}
+\chapter{Processo di Sviluppo} \label{chap:dev-process}
 In questo capitolo viene analizzato l'intero processo di sviluppo definito dal team.
 
 \section{Domain Driven Design}
@@ -34,13 +34,27 @@ Per sviluppare il progetto è stato scelto il framework \textbf{Scrum}, infatti 
 
 \section{Gestione di Progetto}
 In questa sezione verrà spiegato come il progetto è stato gestito con diversi tool seguendo la metodologia Scrum.
-    \paragraph{Gantt Chart} 
-    Per l'organizzazione generale del progetto è stato utilizzato un diagramma di Gantt realizzato grazie ai tool forniti da \href{https://riccardo-omiccioli.atlassian.net/jira/software/projects/IQ/boards/1/roadmap}{Jira}. Questo ci ha permesso di avere una visione globale dei momenti del progetto e dei task da svolgere in ogni fase. Inoltre, lo strumento è stato utile per monitorare il lavoro svolto nelle varie deadline. 
+    \paragraph{Diagramma di Gantt} \label{par:gantt}
+    Per l'organizzazione generale del progetto è stato utilizzato un diagramma di Gantt realizzato grazie ai tool forniti da \href{https://www.atlassian.com/software/jira}{Jira}, come si può notare da Figura \ref{fig:jira-start1} e Figura \ref{fig:jira-start2}. Questo ci ha permesso di avere una visione globale dei momenti del progetto e dei task da svolgere in ogni fase. Inoltre, lo strumento è stato utile per monitorare il lavoro svolto nelle varie deadline.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{Images/Jira_sprintInizio1png.png}
+            \caption{Diagramma di Gantt all'inizio del processo di sviluppo}
+            \label{fig:jira-start1}
+        \end{figure}
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{Images/Jira_sprintInizio2png.png}
+            \caption{Diagramma di Gantt all'inizio del processo di sviluppo}
+            \label{fig:jira-start2}
+        \end{figure}
     
     \paragraph{Collaborative Design Board}
-    Per lavorare simultaneamente su grafici e schemi che sono stati molto utili nelle fasi iniziali di analisi e design, è stato utilizzato \href{https://miro.com/app/board/uXjVPN93uLs=/?share_link_id=56431555728}{Miro}. 
+    Per lavorare simultaneamente su grafici e schemi che sono stati molto utili nelle fasi iniziali di analisi e design, è stato utilizzato \href{https://miro.com}{Miro}.
 
-    \paragraph{Product-Backlog}
+    \paragraph{Product-Backlog} \label{chap:product-backlog}
     Per realizzare le board secondo il framework Scrum è stato utilizzato \href{https://github.com/orgs/ISIQuiz/projects/3}{GitHub-Projects}, un tool che si è rivelato molto potente, grazie anche all'integrazione diretta con \href{https://github.com}{GitHub}. Ad esempio, la chiusura delle issue avviene automaticamente con la merge del relativo branch relativo e gli item corrispondenti vengono spostati correttamente nella board. Inoltre, la possibilità di avere diverse viste sugli stessi dati ha permesso di sviluppare product e sprint backlog senza ripetizioni o duplicazioni. La creazione di diverse view ha permesso anche ai membri del team di osservare facilmente il progresso, la priorità e la grandezza dei task. I vari raffinamenti sono stati referenziati alle issue principali tramite la loro descrizione, in modo da poter osservare il completamento passo passo delle user-stories. Unica mancanza da parte del tool, è quella di non poter assegnare delle issue a più sprint backlog, qualora non venissero completate solamente in uno di essi.
     
     \paragraph{Licensing} 
@@ -49,7 +63,7 @@ In questa sezione verrà spiegato come il progetto è stato gestito con diversi 
     \paragraph{Versioning}
     Riguardo al versioning, la piattaforme scelta è stata \href{https://git-scm.com}{Git}. Dato che il progetto è stato svolto in tempi ristetti, è stato scelto il versioning semantico unito a quello temporale, per cui in ogni versione è presente un'indicazione data da MAJOR.MINOR.PATCH in unione alla data di rilascio.
     
-    \paragraph{Git Flow}
+    \paragraph{Git Flow} \label{chap:git-flow}
     Per la gestione del workflow del repository del progetto, è stato utilizzato il modello di branching \textbf{Git Flow} (come schematizzato in Figura \ref{fig:git-flow}). Il branch \textit{main} è stato utilizzato solamente per pubblicare le release del software finito o suoi eventuali aggiornamenti. Il branch \textit{dev} viene invece aggiornato con le versioni stabili di tutte le feature man mano che vengono implementate. Per ogni issue indicata negli sprint backlog, viene creato un branch apposito a partire da \textit{dev}, nel quale verrà implementata la nuova funzionalità per poi essere infine riportata sul branch \textit{dev} una volta terminata.
         \begin{figure}[H]
             \centering
@@ -58,7 +72,7 @@ In questa sezione verrà spiegato come il progetto è stato gestito con diversi 
             \label{fig:git-flow}
         \end{figure}
 
-    \paragraph{Quality Assurance}
+    \paragraph{Quality Assurance} \label{chap:QA}
     Per garantire il giusto processo di sviluppo appena indicato, sono state attivate delle \textbf{Branch Protection Rules}. Esse obbligano uno sviluppatore che contribuisce al progetto ad eseguire una pull request prima di poter fare la merge sul branch \textit{dev} del codice da lui implementato nel branch di una feature. 
     Ogni pull request deve ricevere l'approvazione dal almeno uno degli altri membri del progetto e deve anche eseguire correttamente tutti i test automatici presenti nel progetto. Le stesse regole sono state applicate anche quando viene effettuata una release sul branch \textit{main} del codice presente sul branche \textit{dev}.
 

@@ -15,7 +15,15 @@
 \usepackage{color}
 \usepackage{multicol}
 \tcbuselibrary{skins}
-%\usepackage[italian]{babel}
+\usepackage{geometry}
+    \geometry{
+        a4paper,
+        left=30mm,
+        right=30mm,
+        top=30mm,
+        bottom=30mm
+    }
+\usepackage[italian]{babel}
 
 %Disable all warnings issued by latex starting with "You have..."
 \usepackage{silence}
@@ -118,12 +126,12 @@ coltitle=black,center title}}
 \author{
     Gambaletta Daniele \\ \emailaddr{daniele.gambaletta@studio.unibo.it}
     \and
-    Lirussi Igor \\ \emailaddr{igor.lirussi@studio.unibo.it}
+    Lirussi Igor \\ ~~\emailaddr{igor.lirussi@studio.unibo.it}~~
     \and 
     Omiccioli Riccardo \\ \emailaddr{riccardo.omiccioli@studio.unibo.it} 
     \and 
     Teodorani Cecilia \\ \emailaddr{cecilia.teodorani@studio.unibo.it} 
-    \\ \\ \\ 
+    \\ \\ \\ \\ \\ \\ 
 }
 
 
@@ -238,6 +246,12 @@ coltitle=black,center title}}
     \chapter{Sprint 10}
     \section{Sprint Goal}
         \input{process/Sprint10/1-Sprint-Goal.tex}
+    \section{Sprint Backlog}
+        \input{process/Sprint10/2-Sprint-Backlog.tex}
+    \section{Sprint Review}
+        \input{process/Sprint10/3-Sprint-Review.tex}
+    \section{Sprint Retrospective}
+        \input{process/Sprint10/4-Sprint-Retrospective.tex}
     
     \include{process/Meetings.tex}
     
